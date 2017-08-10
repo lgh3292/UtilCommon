@@ -1,0 +1,9 @@
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+2016-08-16 15:30:01,330 [scheduler_Worker-6] ERROR com.cupdata.ibs.core.impexp.ImportBatchRequestService - [Bat] Read data for file ACCTSEL1.txt failed \ucccn1\wrk\CCIOUG\ECMS\PORTF\DN\ACCTSEL1.txt (The system cannot find the path specified)
+2016-08-16 15:30:01,854 [scheduler_Worker-6] ERROR com.cupdata.ibs.core.impexp.ImportBatchRequestService - [Bat] Read data for file ACCTSEL2.txt failed \ucccn1\wrk\CCIOUG\ECMS\PORTF\DN\ACCTSEL2.txt (The system cannot find the path specified)
+2016-08-16 15:30:01,987 [scheduler_Worker-6] ERROR com.cupdata.ibs.core.impexp.ImportBatchRequestService - [Bat] Read data for file ACCTSEL.txt failed \ucccn1\wrk\CCIOUG\ECMS\PORTF\DN\ACCTSEL.txt (The system cannot find the path specified)
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n

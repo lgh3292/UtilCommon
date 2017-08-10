@@ -1,0 +1,6 @@
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n
+#logback.classic pattern: %date [%thread] %-5level %logger{80} - %msg%n

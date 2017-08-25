@@ -1,2 +1,0 @@
-# UtilCommon
-personal util project

@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//conf/eastmoney_readonly.properties=UTF-8
+encoding//conf/importdateHistory.txt=UTF-8
+separateDerivedEncodings=true

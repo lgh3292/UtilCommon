@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- ====================================================================== 
+     2011-9-22 下午12:01:41                                                        
+
+     project    
+     description
+                   
+     liuguohu                                                                
+     ====================================================================== -->
+<project name="project" default="build_em_jar">
+	<description>
+            description
+    </description>
+
+	<!-- ================================= 
+	          target: init 1             
+	         ================================= -->
+	<target name="init" description="description">
+		<echo message="do init...." />
+		<property name="WORK_DIR" value="." />
+		<property name="src_java" value="${WORK_DIR}/src" />
+		<property name="lib_dir" value="${WORK_DIR}/lib" />
+		<echo message='test' />
+		<path id="tm_cp">
+			<pathelement location="${lib_dir}/ojdbc14.jar" />
+			<pathelement location="${lib_dir}/msbase.jar" />
+			<pathelement location="${lib_dir}/mssqlserver.jar" />
+			<pathelement location="${lib_dir}/msutil.jar" />
+			<pathelement location="${lib_dir}/jxl.jar" />
+			<pathelement location="${lib_dir}/jdom-1.0.jar" />
+			<pathelement location="${lib_dir}/dom4j.jar" />
+			<pathelement location="${lib_dir}/javax.jms_1.1.jar" />
+			<!--httpclient-->
+			<pathelement location="${lib_dir}/commons-httpclient-3.1-beta1.jar" />
+			<pathelement location="${lib_dir}/commons-logging-1.1.jar" />
+			<pathelement location="${lib_dir}/commons-codec-1.3.jar" />
+			<pathelement location="${lib_dir}/commons-net-1.0.0.jar" />
+			
+			<pathelement location="${lib_dir}/log4j-1.2.9.jar" />
+		</path>
+	</target>
+
+	<!-- - - - - - - - - - - - - - - - - - 
+	          target: compile                      
+	         - - - - - - - - - - - - - - - - - -->
+	<target name="compile" depends="init">
+		<echo message="Compiling Transaction Monitor code ..." />
+		<mkdir dir="${WORK_DIR}/deploy" />
+		<mkdir dir="${WORK_DIR}/deploy/classes" />
+		<javac classpathref="tm_cp" destdir="${WORK_DIR}/deploy/classes" srcdir="${src_java}" optimize="false" debug="true">
+			<include name="com/lgh/eastmoney/*/*.java" />
+			<exclude name="com/lgh/ftp/*.java" />
+		</javac>
+	</target>
+
+
+	<target name="build_eastmoney_jar" depends="compile"></target>
+
+	<!-- - - - - - - - - - - - - - - - - - 
+	          target: build_em_jar                      
+	         - - - - - - - - - - - - - - - - - -->
+	<target name="build_em_jar" depends="compile">
+		<echo message="Main targets:" />
+		<echo message="-------------" />
+		<echo message="build UtilCommon jar file" />
+		<echo message="" />
+		<jar destfile="${WORK_DIR}/deploy/em.jar" basedir="${WORK_DIR}/deploy/classes" filesonly="true" includes="**/*.class">
+			<manifest>
+				<attribute name="Class-Path" value="
+					lib\eastmoney.jar lib\util.jar lib\log4j-1.2.9.jar 
+					lib\commons-codec-1.3.jar lib\commons-httpclient-3.1-beta1.jar lib\commons-logging-1.1.jar lib\ojdbc14.jar" />
+				<attribute name="Main-Class" value="com.lgh.eastmoney.ui.EastMoney_UI_Main" />
+			</manifest>
+		</jar>
+
+		<!-- - - - - copy conf and source folder to deploy - - - - - - - - -->
+		<copy todir="${WORK_DIR}/deploy">
+			<fileset dir="${WORK_DIR}" includes="conf/*,source/*" />
+		</copy>
+		<!-- - - - - copy the reliant jar to lib - - - - - - - - -->
+		<copy todir="${WORK_DIR}/deploy/lib">
+			<fileset dir="${WORK_DIR}/lib" includes="log4j-1.2.9.jar" />
+			<fileset dir="${WORK_DIR}/lib" includes="commons*" />
+			<fileset dir="${WORK_DIR}/lib" includes="ojdbc14.jar" />
+				
+		</copy>
+		<delete dir="${WORK_DIR}/deploy/classes" />
+	</target>
+</project>

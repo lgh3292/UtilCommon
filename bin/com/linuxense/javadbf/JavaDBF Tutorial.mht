@@ -1,0 +1,361 @@
+From: <Saved by Windows Internet Explorer 8>
+Subject: JavaDBF Tutorial
+Date: Tue, 25 Jan 2011 10:19:56 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://sarovar.org/docman/view.php/32/23/javadbf-tutorial.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>JavaDBF Tutorial</TITLE>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<STYLE type=3Dtext/css>.border {
+	MARGIN-TOP: 5px; BACKGROUND: #000000
+}
+.listing {
+	MARGIN: 1px; PADDING-LEFT: 5px; BACKGROUND: #f4f1c1; COLOR: #840527; =
+PADDING-TOP: 1px
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY>
+<DIV align=3Dcenter>
+<H1 align=3Dcenter>JavaDBF Library Tutorial</H1>(for JavaDBF ver. 0.4.0 =
+and=20
+above)<BR>Anil Kumar K.<BR>anil at linuxense dot com<BR><A=20
+href=3D"http://www.linuxense.com/">Linuxense Information Systems Pvt. =
+Ltd.</A>,=20
+Trivandrum, India </DIV>
+<H2>1. Introduction</H2>JavaDBF is a Java library for reading and =
+writing XBase=20
+files. There are plenty of legacy applications around with <TT>.dbf</TT> =
+as=20
+their primary storage format. JavaDBF was initially written for data =
+transfer=20
+with such applications.=20
+<P>Other than that, there are requirements to export data from a Java=20
+application to a spreadshet program like GNumeric, Excel or Lotus 123. A =
+DBF=20
+file would be more appropriate in such situations rather than a CSV or =
+an HTML=20
+file because a DBF file can carry field type information. More over, =
+XBase=20
+format is like an Open-standard; it is understood by almost all =
+spreadsheet=20
+programms.=20
+<H2>2. Getting and Installing</H2>Obtain the latest version of JavaDBF =
+from <A=20
+href=3D"http://sarovar.org/projects/javadbf/">http://sarovar.org/projects=
+/javadbf/</A>.=20
+Create a folder in a convenient location and run: <PRE>	tar xvfz =
+javadbf-x.x.x-tar.gz=20
+	cd javadbf-x.x.x
+</PRE>In this folder you will find <TT>javadbf.jar</TT> which contains =
+the=20
+library. Include this jar file in your <TT>$CLASSPATH</TT> variable. You =
+are=20
+ready to go.=20
+<H2>3. Overview of the Library</H2>JavaDBF has a simple API of its own =
+and it=20
+does not implement the JDBC API. It is designed this way because JavaDBF =
+is not=20
+indedned to support full-blown RDBMS-style database interaction. And you =
+are not=20
+supposed to use it like a back-end; it just doesn't work that way. Also, =
+JavaDBF=20
+is not designed to be thread-safe; keep that in mind when you design =
+threaded=20
+applications.=20
+<P>JavaDBF comes in the package <TT>com.linuxense.javadbf</TT>. Import =
+that=20
+package in your Java code. Following examples will familiarise you with =
+its=20
+APIs. </P>
+<H3>3.1. Data Type Mapping</H3>In version 0.3.2, JavaDBF supports almost =
+all=20
+XBase data types except Memo field. While reading, those types are =
+interpretted=20
+as appropriate Java types. Following table shows the mapping scheme.=20
+<TABLE border=3D1 summary=3D"type mapping">
+  <TBODY>
+  <TR>
+    <TH>XBase Type</TH>
+    <TH>XBase Symbol</TH>
+    <TH>Java Type used in JavaDBF</TH></TR>
+  <TR>
+    <TD>Character</TD>
+    <TD align=3Dmiddle>C</TD>
+    <TD>java.lang.String</TD></TR>
+  <TR>
+    <TD>Numeric</TD>
+    <TD align=3Dmiddle>N</TD>
+    <TD>java.lang.Double</TD></TR>
+  <TR>
+    <TD>Double</TD>
+    <TD align=3Dmiddle>F</TD>
+    <TD>lava.lang.Double</TD></TR>
+  <TR>
+    <TD>Logical</TD>
+    <TD align=3Dmiddle>L</TD>
+    <TD>java.lang.Boolean</TD></TR>
+  <TR>
+    <TD>Date</TD>
+    <TD align=3Dmiddle>D</TD>
+    <TD>java.util.Date</TD></TR></TBODY></TABLE>
+<H2>4. Reading a DBF File</H2>To read a DBF file, JavaDBF provides a =
+DBFReader=20
+class. Following is a ready-to-compile, self-explanatory program =
+describing=20
+almost all feature of the <CODE>DBFReader</CODE> class. Copy/paste this =
+listing=20
+and compile it. Keep a <CODE>.dbf</CODE> file handy to pass to this =
+program as=20
+its argument.=20
+<DIV class=3Dborder>
+<DIV class=3Dlisting><PRE>import java.io.*;
+<STRONG>import com.linuxense.javadbf.*;</STRONG>
+
+public class JavaDBFReaderTest {
+
+  public static void main( String args[]) {
+
+    try {
+
+      // create a DBFReader object
+      //
+      InputStream inputStream  =3D new FileInputStream( args[ 0]); // =
+take dbf file as program argument
+      <STRONG>DBFReader reader =3D new DBFReader( inputStream); =
+</STRONG>
+
+      // get the field count if you want for some reasons like the =
+following
+      //
+      int numberOfFields =3D reader.<STRONG>getFieldCount();</STRONG>
+
+      // use this count to fetch all field information
+      // if required
+      //
+      for( int i=3D0; i&lt;numberOfFields; i++) {
+
+        DBFField field =3D reader.<STRONG>getField( i);</STRONG>
+
+        // do something with it if you want
+        // refer the JavaDoc API reference for more details
+        //
+        System.out.println( field.getName());
+      }
+
+      // Now, lets us start reading the rows
+      //
+      Object []rowObjects;
+
+      while( (rowObjects =3D reader.<STRONG>nextRecord()</STRONG>) !=3D =
+null) {
+
+        for( int i=3D0; i&lt;rowObjects.length; i++) {
+
+          System.out.println( rowObjects[i]);
+        }
+      }
+
+      // By now, we have itereated through all of the rows
+     =20
+      inputStream.close();
+    }
+    catch( <STRONG>DBFException</STRONG> e) {
+
+      System.out.println( e.getMessage());
+    }
+    catch( IOException e) {
+
+      System.out.println( e.getMessage());
+    }
+  } =20
+} =20
+</PRE></DIV></DIV>
+<H2>5. Writing a DBF File</H2>The class complementary to =
+<CODE>DBFReader</CODE>=20
+is the <CODE>DBFWriter</CODE>.While creating a <CODE>.dbf</CODE> data =
+file you=20
+will have to deal with two aspects: 1. define the fields and 2. populate =
+data.=20
+As mentioned above a dbf field is represented by the class=20
+<CODE>DBFField</CODE>. First, let us familiarise this class.=20
+<H3>5.1. Defining Fields</H3>Create an object of <CODE>DBFField</CODE> =
+class:=20
+<DIV class=3Dborder>
+<DIV class=3Dlisting><PRE>  DBFField field =3D new DBFField();
+  field.setField( "emp_name"); // give a name to the field
+  field.setDataType( DBFField.FIELD_TYPE_C); // and set its type
+  field.setFieldLength( 25); // and length of the field
+</PRE></DIV></DIV>This is, now, a complete <CODE>DBFField</CODE> Object =
+ready to=20
+use. We have to create as many <CODE>DBFField</CODE> Objects as we want =
+to be in=20
+the <CODE>.dbf</CODE> file. The <CODE>DBFWriter</CODE> class accept=20
+<CODE>DBFField</CODE> in an array. Now, let's move on to the next step =
+of=20
+populating data.=20
+<H3>5.2. Preparing <CODE>DBFWriter</CODE> Object.</H3>A =
+<CODE>DBFWriter</CODE>=20
+is used for creating a <CODE>.dbf</CODE> file. First lets create a=20
+<CODE>DBFWriter</CODE> object by calling its constructor and then set =
+the fields=20
+created (as explained above) by calling the <CODE>setFields</CODE> =
+method.=20
+<DIV class=3Dborder>
+<DIV class=3Dlisting><PRE>DBFWriter writer =3D new DBFWriter();
+writer.setFields( fields); // fields is a non-empty array of DBFField =
+objects
+</PRE></DIV></DIV>
+<P>Now, the <CODE>DBFWriter</CODE> Object is ready to be populated. The =
+method=20
+for adding data to the <CODE>DBFWriter</CODE> is <CODE>addRecord</CODE> =
+and it=20
+takes an Object array as its argument. This Object array is supposed =
+contain=20
+values for the fields added with one-to-one correspondence with the =
+fields set.=20
+</P>
+<P>Following is a complete program explaining all the steps described =
+above:=20
+</P>
+<DIV class=3Dborder>
+<DIV class=3Dlisting><PRE><STRONG>import =
+com.linuxense.javadbf.*;</STRONG>
+import java.io.*;
+
+public class DBFWriterTest {
+
+  public static void main( String args[])
+  throws DBFException, IOException {
+
+    // let us create field definitions first
+    // we will go for 3 fields
+    //
+    <STRONG>DBFField fields[] =3D new DBFField[ 3]</STRONG>;
+
+    fields[0] =3D new DBFField();
+    fields[0].<STRONG>setName( "emp_code")</STRONG>;
+    fields[0].<STRONG>setDataType( DBFField.FIELD_TYPE_C)</STRONG>;
+    fields[0].<STRONG>setFieldLength( 10)</STRONG>;
+
+    fields[1] =3D new DBFField();
+    fields[1].setField( "emp_name");
+    fields[1].setDataType( DBFField.FIELD_TYPE_C);
+    fields[1].setFieldLength( 20);
+
+    fields[2] =3D new DBFField();
+    fields[2].setField( "salary");
+    fields[2].setDataType( DBFField.FIELD_TYPE_N);
+    fields[2].setFieldLength( 12);
+    fields[2].<STRONG>setDecimalCount( 2)</STRONG>;
+
+    DBFWriter writer =3D new DBFWriter();
+    writer.<STRONG>setFields( fields)</STRONG>;
+
+    // now populate DBFWriter
+    //
+
+    Object rowData[] =3D new Object[3];
+    rowData[0] =3D "1000";
+    rowData[1] =3D "John";
+    rowData[2] =3D new Double( 5000.00);
+
+    writer.<STRONG>addRecord( rowData)</STRONG>;
+
+    rowData =3D new Object[3];
+    rowData[0] =3D "1001";
+    rowData[1] =3D "Lalit";
+    rowData[2] =3D new Double( 3400.00);
+
+    writer.addRecord( rowData);
+
+    rowData =3D new Object[3];
+    rowData[0] =3D "1002";
+    rowData[1] =3D "Rohit";
+    rowData[2] =3D new Double( 7350.00);
+
+    writer.addRecord( rowData);
+
+    FileOutputStream fos =3D new FileOutputStream( args[0]);
+    writer.<STRONG>write( fos)</STRONG>;
+    fos.close();
+  }
+}
+</PRE></DIV></DIV>
+<P>Keep in mind that till the <CODE>write</CODE> method is called, all =
+the added=20
+data will be kept in memory. So, if you are planning to write huge =
+amount of=20
+data make sure that it will be safely held in memory till it is written =
+to disk=20
+and the <CODE>DBFWriter</CODE> object is garbage-collected. Read the =
+``<A=20
+href=3D"http://sarovar.org/docman/view.php/32/23/javadbf-tutorial.html#sy=
+nc_mod">Sync=20
+Mode</A>'' section to know how JavaDBF to use a special feature of =
+JavaDBF to=20
+overcome this. </P>
+<H3><A name=3Dsync_mod>5.3. ``Sync Mode'' --Writing Records to File as =
+They are=20
+Added</A></H3>
+<P>This is useful when JavaDBF is used to create a DBF with very large =
+number of=20
+records. In this mode, instead of keeping records in memory for writing =
+them=20
+once for all, records are written to file as <CODE>addRecord()</CODE> is =
+called.=20
+Here is how to write in <EM>Sync Mode</EM>: </P>
+<P>Create DBFWriter instance by passing a <CODE>File</CODE> object which =
+
+represents a new/non-existent or empty file. And you are done! But, as =
+in the=20
+normal mode, remember to call <CODE>write()</CODE> when have added all =
+the=20
+records. This will help JavaDBF to write the meta data with correct =
+values. Here=20
+is a sample code: </P>
+<DIV class=3Dborder>
+<DIV class=3Dlisting><PRE>import com.linuxense.javadbf.*;
+import java.io.*;
+
+public class DBFWriterTest {
+
+  public static void main( String args[])
+  throws DBFException, IOException {
+
+    // ...
+
+    <STRONG>DBFWriter writer =3D new DBFWriter( new File( =
+"/path/to/a/new/file"));</STRONG> /* this DBFWriter object is now in =
+<EM>Syc Mode</EM> */
+    // ...
+  }
+}=09
+</PRE></DIV></DIV>
+<H2><A name=3Dappending>7. Appending Records</A></H2>
+<P>From version 0.4.0 onwards JavaDBF supports appending of records to =
+an=20
+existing DBF file. Use the same constructor used in <A=20
+href=3D"http://sarovar.org/docman/view.php/32/23/javadbf-tutorial.html#sy=
+nc_mod"><EM>Sync=20
+Mode</EM></A> to achieve this. But here the <CODE>File</CODE> object =
+passed to=20
+the construction should represent the DBF file to which records are to =
+be=20
+appended. </P>
+<P>It is illegal to call <CODE>setFields</CODE> in DBFWriter object =
+created for=20
+appending. Here also it is required to call the <CODE>write()</CODE> =
+method=20
+after adding all the records. </P>
+<H2><A name=3Dplanned_features>6. Planned Features</A></H2>
+<OL>
+  <LI>Support for memo fields. </LI></OL>
+<HR>
+=C2=A9 2003, 2004 Anil Kumar Krishnan Nair, Linuxense </BODY></HTML>

@@ -24,14 +24,14 @@ import com.lgh.util.logging.LogUtil;
 
 
 /**
- * ´Óhttp://fund.eastmoney.com/»ñµÃÄ³Ö§¹ÉÆ±µÄ³É½»Á¿
+ * ä»http://fund.eastmoney.com/è·å¾—æŸæ”¯è‚¡ç¥¨çš„æˆäº¤é‡2
  * @author liuguohu
  *
  */
 public class StockVolume implements Runnable{
-	//002142Òª´Óhttp://quote.eastmoney.com/f1.aspx?code=002142&market=2 È¡µÃ
-	//600000Òª´Óhttp://quote.eastmoney.com/f1.aspx?code=600000&market=1 È¡µÃ
-	private int market = 1;//´ÓÄÄ¸ömarketÈ¡µÃµÄÊı¾İ,Ä¬ÈÏÊÇ1
+	//002142è¦ä»http://quote.eastmoney.com/f1.aspx?code=002142&market=2 å–å¾—
+	//600000è¦ä»http://quote.eastmoney.com/f1.aspx?code=600000&market=1 å–å¾—
+	private int market = 1;//ä»å“ªä¸ªmarketå–å¾—çš„æ•°æ®,é»˜è®¤æ˜¯1
 	private String emStockId;
 	private String emStockName;
 	private String charsetName = "GBK";
@@ -373,19 +373,19 @@ public class StockVolume implements Runnable{
 //			e.printStackTrace();LogUtil.error("error", e);
 //		}
 		stocks.add("601111");
-		stocks.add("601669");//ÖĞ¹úË®µç
-		stocks.add("601106");//Ò»ÖØ
-		stocks.add("002142");//Äş²¨
-		stocks.add("601899");//×Ï½ğ
+		stocks.add("601669");//ä¸­å›½æ°´ç”µ
+		stocks.add("601106");//ä¸€é‡
+		stocks.add("002142");//å®æ³¢
+		stocks.add("601899");//ç´«é‡‘
 		stocks.add("600000");
-		stocks.add("601299");//±±³µ
-		stocks.add("600116");//ÈıÏ¿
-		stocks.add("600036");//ÕĞÉÌ
+		stocks.add("601299");//åŒ—è½¦
+		stocks.add("600116");//ä¸‰å³¡
+		stocks.add("600036");//æ‹›å•†
 		
-		stocks.add("600131");//áº½­
+		stocks.add("600131");//å²·æ±Ÿ
 		
-		stocks.add("600022");//¼ÃÄÏ
-		stocks.add("601288");//Å©ĞĞ
+		stocks.add("600022");//æµå—
+		stocks.add("601288");//å†œè¡Œ
 		stocks.add("600115");
 		
 		

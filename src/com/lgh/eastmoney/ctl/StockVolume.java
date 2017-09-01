@@ -24,8 +24,8 @@ import com.lgh.util.logging.LogUtil;
 
 
 /**
- * 从http://fund.eastmoney.com/获得某支股票的成交量1
- * @author liuguohu  
+ * 从http://fund.eastmoney.com/获得某支股票的成交量
+ * @author liuguohu
  *
  */
 public class StockVolume implements Runnable{

@@ -24,7 +24,7 @@ import com.lgh.util.logging.LogUtil;
 
 
 /**
- * 从http://fund.eastmoney.com/获得某支股票的成交量2
+ * 从http://fund.eastmoney.com/获得某支股票的成交量22
  * @author liuguohu
  *
  */

@@ -11,7 +11,7 @@ package testpackage;
 
 /**
  *
- * @author tewang
+ * @author tewangtest
  */
 import java.awt.*;
 import java.awt.event.*;

@@ -11,4 +11,7 @@ public class Boss extends Human {
     public String toString(){  
         return new StringBuffer("Manager the id:"+id).toString();  
     }  
+    public static void main(String[] args) {
+		
+	}
 }  

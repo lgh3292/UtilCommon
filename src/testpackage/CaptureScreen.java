@@ -28,7 +28,7 @@ public class CaptureScreen extends JFrame implements ActionListener{
     public CaptureScreen() {
         super("屏幕截取软件");
         initWindow();
-    }
+    }  
     private void initWindow(){
         start=new JButton("开始截取");
         cancel=new JButton("退出");

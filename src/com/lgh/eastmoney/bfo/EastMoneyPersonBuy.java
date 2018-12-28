@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 import com.lgh.util.logging.LogUtil;
 
 /**
- * 个人所买的股票 test
+ * 个人所买的股票  test2
  * @author liuguohu
  *
  */

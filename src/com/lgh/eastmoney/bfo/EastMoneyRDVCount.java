@@ -1,7 +1,7 @@
 package com.lgh.eastmoney.bfo;
 
 /**
- * 每张表历史每天的成功导入的数据量
+ * 每张表历史每天的成功导入的数据量 test2
  * @author liuguohu
  *
  */

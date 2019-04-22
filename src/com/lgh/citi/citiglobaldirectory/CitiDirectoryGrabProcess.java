@@ -39,7 +39,7 @@ public class CitiDirectoryGrabProcess {
 	 * if HTML Context file already exist, readContext and return
 	 * otherwise get from citi directory site and return
 	 * @param sb
-	 * @param webGEIDa
+	 * @param webGEIDaa
 	 * @return
 	 * @throws Exception
 	 */

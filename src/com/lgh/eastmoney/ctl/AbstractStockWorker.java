@@ -11,7 +11,8 @@ import com.lgh.util.logging.LogUtil;
 
 
 public abstract class AbstractStockWorker  implements Runnable{
- 
+
+	
 	protected String charsetName = "utf-8";
 	protected int pageSize = 20;
 	/**

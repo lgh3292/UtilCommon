@@ -18,6 +18,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import oracle.sql.BLOB;
 import com.lgh.util.StreamUtil;
 import com.lgh.util.logging.LogUtil;
 
@@ -430,9 +431,9 @@ public abstract class BaseDao {
                     } else if (cla == Double.class||cla == double.class) {
                         setMethod.invoke(object, rsltSet.getDouble(columns[i]));
                     }else if (cla == byte[].class) {
-//        				BLOB blob = (BLOB) rsltSet.getBlob(columns[i]);
-//        				InputStream is = blob.getBinaryStream();
-//						setMethod.invoke(object, StreamUtil.getByteArrayByInputStream(is));
+        				BLOB blob = (BLOB) rsltSet.getBlob(columns[i]);
+        				InputStream is = blob.getBinaryStream();
+						setMethod.invoke(object, StreamUtil.getByteArrayByInputStream(is));
                     }
                 }
                 list.add(object);

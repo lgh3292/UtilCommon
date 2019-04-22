@@ -4,18 +4,22 @@
  */
 package com.lgh.util.net;
 
-import com.lgh.util.Util;
-import com.lgh.util.logging.LogUtil;
-
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.methods.GetMethod;
+
+import com.lgh.util.Util;
+import com.lgh.util.logging.LogUtil;
 
 /**
  *
@@ -32,8 +36,8 @@ public class NetUtil {
 	 public static String getStringByRead(InputStream is,String charsetName) {
 	        InputStreamReader r = null;
 	        try {
-	            StringBuilder sb = new StringBuilder();
-	            //TODO ÕâÀïÊÇ¹Ì¶¨°ÑÍøÒ³ÄÚÈÝµÄ±àÂëÐ´ÔÚGBK,Ó¦¸ÃÊÇ¿ÉÉèÖÃµÄ
+	        	StringBuffer sb = new StringBuffer();
+	            //TODO ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹Ì¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ÝµÄ±ï¿½ï¿½ï¿½Ð´ï¿½ï¿½GBK,Ó¦ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½Ãµï¿½
 	            r = new InputStreamReader(is, charsetName);
 	            char[] buffer = new char[128];
 	            int length = -1;
@@ -43,7 +47,7 @@ public class NetUtil {
 	            return sb.toString();
 	        } catch (Exception ex) {
 	        	ex.printStackTrace();
-	        	return "";
+	        	
 	        } finally {
 	            try {
 	                r.close();
@@ -51,6 +55,7 @@ public class NetUtil {
 	            	ex.printStackTrace();
 	            }
 	        }
+	        return null;
 	}
 
 	 
@@ -93,6 +98,27 @@ public class NetUtil {
 			e.printStackTrace();
 		}
 		return sb.toString();
+	}
+	
+	
+	/**
+	 * get string content from InputStream
+	 * @param is
+	 * @return
+	 */
+	public static StringBuffer getStringByReadLine(InputStream is,Charset charset) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(is,charset));
+		String readLine = null;
+		StringBuffer sb = new StringBuffer();
+		try {
+			while((readLine=br.readLine())!=null){
+				sb.append(readLine);
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return sb;
 	}
     /**
      * return the num by Data packge's type
@@ -159,6 +185,7 @@ public class NetUtil {
      */
     public static boolean accessable(String host) {
         String os = System.getProperty("os.name");
+        System.out.println(os);
         if (os != null) {
             if (os.startsWith("Windows")) {
                 ProcessBuilder pb = new ProcessBuilder("ping", host);
@@ -214,7 +241,7 @@ public class NetUtil {
                     BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
                     String line;
                     while ((line = br.readLine()) != null) {
-                        int index = line.indexOf("Ó²¼þµØÖ·");
+                        int index = line.indexOf("Ó²ï¿½ï¿½ï¿½ï¿½Ö·");
                         if (index != -1) {
                             address = line.substring(index + 4);
                             break;
@@ -230,20 +257,45 @@ public class NetUtil {
         }
         return address;
     }
-    public static void main(String args[]) {
-    	for(int i=100;i<255;i++){
-    		final int num = i;
-    		 new Thread(new Runnable() {
-
-    	            public void run() {
-    	            	boolean is = accessable("192.168.1."+num);
-    	            	if(is){
-    	            		LogUtil.info(num+" true!");   
-    	            	}
-    	            	
-    	            }
-    		 }).start();
+    
+    
+    /**
+     * 
+     * @param webGEID
+     * @return
+     * @throws Exception
+     */
+    public static void get_Citi_Global_Directory_Image(String webGEID) throws Exception  {
+    	HttpClient http = new HttpClient();
+    	String url = "http://globaldirectory.citigroup.net/globaldir_new/GDIR_Result_Detail.aspx?webGEID="+webGEID;;
+    	GetMethod getMethod = new GetMethod(url);
+    	http.getParams().setContentCharset("UTF-8");
+    	getMethod.addRequestHeader("Accept","*/*");
+    	int responseCode = http.executeMethod(getMethod);
+    	System.out.println(responseCode);
+    	if (responseCode == 200) {
+    		
     	}
+    }
+    
+    
+   
+    public static void main(String args[]) throws Exception {
+  
+    	
+//    	for(int i=100;i<255;i++){
+//    		final int num = i;
+//    		 new Thread(new Runnable() {
+//
+//    	            public void run() {
+//    	            	boolean is = accessable("192.168.1."+num);
+//    	            	if(is){
+//    	            		LogUtil.info(num+" true!");   
+//    	            	}
+//    	            	
+//    	            }
+//    		 }).start();
+//    	}
 //        new Thread(new Runnable() {
 //
 //            public void run() {
@@ -255,7 +307,7 @@ public class NetUtil {
 //                        Thread.sleep(1000);
 //                        int nextReceived = getNetFlux().get("Received");
 //                        int nextSent = getNetFlux().get("Sent");
-//                        LogUtil.info("the download speed:" + changeFluxUnit(nextReceived - preReceived, "kb") + "KB" + " ÉÏ´«:" + changeFluxUnit(nextSent - preSent, "kb") + "KB");
+//                        LogUtil.info("the download speed:" + changeFluxUnit(nextReceived - preReceived, "kb") + "KB" + " ï¿½Ï´ï¿½:" + changeFluxUnit(nextSent - preSent, "kb") + "KB");
 //                    } catch (InterruptedException ex) {
 //                        Logger.getLogger(Util.class.getName()).log(Level.SEVERE, null, ex);
 //                    }
@@ -296,16 +348,15 @@ public class NetUtil {
 //        showOnJFrame(new MailRightPanel());
 //         showOnJFrame(new JTextPane());
 //        showOnJFrame(new GroupSendMailPanel());
-    /**Ïà¹ØProperties ²Ù×÷**/
+    /**ï¿½ï¿½ï¿½Properties ï¿½ï¿½ï¿½ï¿½**/
 //        LogUtil.info(System.getProperties());
 //        Properties p = new Properties();
 //        loadProperties(new File("c://lgh.properties"), p);
 //        LogUtil.info(p.get("lgh"));
-//        p.put("cxh", "³ÂÐ¡ºì");
+//        p.put("cxh", "ï¿½ï¿½Ð¡ï¿½ï¿½");
 //        saveProperties(new File("c://lgh.properties"), p);
-    /**ÈÕÆÚ**/
-    //        LogUtil.info(Util.getDate(new SimpleDateFormat("yyÄêMMÔÂddÈÕ"), new Date()));
-    /**»ñµÃÍø¿¨µØÖ·**/
+    /**ï¿½ï¿½ï¿½ï¿½**/
+    //        LogUtil.info(Util.getDate(new SimpleDateFormat("yyï¿½ï¿½MMï¿½ï¿½ddï¿½ï¿½"), new Date()));
 //        LogUtil.info(getMACAddress());
     }
 }

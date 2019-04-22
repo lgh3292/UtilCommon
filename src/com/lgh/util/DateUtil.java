@@ -119,6 +119,15 @@ public class DateUtil {
 	 * @param pattern)
 	 * @return
 	 */
+	public static String getCurrentDate(){
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return sdf.format(new Date());
+	}
+	/**
+	 * return the current date's String type by the date pattern
+	 * @param pattern)
+	 * @return
+	 */
 	public static String getDateStr(long date,String pattern){
 		Date d = new Date(date);
 		return getDateStr(d,pattern);

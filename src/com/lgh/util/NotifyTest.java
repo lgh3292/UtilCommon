@@ -34,7 +34,7 @@ public class NotifyTest {
 		public void run() {  
             synchronized (flag) {  
                 while (flag[0] != "false") {  
-                    LogUtil.println(getName() + " begin waiting!");  
+                    LogUtil.log(getName() + " begin waiting!");  
                     long waitTime = System.currentTimeMillis();  
                     try {  
                         flag.wait();  
@@ -43,15 +43,15 @@ public class NotifyTest {
                         e.printStackTrace();  
                     }  
                     waitTime = System.currentTimeMillis() - waitTime;  
-                    LogUtil.println("wait time :" + waitTime);  
+                    LogUtil.log("wait time :" + waitTime);  
                 }  
-                LogUtil.println(getName() + " end waiting!");  
+                LogUtil.log(getName() + " end waiting!");  
             }  
         }  
     }  
   
     public static void main(String[] args) throws InterruptedException {  
-        LogUtil.println("Main Thread Run!");  
+        LogUtil.log("Main Thread Run!");  
         NotifyTest test = new NotifyTest();  
         NotifyThread notifyThread = test.new NotifyThread("notify01");  
         WaitThread waitThread01 = test.new WaitThread("waiter01");  

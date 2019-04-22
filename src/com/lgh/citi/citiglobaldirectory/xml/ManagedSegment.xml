@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="ContentPlaceHolderBody_pnlManagedSegmentContent"
+	style="background-color: rgb(242, 242, 242); font-size: small; margin: 7px 0px 7px 7px; overflow-y: hidden; visibility: visible; height: auto; display: block;">
+	<div id=""
+		style="background-color: rgb(242, 242, 242); font-size: small; padding: 7px; visibility: visible; height: auto;">
+
+		<table cellspacing="1" cellpadding="1">
+			<tbody>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=1&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								Total Citi [L1]
+								<br>1
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=20448&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								Core Citi Businesses [L2]
+								<br>20448
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=3&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								Institutional Clients Group [L
+								<br>3
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=23077&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								Other ICG [L4]
+								<br>23077
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=3224&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								Other ICG Support [L5]
+								<br>3224
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=9903254&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								CCO [L6]
+								<br>9903254
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:#e5effa;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=3257&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								CCO [L7]
+								<br>3257
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="center"
+						style="border-color:LightGrey;border-width:2px;border-style:Dashed;">
+						<img id="ContentPlaceHolderBody_imgHelpMS351" src="images/icon_information.gif"
+							style="cursor:hand;border-width: 0px;vertical-align: middle;">
+							<div id="ContentPlaceHolderBody_pnlHelpMS59"
+								style="width: 330px; padding: 1px 1px 1px 5px; font-size: 8pt; color: black; border: 2px solid rgb(207, 234, 249); background-color: rgb(255, 255, 219); text-align: left; display: none; position: absolute;">
+								This is the Global Organizational Code (GOC) the worker reports to.
+								The lowest-level CBOH node may contain multiple GOCs.
+							</div>
+							<span>&nbsp;&nbsp;
+							</span>
+							<span>This worker’s GOC is </span>
+							<span>&nbsp;&nbsp;
+							</span>
+							<a
+								href="GDIR_GOC_Search_Result.aspx?SearchType=GOCSearch&amp;GOC_Code=26750391&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_GOC_RDP_MBH&amp;Screen_Code=RDP">
+								<div class="wrapword2">26750391(COUNTRY CORPORATE OFFICER OFFICE)</div>
+							</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

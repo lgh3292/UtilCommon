@@ -16,7 +16,25 @@ import org.apache.commons.httpclient.methods.GetMethod;
 @SuppressWarnings("deprecation")
 public class HttpClientProxy { 
 	public static void main(String[] args) {
-		System.out.println(ConectStatus.SUCCESS.key|ConectStatus.FAIL.key);
+		try {
+			HttpClient http = new HttpClient();
+			GetMethod getMethod = new GetMethod("http://globaldirectory.citigroup.net/globaldir_new/GDIR_Result_Detail.aspx?webGEID=0000450357");
+			http.getParams().setContentCharset("GBK");
+			getMethod.addRequestHeader("Accept", "*/*");
+			http.getHttpConnectionManager().getParams().setSoTimeout(2000);
+			getMethod.getParams().setSoTimeout(2000);
+			DefaultMethodRetryHandler defaultMethodRetryHandler = new DefaultMethodRetryHandler();
+			defaultMethodRetryHandler.setRetryCount(0);
+			getMethod.setMethodRetryHandler(defaultMethodRetryHandler);
+			int responseCode = http.executeMethod(getMethod);
+			System.err.println(responseCode);
+			if (responseCode == 200) {
+			} else {
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	 
 	public enum ConectStatus{
@@ -118,5 +136,4 @@ public class HttpClientProxy {
      		http.getHostConfiguration().setProxy(inetSocketAddress.getHostName(),inetSocketAddress.getPort());
      	  }
 	}
-
 }

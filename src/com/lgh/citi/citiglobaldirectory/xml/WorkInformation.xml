@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="GDIRwidget_text_left">
+	<input type="hidden"
+		name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Work_ClientState"
+		id="ContentPlaceHolderBody_CollapsiblePanelExtender_Work_ClientState"
+		value="false">
+		<div id="ContentPlaceHolderBody_pnlWorkTitle" style="color:#0099CC;font-size:Small;font-weight:bold;">
+
+			<table cellpadding="0" cellspacing="0"
+				style="padding-left: -10px; font-size: 14px">
+				<tbody>
+					<tr>
+						<td style="color: #0099CC; font-weight: bold">
+							<input type="image"
+								name="ctl00$ContentPlaceHolderBody$imgbtnWork_Expand_Collapse"
+								id="ContentPlaceHolderBody_imgbtnWork_Expand_Collapse" src="images/collapse_button.gif">
+                                                                                                                        
+                                                                                &nbsp;&nbsp;
+								<u>
+									<span id="ContentPlaceHolderBody_lblWorkTitle">Work Information</span>
+								</u>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		</div>
+		<div id="ContentPlaceHolderBody_pnlWorkContent"
+			style="font-size: small; overflow-y: hidden; visibility: visible; height: auto; display: block;">
+			<div id="" style="font-size: small; visibility: visible; height: auto;">
+
+				<table id="ContentPlaceHolderBody_tbWorkInfo" cellspacing="0"
+					cellpadding="0" style="width:95%;border-collapse:collapse;">
+					<tbody>
+						<tr>
+							<td style="width:1%;">&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+							<td style="width:35%;">
+								<strong>
+									<span id="ContentPlaceHolderBody_lblJobTitle">Job Title</span>
+								</strong>
+							</td>
+							<td>Citi Country Officer (CCO) MD</td>
+						</tr>
+						<tr>
+							<td style="width:1%;">&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+							<td style="width:25%;">
+								<strong>
+									<span id="ContentPlaceHolderBody_lblJobFunction">Job Function</span>
+								</strong>
+							</td>
+							<td>Business Strategy Mgmt &amp; Admin</td>
+						</tr>
+						<tr>
+							<td style="width:1%;">&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+							<td style="width:25%;">
+								<strong>
+									<span id="ContentPlaceHolderBody_lblJobFamily">Job Family</span>
+								</strong>
+							</td>
+							<td>BUSINESS MANAGEMENT</td>
+						</tr>
+						<tr>
+							<td style="width:1%;">&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+							<td style="width:25%;">
+								<strong>
+									<span id="ContentPlaceHolderBody_lblOfficerTitle">Officer Title</span>
+								</strong>
+							</td>
+							<td>MANAGING DIRECTOR</td>
+						</tr>
+						<tr>
+							<td style="width:1%;">&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+							<td style="width:25%;">
+								<strong>
+									<span id="ContentPlaceHolderBody_lblGOC_Code">GOC</span>
+								</strong>
+							</td>
+							<td>
+								<a id="ContentPlaceHolderBody_hyplnkGOC_Code"
+									href="GDIR_GOC_Search_Result.aspx?SearchType=GOCSearch&amp;GOC_Code=26750391&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_GOC_RDP_WI&amp;Screen_Code=RDP">26750391 &gt; COUNTRY CORPORATE OFFICER OFFICE</a>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<strong>
+									<span id="ContentPlaceHolderBody_lblMSPath">Managed Segment Path</span>
+								</strong>
+							</td>
+							<td>
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=1&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">Total Citi [L1]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=20448&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">Core Citi Businesses [L2]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=3&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">Institutional Clients Group [L</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=23077&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">Other ICG [L4]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=3224&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">Other ICG Support [L5]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=9903254&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">CCO [L6]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=3257&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">CCO [L7]</a>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<strong>
+									<span id="ContentPlaceHolderBody_lblMGPath">Managed Geography Path</span>
+								</strong>
+							</td>
+							<td>
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1000&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MG_RDP_MBH&amp;Screen_Code=RDP">Total Citi Geography [L1]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1130&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MG_RDP_MBH&amp;Screen_Code=RDP">International [L2]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1002&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MG_RDP_MBH&amp;Screen_Code=RDP">Asia Pacific [L3]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1060&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MG_RDP_MBH&amp;Screen_Code=RDP">Asia ex Japan [L4]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=CN&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MG_RDP_MBH&amp;Screen_Code=RDP">China [L5]</a>
+								-&gt;
+								<a
+									href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=CN_P00&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MG_RDP_MBH&amp;Screen_Code=RDP">China Country [L6]</a>
+							</td>
+						</tr>
+						<tr id="ContentPlaceHolderBody_trExpenses">
+							<td style="width:1%;">&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+							<td style="width:25%;">
+								<strong>
+									<span id="ContentPlaceHolderBody_lblExpenseCode">Expense Code</span>
+								</strong>
+							</td>
+							<td>
+								<a id="ContentPlaceHolderBody_hyplnkExpenseCode"
+									href="Gdir_Result.aspx?SearchType=ExpenseCodeSearch&amp;ExpenseCode=&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_EXP_RDP_WI&amp;Screen_Code=RDP"></a>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<strong>
+								</strong>
+							</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+</div>

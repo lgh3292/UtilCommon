@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="ContentPlaceHolderBody_pnlIDContent"
+	style="font-size: small; width: 100%; text-align: left; overflow-y: hidden; visibility: visible; height: auto; display: block;">
+	<div id=""
+		style="font-size: small; width: 100%; text-align: left; visibility: visible; height: auto;">
+
+		<table id="ContentPlaceHolderBody_tbIDInfo" cellspacing="0"
+			cellpadding="0" style="width:75%;border-collapse:collapse;">
+			<tbody>
+				<tr>
+					<td style="width:1%;">&nbsp;&nbsp;&nbsp;&nbsp;
+					</td>
+					<td style="width:35%;">
+						<strong>
+							<span id="ContentPlaceHolderBody_lblGEID_IDSection">GEID</span>
+						</strong>
+					</td>
+					<td>0000537302</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblSOEID">SOEID</span>
+						</strong>
+					</td>
+					<td>YL78023</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblRITSID">RITS ID</span>
+						</strong>
+					</td>
+					<td>0000178023</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblSourceSystemID">Source System ID</span>
+						</strong>
+					</td>
+					<td>NAM</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblPrimaryLogInID">Primary Login ID</span>
+						</strong>
+					</td>
+					<td>YL78023</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblFCID">FCID</span>
+						</strong>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

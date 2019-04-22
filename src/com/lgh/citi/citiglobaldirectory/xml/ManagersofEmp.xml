@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div class="GDIR_ID_info_box">
+	<div class="topCenter">
+		<div class="topLeft">
+		</div>
+		<div class="topRight">
+		</div>
+	</div>
+	<div class="GDIRmidRight">
+		<div class="GDIRwidget_text_left2">
+			<input type="hidden"
+				name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Manager_HR_ClientState"
+				id="ContentPlaceHolderBody_CollapsiblePanelExtender_Manager_HR_ClientState"
+				value="true">
+				<div id="ContentPlaceHolderBody_pnlManager_HRTitle" style="color:#0099CC;font-size:Small;font-weight:bold;">
+
+					<input type="image"
+						name="ctl00$ContentPlaceHolderBody$imgbtnManager_HR_Expand_Collapse"
+						id="ContentPlaceHolderBody_imgbtnManager_HR_Expand_Collapse" src="images/expand_button.gif">
+                                                                                                            
+                                                                    &nbsp;&nbsp;
+						<u>
+							<span id="ContentPlaceHolderBody_lblManager_HRTitle" style="font-weight:bold;">Managers
+								of Lam, Yuk Wah Christine
+							</span>
+						</u>
+
+				</div>
+				<div id="ContentPlaceHolderBody_pnlManager_HRContent"
+					style="font-size: small; font-weight: normal; overflow-y: hidden; visibility: visible; height: 0px; display: none;">
+					<div id=""
+						style="font-size: small; font-weight: normal; visibility: visible; height: auto;">
+						<table>
+							<tbody>
+								<tr>
+									<td style="font-weight:bold;">Name</td>
+									<td style="font-weight:bold;">Role</td>
+									<td style="font-weight:bold;">GOC Description</td>
+									<td style="font-weight:bold;">Phone</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="GDIR_Result_Detail.aspx?webGEID=0000944928">Aristeguieta, Francisco</a>
+									</td>
+									<td>
+										<img id="ContentPlaceHolderBody_imgHelpDM1" src="images/icon_information.gif"
+											style="cursor:hand;border-width: 0px;vertical-align: middle;">
+											<div id="ContentPlaceHolderBody_pnlHelpDM1"
+												style="width: 330px; padding: 1px 1px 1px 5px; font-size: 8pt; color: black; border: 2px solid rgb(207, 234, 249); background-color: rgb(255, 255, 219); text-align: left; visibility: hidden; position: absolute; left: 243px; top: 537px; opacity: 0; display: none;">
+												For Citi employees, the Direct Manager is a Citi
+												employee
+												responsible for managing an employee’s day-to-day
+												activities
+												including self-service transactions (if
+												applicable), worker
+												status changes, exit management, etc.
+											</div>
+											<span> Direct Manager 1</span>
+									</td>
+									<td>CEO Asia Pacific</td>
+									<td>+852 2868-8867</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<br class="clearfloat">
+		</div>
+	</div>
+	<div class="btmCenter">
+		<div class="btmLeft">
+		</div>
+		<div class="btmRight">
+		</div>
+	</div>
+</div>
+

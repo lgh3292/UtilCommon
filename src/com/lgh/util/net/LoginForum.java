@@ -6,6 +6,9 @@ package com.lgh.util.net;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -13,7 +16,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import com.lgh.util.logging.LogUtil;
-import com.lgh.util.netProxy.SystemProxy;
 
 
 
@@ -23,9 +25,13 @@ import com.lgh.util.netProxy.SystemProxy;
  */
 public class LoginForum {
 
-    public static void main(String[] args) {
-        SystemProxy.setSystemProxy("proxy.tay.cpqcorp.net", "8080", null, null);
+    public static void main(String[] args) throws Exception{
+//        SystemProxy.setSystemProxy("proxy.tay.cpqcorp.net", "8080", null, null);
+//    	 List<Proxy> o = SystemProxy.getSystemProxy();
+//    	System.setProperty("sun.net.spi.nameservice.nameservers", "192.193.215.65");
+//    	System.setProperty("sun.net.spi.nameservice.provider.1", "dns,sun");
         loginBaidu();
+
     }
 
     public static void loginBaidu() {
@@ -88,14 +94,21 @@ public class LoginForum {
             httpurlconnection.connect();
             InputStream urlStream = httpurlconnection.getInputStream();
             BufferedInputStream buff = new BufferedInputStream(urlStream);
-            Reader r = new InputStreamReader(buff, "gbk");
+            Reader r = new InputStreamReader(buff, "UTF-8");
             BufferedReader br = new BufferedReader(r);
             StringBuffer strHtml = new StringBuffer("");
             String strLine = null;
+            
             while ((strLine = br.readLine()) != null) {
                 strHtml.append(strLine + "\r\n");
             }
-            System.out.print(strHtml.toString());
+            
+            File f = new File("LoginForum.txt");
+            f.createNewFile();
+            System.out.println(f.getPath());
+            BufferedWriter fous = new BufferedWriter(new FileWriter(f));
+            fous.append(strHtml);
+            fous.close();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

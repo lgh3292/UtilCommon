@@ -1,0 +1,2470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title> Citi Global Directory</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link type="text/css" rel="stylesheet" media="all" href="css/global.css?o" />
+		<link rel="stylesheet" type="text/css" href="css/common_fixed.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js?o"></script>
+		<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+		<script type="text/javascript"> $('#scroll').cycle({ fx: 'scrollUp', speed: 600,
+			pause: 1, timeout: 7000, delay: -10 });    </script>
+		<style> .tt-dropdown-menu { margin-top: 3px; margin-left: -140px;
+			z-index: 1000 !important; } .btn-seach { margin-top: -10px; }    </style>
+		<link rel="stylesheet"
+			href="//search.citi.net/assets/stylesheets/typeahead.min.css" type="text/css" />
+		<script type="text/javascript"
+			src="//search.citi.net/assets/javascripts/cis-with-deps.js"></script>
+		<script type="text/javascript"> cgn.search.$(document).ready(function () {
+			cgn.search.$("#searchFieldContainer").renderSearch( { formAction:
+			"get", autoCompleteUri: "//search.citi.net/ac", formUri:
+			"//www.citi.net/Pages/SearchResult.aspx", readyText: "Search Citi"
+			}); });    </script>
+		<style type="text/css"> #edit-menu-parent-wrapper,
+			#edit-menu-weight-wrapper { display: none; }    </style>    <!--[if IE 6]> <link href="citi/css/ie6fixes.css" rel="stylesheet" type="text/css" 
+			/> <![endif] -->    <!--[if IE 7]> <link href="citi/css/ie7fixes.css" rel="stylesheet" type="text/css" 
+			/> <![endif] -->    <!--[if IE 8]> <link href="citi/css/ie8fixes.css" rel="stylesheet" type="text/css" 
+			/> <![endif] -->
+		<script type="text/javascript"> $(document).ready(function () { var
+			isMobileDevice = navigator.userAgent.match(/iPad/i); if
+			(isMobileDevice) { $(".dorp-submenu_content").css("marginTop", -1);
+			$(".div_drop_submenu_bottom").css("marginTop", -2); } //
+			$("#wrapper").click(function () { }); $("ul").css("list-style",
+			"none"); }); //Added on Oct 14 for Auto complete extender search
+			function OnSelect(behaviour, args) { var vals =
+			behaviour._completionListElement.childNodes[behaviour._selectIndex];
+			var element = behaviour.get_element(); var control = element.control;
+			if (control && control.set_text) { control.set_text(vals._value[4]);
+			} else element.value = vals._value[4]; var geid =
+			document.getElementById(" hddGEID.ClientID %>"); geid.value =
+			vals._value[0]; var btn = document.getElementById("
+			btnSearch.ClientID %>"); btn.click(); } function CatchEnterKey() { if
+			(event.keyCode == 13) { var btn = document.getElementById("
+			btnSearch.ClientID "); btn.click(); } } function
+			Launch_Resources(P_What, P_URL) { var result; switch (P_What) { case
+			"FAQ": window.open(P_URL, 'Global',
+			'resizable=yes,width=900,scrollbars=yes,height=600,toolbar=no,location=no,menubar=no');
+			break; case "FAQVIEWER": window.open(P_URL, 'Global',
+			'resizable=yes,width=1000,scrollbars=yes,height=700,toolbar=no,location=no,menubar=no');
+			break; default: result = 'unknown'; } }             </script>
+	</head>
+	<body class="internal_view">
+		<iframe src="Defibrillator.aspx" id="Defib" frameborder="0"
+			width="0" height="0"></iframe>
+		<form method="post" action="./GDIR_Result_Detail.aspx?webGEID=1010960249"
+			id="form1">
+			<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+				value="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" />
+			<script type="text/javascript">//<![CDATA[                function AdvancedItemDisplay(behaviour,args)                 {                    var template=behaviour.get_element().getAttribute('_template');                    //if (!template==null) template='${0}';                    for (var i=0; i<behaviour._completionListElement.childNodes.length; i++)                     {                        var item=behaviour._completionListElement.childNodes[i];                        var vals = item._value;                        var html=template;                        //alert(html);                        //alert(vals);                        //var values = vals.split(',');                        //var pair = Sys.Serialization.JavaScriptSerializer.deserialize('(' + vals + ')');                        var pair = vals;                        if (pair && pair.First)                         {                            // Use the text and value pair returned from the web service                            vals = pair.First;                        }                         else                         {                            // If the web service only returned a regular string, use it for// both the text and the value                            vals = pair;                         }                         //for (var c=0; c<vals.length; c++)                        //{                            //html=html.replace(new RegExp('\\$\\{'+c+'\\}','g'),vals[c]);                            //html=html.replace('$(' + c + ')',vals[c]);                            //alert(vals[c]);                        //}                        //alert(vals);                        //alert(vals.length);                        for (var c=0; c<vals.length; c++)                        {//                            values[c] = values[c].replace('[','');//                            values[c] = values[c].replace(']','');//                            values[c] = values[c].substring(1,values[c].length-1);                            html=html.replace('${' + c + '}',vals[c]);//                            alert(values[c]);                        }                        //html = html + '<a href=\'mailto:arindam1.pal@citi.com\'> Email</a>'                        item.innerHTML=html;                        //alert(html);                    }                }                function AdvancedSetText(behaviour,args)                 {                    var vals=args._value;alert(args.length);alert(vals);                    var element=behaviour.get_element();                    var control = element.control;                    if (control && control.set_text)control.set_text(vals[0]);                    else element.value = vals[0];alert(element);element.value=vals;                }//]]></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yKFCPWufD5fu4BpnITvzGIJn54YSXf-jFD58zgb6lSPpMEVv4eRKf2dSNlkgSL9XGUpMNFBojCLj7BH9SLS2IV5HkBEhKsMe6JgGBa8GWudRusikNh_y_cyvNpRskJMROEIHPNEBbXR8ascwIw3HKr81&amp;t=ffffffff85e60464"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=5h0NtxUlQa8Df2oWXPhUL_O6ngujSvUvUNj8YJe3NrFJLITi8j9EhSll72WD_FJCADFUSI7v-qxa2ss_dH9bFIp3DiB-ej3L2v-fyB4D38mtZB_JaIMAfpHYO6R5SgCIy_50OgHagbYwXWxwsMsR5w2&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=rlicvrbMGEB1GFbgiKVbMHYElCYF_zSBuN9VpQcIKgrewHeTqXSLD7fLkIdAySYVXe_XdB3o17CwErMXOQR0RxkUncaWXJCPy3n7uSZhbgJXGhrkWnX6jsGk2EQjRa-bHVBKpZb50TkRhQM0A9brgw2&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=CqwIbZAUnW7FSFSzLAcom30M1DIYD0PSpVL0INPec8pUT8P9Ad0VS7apRAw_klCDUDnQKhA0jBvlTDIn-1XCVfUfpKRzxfLaBTercsIv0N8xMG-YgnLpcx6R2zO7cFR8rgtUjkVa9rZy7WXQW2_eUg2&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=I5r_uwF_kmHq3vRnqwJ1AVcrrhyvXC_wLZfpT4uX4r0zIPqfOa7J-9QPlZXFvJAD8CI1_xUz5G5PcYipD5MhLvN-sZP28x7mQUeGmg0d0QYPVaJ7YyUxfpuZnHTuwVjVwGzmACG3itLqVGhg-1agBLpwiAyzoZ57TLrHGq2MbGE1&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=5Q_hoBh-rKu0GLFmViEi5llL76sS-ej-RNN0ffW_09q5Ww7L_nsVU0d3KiJvywGlaC0SwnA6k-jjDhEbt3QwtyO6mcxDsrB6vy72AOs8rcbkfcKzjc4sqbcaA2TFgioEc6rJ4AJaQrTqqWPZH5R8YnE5o086-Jo3Uu_rmA_uqTM1&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=EWjdl4CewJxCRxDQlcrNfPs1kq-jZVkHQJxLHrztPAz7zk-PUWVDTuaxhIBrzeZU_eaQIXfKuj9hVv0Ke7zaw5yeaoTdbodvZyl6rNTxXrxweTSKwKglHJ2ODXnn0uFac8rYIYUyquw-DKCt_SrtoCU3iD029nFo0zLx2lEogEc1&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=F_w5987XSibCeZQIbTYmTrLCfKexh39KnS-NUJzfVHAb5soEZe9z5AI5WAB61GV7VJ0ke5sq84Us8f3dxW6oiGM1ZGPyq2iXOHdexsnWtL0QXBuMMkIIw74ooSM1HvSgFL-O0BAIt90jpCApRnSxcouCWJyk3bAddq09-AheZA81&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=g6EFcZBxYV_xLpZNaoz9NujN3Xyt4C-09n9QZ9sLc2oC0FH0vb7EPye137kgfAZcAZEOfcC6Y6v-bvuItT1vbFRoDZmWct4XEPwUqyunqBk3TsVyYCwdle2EgPz44K8zdRdJqfOJ2AnSU8iGhg5CB9AmC774V1VFTpIoY6YA_BosOYUKu-qO5_PGRaROAUcG0&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=zKCt7U62W9aN76HPKtdj1d3bvLp_-L1DBbTdD-nlkZ1H1JL6aTjCR4Ep3vKiUvfCjHsEiJ2dtZxieapHktKz507GUsY15LOpu4MDCYoSes4hWYcvapyl-sNzw0lrFpFO_zkUPNSGk7MFW3ni59kAY_G3Mb8rTXWZOG9hYTxcyNdRnVztsKjuwCcx86v0m8T20&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=YA4am0-Wx5D6Al2solBrp0Ye6ZoncYjTPlNDhESflN-8HkL83QNeMBZyLHWlCl8g-_2T9UbkDGCuwZfwIQsu8cK0ZPaTFX_t5fqLxFOBlG2Yxv0DqFtL6fNDUATS0QkiQ6SagWUvJdv2WWMOdriEXIsAOAPDZSt3_5vFk1kknO81&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=a8-5fblyF_ztGy9t8kO_wDFiCF-hC0dccMxnU7NR1vLoUDgcnJhbIWz-OwjHhvGsLVla2fJFOh0fS426B6SdO_DAq0VemFg_KkmWRbcmGzwyJoCDJZ-LOzMkpk_jtQZ0fjDiHfKwfjICr1zROcle4MoR4qrE5L-pxKgZrSqHkJHYa630HjiFb_SuAN4Wkm_V0&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script
+				src="/Globaldir_New/ScriptResource.axd?d=xAeyHohLykseClGRqhTsxQUX5QEGXw2ED9i9N-Dv7U22UlGM5pZZjK-VPNcFpMWn0HK0QTdvoLKB--Kd8PeoggALHWvaPrDwVsjSbQVRx5kJF2IYNHfqdqjKATMoZwPs6TC4O6fVbVwjcdT5hf8X_SJ4hwlA76rUi0YUBm0g81g1&amp;t=ffffffff87636c38"
+				type="text/javascript"></script>
+			<script type="text/javascript">//<![CDATA[var PageMethods = function() {PageMethods.initializeBase(this);this._timeout = 0;this._userContext = null;this._succeeded = null;this._failed = null;}PageMethods.prototype = {_get_path:function() { var p = this.get_path(); if (p) return p; else return PageMethods._staticInstance.get_path();},GetSearchCompletionList_SBS:function(prefixText,count,succeededCallback, failedCallback, userContext) {return this._invoke(this._get_path(), 'GetSearchCompletionList_SBS',false,{prefixText:prefixText,count:count},succeededCallback,failedCallback,userContext); },LogMyLinkiWTA:function(succeededCallback, failedCallback, userContext) {return this._invoke(this._get_path(), 'LogMyLinkiWTA',false,{},succeededCallback,failedCallback,userContext); },Get_Pop_Detail_People:function(p_fk,p_nig,p_rom,p_gid,p_ms,p_mg,p_name,succeededCallback, failedCallback, userContext) {return this._invoke(this._get_path(), 'Get_Pop_Detail_People',false,{p_fk:p_fk,p_nig:p_nig,p_rom:p_rom,p_gid:p_gid,p_ms:p_ms,p_mg:p_mg,p_name:p_name},succeededCallback,failedCallback,userContext); }}PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);PageMethods._staticInstance = new PageMethods();PageMethods.set_path = function(value) { PageMethods._staticInstance.set_path(value); }PageMethods.get_path = function() { return PageMethods._staticInstance.get_path(); }PageMethods.set_timeout = function(value) { PageMethods._staticInstance.set_timeout(value); }PageMethods.get_timeout = function() { return PageMethods._staticInstance.get_timeout(); }PageMethods.set_defaultUserContext = function(value) { PageMethods._staticInstance.set_defaultUserContext(value); }PageMethods.get_defaultUserContext = function() { return PageMethods._staticInstance.get_defaultUserContext(); }PageMethods.set_defaultSucceededCallback = function(value) { PageMethods._staticInstance.set_defaultSucceededCallback(value); }PageMethods.get_defaultSucceededCallback = function() { return PageMethods._staticInstance.get_defaultSucceededCallback(); }PageMethods.set_defaultFailedCallback = function(value) { PageMethods._staticInstance.set_defaultFailedCallback(value); }PageMethods.get_defaultFailedCallback = function() { return PageMethods._staticInstance.get_defaultFailedCallback(); }PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }PageMethods.get_enableJsonp = function() { return PageMethods._staticInstance.get_enableJsonp(); }PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }PageMethods.get_jsonpCallbackParameter = function() { return PageMethods._staticInstance.get_jsonpCallbackParameter(); }PageMethods.set_path("GDIR_Result_Detail.aspx");PageMethods.GetSearchCompletionList_SBS= function(prefixText,count,onSuccess,onFailed,userContext) {PageMethods._staticInstance.GetSearchCompletionList_SBS(prefixText,count,onSuccess,onFailed,userContext); }PageMethods.LogMyLinkiWTA= function(onSuccess,onFailed,userContext) {PageMethods._staticInstance.LogMyLinkiWTA(onSuccess,onFailed,userContext); }PageMethods.Get_Pop_Detail_People= function(p_fk,p_nig,p_rom,p_gid,p_ms,p_mg,p_name,onSuccess,onFailed,userContext) {PageMethods._staticInstance.Get_Pop_Detail_People(p_fk,p_nig,p_rom,p_gid,p_ms,p_mg,p_name,onSuccess,onFailed,userContext); }//]]></script>
+			<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR"
+				value="B0E3D16B" />
+			<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+				value="3Pj+olSs9//UZYaIcvynIhwhr9tsRw2CJZuraowt3KfIOnakFWBBLtq9i+1mHzStUf8qNkpLbbm5OQXnVsEKdEg9/EI341xwPlH3oooXMRxV94hPlzp51d2mqtoV3CmUpfjpZrnCTz+PYsZrzDSLwhT/RcVsmuQv5A4QF5HWhjg0y8BTHgehkIT/hXz50Uaw/I/8DqDtPruSeua9OIhMzLT+aXgFOtBFwJBlSQwoBT7sOyQIGqF9RiEAcoe5F0+Ng2arFc1Q1mwP2/jti4muLIpht2q36c6dHA95ztkC68f3kgigQgenJpKIGOSxIj9fyXDKQw/nAZ8ThZSO3Z3iHrJNHMSbvJ2p6aL8b+hU/jMvRdaPrg0WHYXtNovCpl2EUq5Aqu5jMfdjfczUFrJgHEmCbzfh4KRljSR35+WBIiSrChhhUEsUijf6cQOTSX09jbphKxWpuL6U60zeWgS/A1KDeIbSb5k3p1lCoZthUC1/ABSN/M7wht9B053uNr5bWBBrgGBeK5s8yZRwFAS9mAqriKCT1aeoH2riGpavKf+gas8/DzcEUV72uZitqQlvmtdQb+wxXe49n+7V6qen6PoiHP1VrsMEH+VFRZMC99Y2OpWXhxO4Vii1FWqGL6H/smgTe5S7QynyNVUxM9JXNNjuwK8elFOFLmUlGOzN7aKLBtCL2DQhfxawbGt18E7jiSGLGaFcnp38s7MMuM/kxIT/ySp6OU7vRzbtlQQLzn35OIQgcKs7WG1QwdAsqRcnQ8L6QFVRdh5gEfbSY0wrDIsLl2HA9EPTeZJtpPtk5RM8AGdi2hN6d+c+EuuZqgSp7izx3PLJPmOzZFq8SjPNjg==" />
+			<script language="JavaScript" type="text/javascript">
+				AjaxControlToolkit.AutoCompleteBehavior.prototype._onListMouseDown =
+				function (ev) { ///
+				<summary> /// Handler for the mousedown event on the autocomplete
+					flyout. /// </summary>
+				///
+				<param name="ev" type="Sys.UI.DomEvent" DomElement="false"
+					mayBeNull="false" />
+				///
+				<returns />
+				if (ev.target !== this._completionListElement) { if
+				(this._selectIndex === -1) { var children =
+				this._completionListElement.childNodes; //alert(children.length);
+				var parent = ev.target.parentElement; //alert(parent.innerHTML); //
+				make sure the selected index is updated for (var i = 0; i <
+				children.length; ++i) { if (parent === children[i]) {
+				this._highlightItem(parent); this._selectIndex = i; break; } } }
+				//alert(this._selectIndex ); this._setText(ev.target);
+				this._flyoutHasFocus = false; } else { // focus is still on the
+				flyout and we do not want to hide it this._flyoutHasFocus = true; }
+				};
+				AjaxControlToolkit.AutoCompleteBehavior.prototype._onListMouseOver =
+				function (ev) { ///
+				<summary> /// Handler for the mouseover event on the autocomplete
+					flyout. /// </summary>
+				///
+				<param name="ev" type="Sys.UI.DomEvent" DomElement="false"
+					mayBeNull="false" />
+				///
+				<returns />
+				var item = ev.target; if (item !== this._completionListElement) {
+				var children = this._completionListElement.childNodes; var parent =
+				ev.target.parentElement; // make sure the selected index is updated
+				for (var i = 0; i < children.length; ++i) { if (item ===
+				children[i]) { this._highlightItem(item); this._selectIndex = i;
+				break; } else if (parent === children[i]) {
+				this._highlightItem(parent); this._selectIndex = i; break; } } } };
+				AjaxControlToolkit.AutoCompleteBehavior.prototype._setText =
+				function (item) { //Rewrite the _setText function to insert the
+				newText into the ListBox. var text = (item && item.firstChild) ?
+				item.firstChild.nodeValue : null; this._timer.set_enabled(false);
+				var element = this.get_element(); var control = element.control; var
+				tgControl = item.nodeName; var newText =
+				this._showOnlyCurrentWordInCompletionListItem ?
+				this._getTextWithInsertedWord(text) : text; if (newText !== "E-Mail"
+				&& newText !== "Chat" && tgControl !== "IMG" && tgControl !== "A") {
+				if (control && control.set_text) { control.set_text(newText); } else
+				{ element.value = newText; } } $common.tryFireEvent(element,
+				"change"); if (newText !== "E-Mail" && newText !== "Chat" &&
+				tgControl !== "IMG" && tgControl !== "A") {
+				this.raiseItemSelected(new
+				AjaxControlToolkit.AutoCompleteItemEventArgs(item, text, item ?
+				item._value : null)); } this._currentPrefix =
+				this._currentCompletionWord(); if (newText !== "E-Mail" && newText
+				!== "Chat" && tgControl !== "IMG" && tgControl !== "A") {
+				this._hideCompletionList(); } };
+			</script>
+			<div id="pagecontainer">
+				<div id="wrapper">
+					<div id="header">
+						<div class="top_bar">
+							<div class="search_wrapper_js" style="float: right">
+								<div id="searchFieldContainer"></div>
+							</div>
+							<div style="float: right; padding-right: 10px;">
+								<select name="ctl00$ddlLanguages" id="ddlLanguages"
+									style="border: 0 none; font-size: 10px; height: 17px">
+									<option selected="selected" value="Select_Language">Language</option>
+									<option value="en">English</option>
+									<option value="es">Spanish</option>
+								</select>
+								<span>|&nbsp;
+								</span>
+							</div>
+						</div>
+						<div class="rounded_box">
+							<div id="center">
+								<div id="center_cont">
+									<div class="user_login_info">
+									</div>
+									<h1 class="logo">
+										<a href="http://www.citigroup.net" title="Visit Citigroup.net">
+											<img src="../Globaldir_New/images/global_header_logo.png"
+												alt="Citi" id="logo" />
+										</a>
+										<span class="brandCentral">
+											<img src="../Globaldir_New/images/app_title.png" alt="Citi Global Directory" />
+										</span>
+									</h1>
+									<ul class="main_menu ">
+										<li class="li_static_link_mvp">
+											<a href="https://www.citi.net/EN/" title="Home" target="_blank">Citi.net
+											</a>
+										</li>
+										<li class="li_static_link_mvp">
+											<a
+												href="https://www.citi.net/EN/missionofprogress/Pages/default.aspx"
+												title="Mission and Progress Proposition" target="_blank">Mission and
+												Value Proposition</a>
+										</li>
+										<li id="">
+											<a id="hyplnkAdvancedSearch"
+												href="GDIR_Advanced_Search.aspx?Origin=AdvSearch&amp;Click=SearchTab">Advanced Search</a>
+										</li>
+										<li id="">
+											<a id="hyplnkUtilities" href="Gdir_Useful_Links.aspx?Origin=Links">Useful Links</a>
+										</li>
+										<li>
+											<a id="hyplnkFAQ"
+												href="javascript:Launch_Resources(&#39;FAQVIEWER&#39;,&#39;GDIR_FAQ_Viewer.aspx?Language=ENGLISH&#39;);">FAQ</a>
+										</li>
+									</ul>
+									<ul class="user_actions">
+										<li class="logonlink">
+											<a class="ico_login" title="" href="startup.aspx">                                        <!--<img src="citi/images/assets/images/icn/global_lock.png" style="border: 
+													0px;" /> -->
+												Login for Personalization                                        <!-- <span class="ico_arr">&nbsp;</span> -->
+											</a>
+											<a id="hyplnkLoginPersonalize"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div style="clear: both"></div>
+					</div>
+					<div class="pageTitle1"
+						style="padding: 4px 0px 2px 0px; width: 955px; margin: 0 auto;">
+						<div style="float: left; width: 955px;">
+							<div id="box" style="padding-top: 1px;">
+								<div class="topCenter">
+									<div class="topLeft"></div>
+									<div class="topRight"></div>
+								</div>
+								<div class="midLeft">
+									<div class="midRight"
+										style="height: 35px; overflow: hidden; padding-left: 5px;">
+										<div
+											style="width: 930px; font-size: small; padding-left: 5px; padding-right: 5px;">
+											<div id="Alert">
+												<div>
+													<font face=arial color=red size=0.7 style="font-weight:bold">Alert -
+													</font>
+													Please be advised that
+													<span style="font-weight: bold;">Global Directory</span>&nbsp;has
+													standardized the columns on its excel download reports for:&nbsp;
+													<span style="font-weight: bold;">Employees and Non-Employees </span>(Directs
+													and Directs &amp; Below)&nbsp;to
+													facilitate users' experience. It is available in
+													<span style="font-weight: bold; text-decoration: underline;">
+														<a href="http://globaldirectoryuat.citigroup.net/globaldir_new"
+															target="_blank">UAT</a>
+													</span>
+													for testing and it will be deployed in
+													<span style="font-weight: bold;">Production</span>
+													by
+													<span style="font-weight: bold;">Nov, 16th.</span>
+												</div>
+											</div>
+											<div id="scroll" style="display:none">
+												<div>
+													<h4>
+														<span id="ctl00_ContentPlaceHolderBody_lblNameSearch"
+															style="font-size: small; color: #3399CC;">
+															<img src="images/bulb_icon.png" width="14" height="15" />
+															Did You Know?
+														</span>
+													</h4>
+													<p>Lorem Ipsum is simply dummy text of the printing and
+														typesetting industry. Lorem Ipsum has been the industry's
+														standard dummy text ever since the 1500s, when an unknown
+														printer took a galley of type and scrambled it to make a
+														type specimen book. </p>
+												</div>
+												<div>
+													<p>sample text two</p>
+												</div>
+												<div>
+													<p>sample text three</p>
+												</div>
+												<div>
+													<p>sample text four</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br class="clearfloat" />
+								<div class="btmCenter" style="clear: both;">
+									<div class="btmLeft">
+									</div>
+									<div class="btmRight">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br class="clearfloat" />
+					<script language="JavaScript" type="text/javascript">
+						AjaxControlToolkit.AutoCompleteBehavior.prototype._onListMouseDown
+						= function (ev) { ///
+						<summary> /// Handler for the mousedown event on the autocomplete
+							flyout. /// </summary>
+						///
+						<param name="ev" type="Sys.UI.DomEvent" DomElement="false"
+							mayBeNull="false" />
+						///
+						<returns />
+						if (ev.target !== this._completionListElement) { if
+						(this._selectIndex === -1) { var children =
+						this._completionListElement.childNodes;//alert(children.length);
+						var parent = ev.target.parentElement;//alert(parent.innerHTML); //
+						make sure the selected index is updated for (var i = 0; i <
+						children.length; ++i) { if (parent === children[i]) {
+						this._highlightItem(parent); this._selectIndex = i; break; } }
+						}//alert(this._selectIndex ); this._setText(ev.target);
+						this._flyoutHasFocus = false; } else { // focus is still on the
+						flyout and we do not want to hide it this._flyoutHasFocus = true;
+						} };
+						AjaxControlToolkit.AutoCompleteBehavior.prototype._onListMouseOver
+						= function (ev) { ///
+						<summary> /// Handler for the mouseover event on the autocomplete
+							flyout. /// </summary>
+						///
+						<param name="ev" type="Sys.UI.DomEvent" DomElement="false"
+							mayBeNull="false" />
+						///
+						<returns />
+						var item = ev.target; if (item !== this._completionListElement) {
+						var children = this._completionListElement.childNodes; var parent
+						= ev.target.parentElement; // make sure the selected index is
+						updated for (var i = 0; i < children.length; ++i) { if (item ===
+						children[i]) { this._highlightItem(item); this._selectIndex = i;
+						break; } else if (parent === children[i]) {
+						this._highlightItem(parent); this._selectIndex = i; break; } } }
+						}; AjaxControlToolkit.AutoCompleteBehavior.prototype._setText =
+						function (item) { //Rewrite the _setText function to insert the
+						newText into the ListBox. var text = (item && item.firstChild) ?
+						item.firstChild.nodeValue : null; this._timer.set_enabled(false);
+						var element = this.get_element(); var control = element.control;
+						var tgControl = item.nodeName; var newText =
+						this._showOnlyCurrentWordInCompletionListItem ?
+						this._getTextWithInsertedWord(text) : text; if (newText !==
+						"E-Mail" && newText !== "Chat" && tgControl !== "IMG" && tgControl
+						!== "A") { if (control && control.set_text) {
+						control.set_text(newText); } else { element.value = newText; } }
+						$common.tryFireEvent(element, "change"); if (newText !== "E-Mail"
+						&& newText !== "Chat" && tgControl !== "IMG" && tgControl !== "A")
+						{ this.raiseItemSelected(new
+						AjaxControlToolkit.AutoCompleteItemEventArgs(item, text, item ?
+						item._value : null)); } this._currentPrefix =
+						this._currentCompletionWord(); if (newText !== "E-Mail" && newText
+						!== "Chat" && tgControl !== "IMG" && tgControl !== "A") {
+						this._hideCompletionList(); } };
+					</script>
+					<script type="text/javascript">
+						Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function
+						(sender, args) { if (args.get_error() && args.get_error().name ==
+						'Sys.WebForms.PageRequestManagerTimeoutException') {
+						args.set_errorHandled(true); } });    </script>
+					<style type="text/css"> .completionList { background: #F8F8F8; border:
+						solid 1px #444444; margin: 1px; padding: 7px; height: auto;
+						overflow: auto; font-family: Arial, Helvetica, sans-serif;
+						font-size: 13px; font-weight: normal; } .listItem { color:
+						#666666; } .itemHighlighted { background-color: #E6E6FA; cursor:
+						hand; } html, body { position: relative; }    </style>        <!--This set needed for fonts and formatting- -->
+					<link rel="stylesheet" type="text/css" href="css/common_fixed.css" />
+					<link rel="stylesheet" type="text/css" href="css/top_nav.css" />
+					<link rel="stylesheet" type="text/css" href="css/tabs08.css" />
+					<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
+					<script type="text/javascript" src="js/showhide.js"></script>
+					<script src="js/jquery.cluetip.js" type="text/javascript"></script>
+					<script type="text/javascript" src="js/jquery.elevatezoom.js"></script>
+					<script type="text/javascript"> function myalert(msg) { alert(msg) } function
+						ShowZoomImage() {
+						$('#ContentPlaceHolderBody_imgEmpPic').elevateZoom(); }    </script>
+					<script language="javascript" type="text/javascript"> function
+						launchTrackLocationURL(P_GEID) { MM_config = ""; MM_config +=
+						"toolbar=no,"; MM_config += "location=no," MM_config +=
+						"directories=no,"; MM_config += "status=no," MM_config +=
+						"menubar=no," MM_config += "scrollbars=yes," MM_config +=
+						"resizable=no," MM_config += "copyhistory=no," MM_config +=
+						"width=" + 900 + "," MM_config += "height=" + 550 + "," MM_config
+						+= "resizable=yes," MM_config += "modal=yes" // strURL =
+						'https://n2rreg.nj.ssmb.com/N2RRegister/showfloorplan.aspx?' +
+						"GEID=" + P_GEID; // + "&Lang=" + P_Lang; strURL =
+						'https://employeefloorplanmapping.citigroup.net/N2RRegister/showfloorplan.aspx?'
+						+ "GEID=" + P_GEID; // + "&Lang=" + P_Lang; window.open(strURL,
+						'TrackLocation', MM_config); } function Launch_Alt_Contact(P_GEID,
+						P_Lang, P_FullName) { MM_config = ""; MM_config += "toolbar=no,";
+						MM_config += "location=no," MM_config += "directories=no,";
+						MM_config += "status=no," MM_config += "menubar=no," MM_config +=
+						"scrollbars=yes," MM_config += "resizable=no," MM_config +=
+						"copyhistory=no," MM_config += "width=" + 750 + "," MM_config +=
+						"height=" + 370 strURL = 'gdir_view_alt_contact.aspx' + "?GEID=" +
+						P_GEID + "&Lang=" + P_Lang + "&Full_Name=" + P_FullName +
+						"&From_RDP=Y"; window.open(strURL, 'Global', MM_config); }
+						//function Launch_Pager_Window(P_Lang, P_GEID, P_SOEID, P_SSID,
+						P_FullName, // P_PagerCountryName, P_BeeperNo, P_WTARecID, //
+						P_SendBeeperUrl) { // MM_config = "" // MM_config +=
+						"toolbar=no,"; // MM_config += "location=no," // MM_config +=
+						"directories=no,"; // MM_config += "status=no," // MM_config +=
+						"menubar=no," // MM_config += "scrollbars=no," // MM_config +=
+						"resizable=no," // MM_config += "copyhistory=no," // MM_config +=
+						"width=" + 788 + "," // MM_config += "height=" + 600 // strURL =
+						P_SendBeeperUrl + "?Language=" + P_Lang; // strURL +=
+						"&pagerNumber=" + P_BeeperNo; // strURL += "&RcptSOEID=" +
+						P_SOEID; // strURL += "&RcptGEID=" + P_GEID; // strURL +=
+						"&RcptFullName=" + P_FullName; // strURL += "&SSID=" + P_SSID; //
+						strURL += "&WTARecID=" + P_WTARecID; // strURL +=
+						"&PagerCountryName=" + P_PagerCountryName; // strURL +=
+						"&DSSO=NO"; // window.open(strURL, 'Global', MM_config); //}
+						function Load_OrgTree(P_URL) { //alert(P_URL); location.href =
+						P_URL; } // Disable the Button that Initiated Asynchronous
+						PostBack Until // Server Processing Completes in ASP.Net AJAX var
+						Page; var postBackElement; function pageLoad() { Page =
+						Sys.WebForms.PageRequestManager.getInstance();
+						Page.add_beginRequest(OnBeginRequest);
+						Page.add_endRequest(endRequest); } function OnBeginRequest(sender,
+						args) { postBackElement = args.get_postBackElement();
+						postBackElement.disabled = true;
+						document.getElementById("ContentPlaceHolderBody_btnFullNameSearch").disabled
+						= true;
+						//document.getElementById("ContentPlaceHolderBody_btnClear").disabled
+						= true; var postBackID = postBackElement.id; if (postBackID !=
+						null) { var controlName = postBackID.split("_"); controlName =
+						controlName[2]; if (controlName == 'btnFullNameSearch') {
+						document.getElementById("ContentPlaceHolderBody_UpdateProgress1").style.display
+						= "block"; } } $get('ParentDiv').className = 'Background'; }
+						function endRequest(sender, args) { postBackElement.disabled =
+						false; var postBackID = postBackElement.id; if (postBackID !=
+						null) {
+						document.getElementById("ContentPlaceHolderBody_btnFullNameSearch").disabled
+						= false;
+						//document.getElementById("ContentPlaceHolderBody_btnClear").disabled
+						= false; } $get('ParentDiv').className = ''; } function
+						setFocusOnSearchButton() { CheckEnterKey(); } function
+						CheckEnterKey() { if (event.keyCode == 13) { //alert('Hello'); var
+						fullname =
+						document.getElementById("ContentPlaceHolderBody_txtFullName").value;
+						//location.href="http://gdirwebd001/gdir/Gdir_Result.aspx?SearchType=FullNameSearch&FullName=Chris%20Lui"
+						//location.href="Gdir_Result.aspx?SearchType=FullNameSearch&FullName="
+						+ fullname; //window.location
+						="Gdir_Result.aspx?SearchType=FullNameSearch&FullName=" +
+						fullname;
+						//document.getElementById("ContentPlaceHolderBody_btnFullNameSearch").click();
+						} } function clearTextBox() { var eventSource =
+						event.srcElement.id; if (eventSource != null) { var controlName =
+						eventSource.split("_"); controlName = controlName[1]; if
+						(controlName == 'btnClear') {
+						document.getElementById("ContentPlaceHolderBody_txtFullName").value
+						= "";
+						document.getElementById("ContentPlaceHolderBody_lblMsgFullNameRequired").value
+						= "";
+						document.getElementById("ContentPlaceHolderBody_txtFullName").focus();
+						} } } //Disable right mouse click Script /* var message="This is a
+						protected page. Access denied.";
+						/////////////////////////////////// function clickIE4(){ if
+						(event.button==2){ alert(message); return false; } } function
+						clickNS4(e){ if
+						(document.layers||document.getElementById&&!document.all){ if
+						(e.which==2||e.which==3){ alert(message); return false; } } } if
+						(document.layers){ //document.captureEvents(Event.MOUSEDOWN);
+						//document.onmousedown=clickNS4; } else if
+						(document.all&&!document.getElementById){
+						//document.onmousedown=clickIE4; } //x=3 is just some dummy text
+						document.oncontextmenu=new Function("x=3;return false")*/ //Added
+						on June 9 for Expand and collapse hyperlink function
+						CollapseAll_Click() { var contactPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Contact");
+						var idPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_ID"); var
+						locationPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Location");
+						var workPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Work"); var
+						managerHRPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Manager_HR");
+						var hrResourcesPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_HRResources");//js55067
+						var hrTechnology =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Technology");//js55067
+						var hrFacilities =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Facilities");
+						var hrLocBISO =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_LocBISO");
+						var hrAddKey =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_AddKey");
+						var directReportPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Direct_Report");
+						var matrixPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Matrix_Report");
+						var nonEmpPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Emp_NonEmp");
+						var ORGMGRPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_ORGMGR");
+						//Added EJS for MG 07/18/2014 ** var pbhPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_PBH"); var
+						dbhPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_DBH"); var
+						mansegEmpPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedSegment");
+						var manGeoEmpPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedGeography");
+						//Added EJS for MG 09/09/2013 *************************** var
+						adminUtilityPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Emp_Admin");
+						if (contactPanel != null) { contactPanel.set_Collapsed(true); } if
+						(idPanel != null) { idPanel.set_Collapsed(true); } if
+						(locationPanel != null) { locationPanel.set_Collapsed(true); } if
+						(workPanel != null) { workPanel.set_Collapsed(true); } if
+						(managerHRPanel != null) { managerHRPanel.set_Collapsed(true); }
+						if (hrResourcesPanel != null) {
+						hrResourcesPanel.set_Collapsed(true); }//js55067 if (hrTechnology
+						!= null) { hrTechnology.set_Collapsed(true); } if (hrFacilities !=
+						null) { hrFacilities.set_Collapsed(true); } if (hrAddKey != null)
+						{ hrAddKey.set_Collapsed(true); } if (directReportPanel != null) {
+						directReportPanel.set_Collapsed(true); } if (matrixPanel != null)
+						{ matrixPanel.set_Collapsed(true); } if (nonEmpPanel != null) {
+						nonEmpPanel.set_Collapsed(true); } if (pbhPanel != null) {
+						pbhPanel.set_Collapsed(true); } if (dbhPanel != null) {
+						dbhPanel.set_Collapsed(true); } if (mansegEmpPanel != null) {
+						mansegEmpPanel.set_Collapsed(true); }
+						//*********************************Added EJS for MG 09/09/2013
+						*************************** if (manGeoEmpPanel != null) {
+						manGeoEmpPanel.set_Collapsed(true); }
+						//*********************************End Added EJS for MG 09/09/2013
+						*************************** if (adminUtilityPanel != null) {
+						adminUtilityPanel.set_Collapsed(true); } } function
+						ExpandAll_Click() { var contactPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Contact");
+						var idPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_ID"); var
+						locationPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Location");
+						var workPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Work"); var
+						managerHRPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Manager_HR");
+						var hrResourcesPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_HRResources");//js55067
+						var hrTechnology =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Technology");//js55067
+						var hrFacilities =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Facilities");
+						var hrLocBISO =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_LocBISO");
+						var hrAddKey =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_AddKey");
+						var directReportPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Direct_Report");
+						var matrixPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Matrix_Report");
+						var nonEmpPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Emp_NonEmp");
+						var ORGMGRPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_ORGMGR");
+						//Added EJS for MG 07/18/2014 var pbhPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_PBH"); var
+						dbhPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_DBH"); var
+						mansegEmpPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedSegment");
+						var manGeoEmpPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedGeography");
+						//Added EJS for MG 09/09/2013 var adminUtilityPanel =
+						$find("ContentPlaceHolderBody_CollapsiblePanelExtender_Emp_Admin");
+						if (contactPanel != null) { contactPanel.set_Collapsed(false); }
+						if (idPanel != null) { idPanel.set_Collapsed(false); } if
+						(locationPanel != null) { locationPanel.set_Collapsed(false); } if
+						(workPanel != null) { workPanel.set_Collapsed(false); } if
+						(managerHRPanel != null) { managerHRPanel.set_Collapsed(false); }
+						if (hrResourcesPanel != null) {
+						hrResourcesPanel.set_Collapsed(false); }//js55067 if (hrTechnology
+						!= null) { hrTechnology.set_Collapsed(false); } if (hrFacilities
+						!= null) { hrFacilities.set_Collapsed(false); } if (hrAddKey !=
+						null) { hrAddKey.set_Collapsed(false); } if (directReportPanel !=
+						null) { directReportPanel.set_Collapsed(false); } if (matrixPanel
+						!= null) { matrixPanel.set_Collapsed(false); } if (nonEmpPanel !=
+						null) { nonEmpPanel.set_Collapsed(false); } if (pbhPanel != null)
+						{ pbhPanel.set_Collapsed(false); } if (dbhPanel != null) {
+						dbhPanel.set_Collapsed(false); } if (mansegEmpPanel != null) {
+						mansegEmpPanel.set_Collapsed(false); }
+						//*********************************Added EJS for MG 09/09/2013
+						*************************** if (manGeoEmpPanel != null) {
+						manGeoEmpPanel.set_Collapsed(false); }
+						//*********************************End Added EJS for MG 09/09/2013
+						*************************** if (adminUtilityPanel != null) {
+						adminUtilityPanel.set_Collapsed(false); } } //End of addition for
+						Expand and collapse hyperlink function Launch_ProfileWindow(P_URL)
+						{ var result; window.open(P_URL, 'Profile',
+						'resizable=yes,width=985,scrollbars=yes,height=600,toolbar=no,location=no,menubar=no"');
+						} function Launch_PrinterFriendlyPage(P_URL) { var result;
+						window.open(P_URL, 'Profile',
+						'resizable=yes,width=700,scrollbars=yes,height=600,toolbar=no,location=no,menubar=no"');
+						} function OnSelect1(behaviour, args) { var vals =
+						behaviour._completionListElement.childNodes[behaviour._selectIndex];
+						var element = behaviour.get_element(); var control =
+						element.control; if (control && control.set_text) {
+						control.set_text(vals._value[4]); } else element.value =
+						vals._value[4]; var geid =
+						document.getElementById("ContentPlaceHolderBody_hddGEID");
+						geid.value = vals._value[0]; var btn =
+						document.getElementById("ContentPlaceHolderBody_btnFullNameSearch");
+						btn.click(); } function Launch_CitiForYou(P_URL) {
+						window.open(P_URL, 'CitiForYou',
+						'resizable=yes,width=700,scrollbars=yes,height=600,toolbar=yes,location=no,menubar=yes"');
+						} function Launch_PeopleBrowser(P_URL) { window.open(P_URL,
+						'PeopleBrowser',
+						'resizable=yes,width=800,scrollbars=yes,height=600,toolbar=no,location=no,menubar=no,left=50,top=0');
+						} function Launch_OrgChart(P_URL) { window.open(P_URL, 'OrgChart',
+						'resizable=yes,width=1000,scrollbars=yes,height=700,toolbar=no,location=no,menubar=no,left=50,top=0');
+						} function Launch_PUU(P_URL) { window.open(P_URL, 'puu',
+						'resizable=yes,width=810,scrollbars=yes,height=710,toolbar=no,location=no,menubar=no');
+						} function Launch_MyLink(P_URL) { PageMethods.LogMyLinkiWTA();
+						window.open(P_URL, 'MyLink',
+						'resizable=yes,width=1000,scrollbars=yes,height=700,toolbar=no,location=no,menubar=no,left=50,top=0');
+						} //learnMore pop boxes 10-14-2015 //function popUpCFY(P_URL) { //
+						window.open(P_URL, 'CFY',
+						'resizable=yes,width=508,height=225,toolbar=no, menubar=no,
+						scrollbars=no,location=no, directories=no, status=no'); //}
+						function popUpConnect1(P_URL) { window.open(P_URL, 'ConOne',
+						'resizable=yes,width=888,height=282,toolbar=no, menubar=no,
+						scrollbars=no,location=no, directories=no, status=no'); } function
+						AdminLinkClick(link) { //alert("hi"); window.location.href = link;
+						var ev = window.event; if (event.stopPropagation)
+						event.stopPropagation(); else event.cancelBubble = true; }
+						function rb_click(p_fk, p_nig, p_rom, p_gid, p_ms, p_mg, p_name) {
+						// alert(p_fk); // alert(p_nig); // alert(p_rom); // alert(p_gid);
+						PageMethods.Get_Pop_Detail_People(p_fk, p_nig, p_rom, p_gid, p_ms,
+						p_mg, p_name, onSuccess); } function onSuccess(result) { //
+						alert(result); window.open(result, "_self"); } /* function
+						showhide(id) { if (document.getElementById) { newimage = new
+						Image(); currentimage = document.getElementById(id + "bullet");
+						obj = document.getElementById(id); if (obj.style.display ==
+						"none") { newimage.src = "images/collapse_button.gif";
+						currentimage.src = newimage.src; obj.style.display = ""; } else {
+						newimage.src = "images/expand_button.gif"; currentimage.src =
+						newimage.src; obj.style.display = "none"; } } } */    </script>
+					<div id="ParentDiv" class="midCenter" style="padding: 0;">
+						<div id="ContentPlaceHolderBody_Panel1">
+							<div id="ContentPlaceHolderBody_UpdatePanel1">
+								<div style="padding: 1px 0px 5px 0px; width: 955px; margin: 0 auto;">
+									<div style="float: left; width: 955px;">
+										<div style="padding-top: 1px;">
+											<div class="topCenter">
+												<div class="topLeft"></div>
+												<div class="topRight"></div>
+											</div>
+											<div class="midLeft">
+												<div class="midRight" style="overflow: hidden; padding-left: 5px;">
+													<table width="60%" border="0" cellpadding="0"
+														cellspacing="0" class="form_labels" style="font-size: small">
+														<tr>
+															<td width="18%" scope="row">
+																<span id="ContentPlaceHolderBody_lblFullName">
+																	<b>
+																		<font size="3">Name / ID:</font>
+																	</b>
+																</span>
+															</td>
+															<td width="40%">
+																<input name="ctl00$ContentPlaceHolderBody$txtFullName"
+																	type="text" maxlength="100"
+																	id="ContentPlaceHolderBody_txtFullName"
+																	_template="                                                            &lt;span id=&quot;lblSugg&quot; style=&quot;font-weight:bold;&quot;>${2}&lt;/span>&lt;br />                                                            &lt;span id=&quot;lblGEID&quot; style=&quot;font-style:italic;&quot;>${1}&lt;/span>&lt;br />                                                            &lt;span id=&quot;lblAdd&quot;>${3}&lt;/span>                                                            ${6}${5}                                                        " />
+																<br />
+																<input name="ctl00$ContentPlaceHolderBody$TextBox1"
+																	type="text" id="ContentPlaceHolderBody_TextBox1" style="visibility: hidden; display: none;" />
+																<br />
+																<span id="ContentPlaceHolderBody_lblMsgFullNameRequired">
+																	<font color="Red"></font>
+																</span>
+															</td>
+															<td width="42%" align="left">
+																<input type="submit"
+																	name="ctl00$ContentPlaceHolderBody$btnFullNameSearch"
+																	value="Search" id="ContentPlaceHolderBody_btnFullNameSearch" />&nbsp;
+																<input type="submit"
+																	name="ctl00$ContentPlaceHolderBody$btnClear" value="Clear"
+																	onclick="clearTextBox(); return false;" id="ContentPlaceHolderBody_btnClear" />
+																<br />
+																<p>
+																	<div class="warning_text">
+																		<span id="ContentPlaceHolderBody_lblSearchResultAlert1"></span>
+																		<span id="ContentPlaceHolderBody_lblSearchResultAlert2"></span>
+																		<span id="ContentPlaceHolderBody_lblSearchResultAlert3"></span>
+																	</div>
+																</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<br class="clearfloat" />
+											<div class="btmCenter" style="clear: both;">
+												<div class="btmLeft">
+												</div>
+												<div class="btmRight">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br class="clearfloat" />
+								<div class="fixedContainer12"
+									style="padding: 1px 0px 5px 0px; width: 955px; margin: 0 auto;">
+									<div style="float: left; width: 955px">
+										<div class="topCenter">
+											<div class="topLeft">
+											</div>
+											<div class="topRight">
+											</div>
+										</div>
+										<div class="midLeft">
+											<div class="midRight">
+												<div class="midCenter" style="padding-left: 5px; padding-right: 5px;">                                        <!--[if !IE]>END START ROUNDED CONTENT WRAPPER<![endif] -->
+													<div class="fluid3Col_Container">
+														<table id="ContentPlaceHolderBody_tbGdirMain" width="100%">
+															<tr>
+																<td
+																	style="width: 100%; padding: 0px; vertical-align: top; z-index: 0;">
+																	<div id="content" class="content_non_bg">                                                            <!--[if !IE]>END START ROUNDED CONTENT WRAPPER<![endif] -->
+																		<div class="fixed1Col_Container">
+																			<div class="searchBar" style="margin-right: 17px; display: none">
+																				<table
+																					id="ContentPlaceHolderBody_tbDownloadContactSection"
+																					rules="all" bordercolor="Black" border="1" width="100%">
+																					<tr>
+																						<td>
+																							<font size="3">
+																								<strong>
+																									<span id="ContentPlaceHolderBody_lblName">
+																										<b>
+																											<font size="3">Name</font>
+																										</b>
+																									</span>
+																								</strong>
+																								Wang, Meng
+																							</font>
+																						</td>
+																						<td></td>
+																						<td align="center" valign="middle">
+																							<font size="3">
+																								<strong>
+																									<span id="ContentPlaceHolderBody_lblGEID">
+																										<b>
+																											<font size="3">GEID - </font>
+																										</b>
+																									</span>
+																								</strong>
+																								1010960249                                                                                &nbsp;&nbsp;
+																								<strong>
+																									<span id="ContentPlaceHolderBody_lblSOEIDHdr">
+																										<b>
+																											<font size="3">SOEID - </font>
+																										</b>
+																									</span>
+																								</strong>
+																								MW60249
+																							</font>
+																						</td>
+																						<td align="right" valign="middle">
+																							<font size="3"></font>
+																						</td>
+																					</tr>
+																				</table>
+																			</div>
+																			<div class="fluid4Col_Container">
+																				<div class="profileContent_long">
+																					<table id="ContentPlaceHolderBody_tbRDP_Main"
+																						width="100%">
+																						<tr>
+																							<td>
+																								<font size="3">
+																									<div id="GDIRprofile_left">
+																										<div class="DotRight" style="height: 100%">
+																											<div class="GDIRbiz_card_left">
+																												<div class="biz_card_left">
+																													<div class="biz_card_top">
+																													</div>
+																													<div class="biz_card_middle">
+																														<div
+																															id="ContentPlaceHolderBody_DivBusTextLeft2"
+																															class="biz_text_left_nopic">
+																															<div id="ContentPlaceHolderBody_divEmpImage"
+																																style="float: right;">
+																															</div>
+																															<h5 style="width: 180px">
+																																<span
+																																	id="ContentPlaceHolderBody_litFullName"
+																																	style="color: #ff0000; font-size: 13; font-weight: bold; width: 180px; height: auto; padding: 0; margin: 0">Wang, Meng </span>
+																															</h5>
+																															<br />
+																															<p>
+																																BUILDING 5, 258 JINKANG ROAD
+																																<br />
+																																Shanghai&nbsp;                                                                        &nbsp;
+																																CN&nbsp;
+																																200127
+																																<br />
+																																<br />
+																																<div class="wrapword">
+																																	<a
+																																		id="ContentPlaceHolderBody_hyplnkEmail_MainSection"
+																																		href="mailto:miya.wang@iuo.citi.com">miya.wang@iuo.citi.com</a>
+																																</div>
+																															</p>
+																														</div>
+																													</div>
+																													<div class="biz_card_bottom">
+																													</div>
+																												</div>
+																												<br class="clearfloat" />
+																												<div
+																													id="ContentPlaceHolderBody_divCollapseExpand"
+																													class="collapse_expand_links">
+																													<table>
+																														<tr>
+																															<td style="text-align: left">
+																																<a href="#"
+																																	id="ContentPlaceHolderBody_a_imgIM"
+																																	style="text-decoration: none; padding-left: 5px">
+																																	<img id="ContentPlaceHolderBody_imgIM"
+																																		src="images/comment.png" alt="Chat"
+																																		align="middle" style="vertical-align: middle" />
+																																</a>
+																																<a href="sip:miya.wang@iuo.citi.com"
+																																	id="ContentPlaceHolderBody_a_IMCall_Top" 
+																																	<a
+																																		href="javascript:launchTrackLocationURL('1010960249');"
+																																		id="ContentPlaceHolderBody_a_imgPeopleTrack"
+																																		style="text-decoration: none; padding-left: 5px">
+																																		<img
+																																			id="ContentPlaceHolderBody_people_track"
+																																			src="images/location.gif" alt="Seat Location"
+																																			align="middle" style="vertical-align: middle" />
+																																	</a>
+																																	<a
+																																		id="ContentPlaceHolderBody_lnkbtnPeopleTrack"
+																																		href="javascript:launchTrackLocationURL(&#39;1010960249&#39;);"
+																																		style="padding-left: 1px;">Location</a>
+																																	<a
+																																		href="https://collaborate.citi.net/displayUser.jspa?loginID=MW60249"
+																																		id="ContentPlaceHolderBody_a_imgCollaborate"
+																																		style="text-decoration: none; padding-left: 5px;"
+																																		target="_blank">
+																																		<img
+																																			id="ContentPlaceHolderBody_imgCollaborate"
+																																			src="images/icon_Collaborate.gif"
+																																			alt="Collaborate Site" align="middle"
+																																			style="vertical-align: middle" />
+																																	</a>
+																																	<a
+																																		href="https://collaborate.citi.net/displayUser.jspa?loginID=MW60249"
+																																		id="ContentPlaceHolderBody_a_Collaborate"
+																																		target="_blank" style="padding-left: 1px;">Collaborate</a>
+																																	<a
+																																		href="javascript:Launch_PrinterFriendlyPage('GDIR_Rdp_Printer_Friendly.aspx?GEID=1010960249');"
+																																		id="ContentPlaceHolderBody_a_imgPrintFriendly"
+																																		style="text-decoration: none; padding-left: 5px;">
+																																		<img
+																																			id="ContentPlaceHolderBody_imgPrintFriendly"
+																																			src="images/icon_print.gif" alt="Print"
+																																			align="middle" style="vertical-align: middle" />
+																																	</a>
+																																	<a
+																																		href="javascript:Launch_PrinterFriendlyPage('GDIR_Rdp_Printer_Friendly.aspx?GEID=1010960249');"
+																																		id="ContentPlaceHolderBody_a_PrintFriendly"
+																																		style="padding-left: 1px;" title="Print">Print
+																																	</a>
+																																	<a
+																																		href="Gdir_Download_Contact.aspx?Lang=ENGLISH&VcardGEID=1010960249"
+																																		id="ContentPlaceHolderBody_a_imgDownloadContact"
+																																		style="text-decoration: none; padding-left: 5px;">
+																																		<img src="images/download_contact.png"
+																																			id="ContentPlaceHolderBody_imgDownloadContact"
+																																			alt="Outlook Contact"
+																																			style="border-width: 0px; vertical-align: middle;" />
+																																	</a>
+																																	<a
+																																		id="ContentPlaceHolderBody_hyplnkDownloadContact"
+																																		href="Gdir_Download_Contact.aspx?Lang=ENGLISH&amp;VcardGEID=1010960249"
+																																		target="_blank">Download</a>
+																															</td>                                                                                                                                                                                                                                                                                                                                                                                                                                <!--<a href="#" onclick="ExpandAll_Click();"><img src="images/collapse_button.gif" 
+																																style="vertical-align:middle;" alt="expand icon" width="16" height="14" /></a> -->                                                                                                        <!-- <a href="#" id="ContentPlaceHolderBody_hlExpand" onclick="ExpandAll_Click();"><strong>Expand 
+																																All</strong></a> &nbsp;&nbsp;&nbsp; -->                                                                                                        <!--<a href="#" style="margin-left: 10px;" onclick="CollapseAll_Click();"><img 
+																																src="images/expand_button.gif" style="vertical-align:middle;" alt="collapse 
+																																icon" width="16" height="14" /></a> -->                                                                                                        <!-- <a href="#" id="ContentPlaceHolderBody_hlCollapse" onclick="CollapseAll_Click();"><strong>Collapse 
+																																All</strong></a> -->
+																														</tr>
+																													</table>
+																												</div>
+																												<div class="GDIR_ID_info_box">
+																													<div class="topCenter">
+																														<div class="topLeft">
+																														</div>
+																														<div class="topRight">
+																														</div>
+																													</div>
+																													<div class="GDIRmidRight">
+																														<div class="GDIRwidget_text_left">
+																															<input type="hidden"
+																																name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_ID_ClientState"
+																																id="ContentPlaceHolderBody_CollapsiblePanelExtender_ID_ClientState" />
+																															<div id="ContentPlaceHolderBody_pnlIDTitle">
+																																<b>
+																																	<font color="#0099CC" size="3">
+																																		<table cellpadding="0"
+																																			cellspacing="0"
+																																			style="padding-left: -10px; font-size: 14px">
+																																			<tr>
+																																				<td
+																																					style="color: #0099CC; font-weight: bold">
+																																					<input type="image"
+																																						name="ctl00$ContentPlaceHolderBody$imgbtnID_Expand_Collapse"
+																																						id="ContentPlaceHolderBody_imgbtnID_Expand_Collapse"
+																																						src="images/expand_button.gif" />                                                                                                                        &nbsp;&nbsp;
+																																					<u>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblIDTitle">ID Information</span>
+																																					</u>
+																																				</td>
+																																				<td>
+																																					<div style="float: right">
+																																						<b> GEID 1010960249 / SOEID
+																																							MW60249</b>
+																																					</div>
+																																				</td>
+																																			</tr>
+																																		</table>
+																																	</font>
+																																</b>
+																															</div>
+																															<div
+																																id="ContentPlaceHolderBody_pnlIDContent"
+																																align="left">
+																																<font size="3">
+																																	<table
+																																		id="ContentPlaceHolderBody_tbIDInfo"
+																																		cellspacing="0" cellpadding="0" width="75%">
+																																		<tr>
+																																			<td width="1%">
+																																				<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td width="35%">
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblGEID_IDSection">GEID</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">1010960249</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblSOEID">SOEID</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">MW60249</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblRITSID">RITS ID</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">1010960249</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblSourceSystemID">Source System ID</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">NEMS</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblPrimaryLogInID">Primary Login ID</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">MW60249</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblFCID">FCID</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																		</tr>
+																																	</table>
+																																</font>
+																															</div>
+																														</div>
+																													</div>
+																													<div class="btmCenter">
+																														<div class="btmLeft">
+																														</div>
+																														<div class="btmRight">
+																														</div>
+																													</div>
+																												</div>
+																												<br class="clearfloat" />
+																												<div class="GDIR_ID_info_box">
+																													<div class="topCenter">
+																														<div class="topLeft">
+																														</div>
+																														<div class="topRight">
+																														</div>
+																													</div>
+																													<div class="GDIRmidRight">
+																														<div class="GDIRwidget_text_left">
+																															<input type="hidden"
+																																name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Work_ClientState"
+																																id="ContentPlaceHolderBody_CollapsiblePanelExtender_Work_ClientState" />
+																															<div
+																																id="ContentPlaceHolderBody_pnlWorkTitle">
+																																<b>
+																																	<font color="#0099CC" size="3">
+																																		<table cellpadding="0"
+																																			cellspacing="0"
+																																			style="padding-left: -10px; font-size: 14px">
+																																			<tr>
+																																				<td
+																																					style="color: #0099CC; font-weight: bold">
+																																					<input type="image"
+																																						name="ctl00$ContentPlaceHolderBody$imgbtnWork_Expand_Collapse"
+																																						id="ContentPlaceHolderBody_imgbtnWork_Expand_Collapse"
+																																						src="images/expand_button.gif" />                                                                                                                                                                                                        &nbsp;&nbsp;
+																																					<u>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblWorkTitle">Work Information</span>
+																																					</u>
+																																				</td>
+																																			</tr>
+																																		</table>
+																																	</font>
+																																</b>
+																															</div>
+																															<div
+																																id="ContentPlaceHolderBody_pnlWorkContent">
+																																<font size="3">
+																																	<table
+																																		id="ContentPlaceHolderBody_tbWorkInfo"
+																																		cellspacing="0" cellpadding="0" width="95%">
+																																		<tr>
+																																			<td width="1%">
+																																				<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td width="35%">
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblJobTitle">Job Title</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">QA Analyst/Tester
+																																					Senior</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td width="1%">
+																																				<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td width="25%">
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblJobFunction">Job Function</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">Technology</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td width="1%">
+																																				<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td width="25%">
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblJobFamily">Job Family</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">Technology Quality
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td width="1%">
+																																				<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td width="25%">
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblOfficerTitle">Officer Title</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td width="1%">
+																																				<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td width="25%">
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblGOC_Code">GOC</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<a
+																																						id="ContentPlaceHolderBody_hyplnkGOC_Code"
+																																						href="GDIR_GOC_Search_Result.aspx?SearchType=GOCSearch&amp;GOC_Code=12465615&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_GOC_RDP_WI&amp;Screen_Code=RDP">12465615 > SHARED SW SERV
+																																						SHANGHAI HC</a>
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblMSPath">Managed Segment Path</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedSegmentSearch&ManagedSegmentCode=1&ComingFrom=RDP&Sub_Action_Code=ADV_MS_RDP_MBH&Screen_Code=RDP'>Total Citi [L1]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedSegmentSearch&ManagedSegmentCode=20448&ComingFrom=RDP&Sub_Action_Code=ADV_MS_RDP_MBH&Screen_Code=RDP'>Core Citi Businesses [L2]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedSegmentSearch&ManagedSegmentCode=3&ComingFrom=RDP&Sub_Action_Code=ADV_MS_RDP_MBH&Screen_Code=RDP'>Institutional Clients Group
+																																						[L</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedSegmentSearch&ManagedSegmentCode=23078&ComingFrom=RDP&Sub_Action_Code=ADV_MS_RDP_MBH&Screen_Code=RDP'>ICG O&T [L4]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedSegmentSearch&ManagedSegmentCode=22941&ComingFrom=RDP&Sub_Action_Code=ADV_MS_RDP_MBH&Screen_Code=RDP'>ICG Technology [L5]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedSegmentSearch&ManagedSegmentCode=9909306&ComingFrom=RDP&Sub_Action_Code=ADV_MS_RDP_MBH&Screen_Code=RDP'>Information Services Group
+																																						Tec</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedSegmentSearch&ManagedSegmentCode=25643&ComingFrom=RDP&Sub_Action_Code=ADV_MS_RDP_MBH&Screen_Code=RDP'>ISG Tech Data Quality [L7]
+																																					</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedSegmentSearch&ManagedSegmentCode=22497&ComingFrom=RDP&Sub_Action_Code=ADV_MS_RDP_MBH&Screen_Code=RDP'>ISG Distribution Technology
+																																						[L</a>
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblMGPath">Managed Geography Path</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedGeographySearch&ManagedGeographyCode=1000&ComingFrom=RDP&Sub_Action_Code=ADV_MG_RDP_MBH&Screen_Code=RDP'>Total Citi Geography [L1]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedGeographySearch&ManagedGeographyCode=1130&ComingFrom=RDP&Sub_Action_Code=ADV_MG_RDP_MBH&Screen_Code=RDP'>International [L2]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedGeographySearch&ManagedGeographyCode=1002&ComingFrom=RDP&Sub_Action_Code=ADV_MG_RDP_MBH&Screen_Code=RDP'>Asia Pacific [L3]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedGeographySearch&ManagedGeographyCode=1060&ComingFrom=RDP&Sub_Action_Code=ADV_MG_RDP_MBH&Screen_Code=RDP'>Asia ex Japan [L4]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedGeographySearch&ManagedGeographyCode=1008&ComingFrom=RDP&Sub_Action_Code=ADV_MG_RDP_MBH&Screen_Code=RDP'>Asia Other [L5]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedGeographySearch&ManagedGeographyCode=X68&ComingFrom=RDP&Sub_Action_Code=ADV_MG_RDP_MBH&Screen_Code=RDP'>Asia EM Hub node [L6]</a>
+																																					->
+																																					<a
+																																						href='Gdir_Result.aspx?SearchType=ManagedGeographySearch&ManagedGeographyCode=X68_R01&ComingFrom=RDP&Sub_Action_Code=ADV_MG_RDP_MBH&Screen_Code=RDP'>China CSC [L7]</a>
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr
+																																			id="ContentPlaceHolderBody_trExpenses">
+																																			<td width="1%">
+																																				<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td width="25%">
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblExpenseCode">Expense Code</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<a
+																																						id="ContentPlaceHolderBody_hyplnkExpenseCode"
+																																						href="Gdir_Result.aspx?SearchType=ExpenseCodeSearch&amp;ExpenseCode=&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_EXP_RDP_WI&amp;Screen_Code=RDP"></a>
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																		</tr>
+																																	</table>
+																																</font>
+																															</div>
+																														</div>
+																													</div>
+																													<br class="clearfloat" />
+																													<div class="btmCenter">
+																														<div class="btmLeft">
+																														</div>
+																														<div class="btmRight">
+																														</div>
+																													</div>
+																												</div>
+																												<br class="clearfloat" />
+																												<div class="GDIR_ID_info_box">
+																													<div class="topCenter">
+																														<div class="topLeft">
+																														</div>
+																														<div class="topRight">
+																														</div>
+																													</div>
+																													<div class="GDIRmidRight">
+																														<div class="GDIRwidget_text_left">
+																															<input type="hidden"
+																																name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Contact_ClientState"
+																																id="ContentPlaceHolderBody_CollapsiblePanelExtender_Contact_ClientState" />
+																															<div
+																																id="ContentPlaceHolderBody_pnlContactTitle">
+																																<b>
+																																	<font color="#0099CC" size="3">
+																																		<table cellpadding="0"
+																																			cellspacing="0"
+																																			style="padding-left: -10px; font-size: 14px">
+																																			<tr>
+																																				<td
+																																					style="color: #0099CC; font-weight: bold">
+																																					<input type="image"
+																																						name="ctl00$ContentPlaceHolderBody$imgbtnContact_Expand_Collapse"
+																																						id="ContentPlaceHolderBody_imgbtnContact_Expand_Collapse"
+																																						src="images/expand_button.gif" />                                                                                                                                                                                                        &nbsp;&nbsp;
+																																					<u>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblContactTitle">Contact Information</span>
+																																					</u>
+																																					<td style="text-align: right">
+																																						<div
+																																							id="ContentPlaceHolderBody_divAdminContactText"
+																																							style="float: right"></div>
+																																					</td>
+																																			</tr>
+																																		</table>
+																																	</font>
+																																</b>
+																															</div>
+																															<div
+																																id="ContentPlaceHolderBody_pnlContactContent"
+																																align="left">
+																																<font size="3">
+																																	<table
+																																		id="ContentPlaceHolderBody_tbContactInfo"
+																																		cellspacing="0" cellpadding="0" width="75%">
+																																		<tr>
+																																			<td width="35%">
+																																				<font size="3">                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblEmail">E-Mail</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<a
+																																						id="ContentPlaceHolderBody_hyplnkEmail"
+																																						href="mailto:miya.wang@iuo.citi.com">miya.wang@iuo.citi.com</a>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																																					<a href="sip:miya.wang@iuo.citi.com"
+																																						id="ContentPlaceHolderBody_a_IMCall">Chat</a>
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3">                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblWorkPhone">Work Phone 1</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">                                                                                                                                                                                                        &nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<a
+																																						id="ContentPlaceHolderBody_HyperLink1"></a>                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3">                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblAltWorkPhone">Work Phone 2</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3">                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblFax">Fax</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3">                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																																					<strong>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																		</tr>
+																																	</table>
+																																</font>
+																															</div>
+																														</div>
+																													</div>
+																													<div class="btmCenter">
+																														<div class="btmLeft">
+																														</div>
+																														<div class="btmRight">
+																														</div>
+																													</div>
+																												</div>
+																												<br class="clearfloat" />
+																												<div class="GDIR_ID_info_box">
+																													<div class="topCenter">
+																														<div class="topLeft">
+																														</div>
+																														<div class="topRight">
+																														</div>
+																													</div>
+																													<div class="GDIRmidRight">
+																														<div class="GDIRwidget_text_left">
+																															<input type="hidden"
+																																name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Location_ClientState"
+																																id="ContentPlaceHolderBody_CollapsiblePanelExtender_Location_ClientState" />
+																															<div
+																																id="ContentPlaceHolderBody_pnlLocationTitle">
+																																<font color="#0099CC" size="3">
+																																	<table cellpadding="0"
+																																		cellspacing="0"
+																																		style="padding-left: -10px; font-size: 14px">
+																																		<tr>
+																																			<td
+																																				style="color: #0099CC; font-weight: bold">
+																																				<input type="image"
+																																					name="ctl00$ContentPlaceHolderBody$imgbtnLocation_Expand_Collapse"
+																																					id="ContentPlaceHolderBody_imgbtnLocation_Expand_Collapse"
+																																					src="images/expand_button.gif" />                                                                                                                        &nbsp;&nbsp;
+																																				<u>
+																																					<span
+																																						id="ContentPlaceHolderBody_lblLocationTitle">Location Information</span>
+																																				</u>
+																																			</td>
+																																			<td>
+																																				<div style="float: right">
+																																					<b>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblLocalTime">Local Date Time</span>
+																																					</b>
+																																					&nbsp 09 Nov 2018 - 06:27 PM
+																																				</div>
+																																			</td>
+																																		</tr>
+																																	</table>
+																																</font>
+																															</div>
+																															<div
+																																id="ContentPlaceHolderBody_pnlLocationContent">
+																																<font size="3">
+																																	<table
+																																		id="ContentPlaceHolderBody_tbLocationInfo"
+																																		cellspacing="0" cellpadding="0" width="75%">
+																																		<tr>
+																																			<td width="1%">
+																																				<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+																																				</font>
+																																			</td>
+																																			<td width="35%">
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblAddress">Address</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<span
+																																						id="ContentPlaceHolderBody_lblAddress_Location">
+																																						BUILDING 5, 258 JINKANG ROAD
+																																						<br />
+																																						PUDONG DISTRICT
+																																						<br />
+																																						SHANGHAI LUJIAZUI CENTURY FINANCE
+																																						PLAZA BUILDING 5
+																																						<br />
+																																					</span>
+																																				</strong>
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblBldFlrZone">Building/Floor/Zone</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"> / / </font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblCity">City</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">Shanghai</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblState">State/Province</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblPostalCode">Postal Code</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">200127</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblCountry">Country</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">CN - CHINA</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblLocationCode">Location Code</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">52118</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<strong>
+																																						<span
+																																							id="ContentPlaceHolderBody_lblMailCode">Mail Code</span>
+																																					</strong>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3"></font>
+																																			</td>
+																																		</tr>
+																																	</table>
+																																</font>
+																															</div>
+																														</div>
+																													</div>
+																													<div class="btmCenter">
+																														<div class="btmLeft">
+																														</div>
+																														<div class="btmRight">
+																														</div>
+																													</div>
+																												</div>
+																												<br class="clearfloat" />
+																												<div class="horizontalDivider2">
+																												</div>
+																												<div style="float: left">
+																													<strong>
+																														<span
+																															id="ContentPlaceHolderBody_lblMgrRptInfo">
+																															<font color="Navy">Managers and Report
+																																Information</font>
+																														</span>
+																													</strong>                                                                                                &nbsp;&nbsp;&nbsp;
+																													<img src="images/icon_question.gif"
+																														id="ContentPlaceHolderBody_MGR_HELP"
+																														width="16" height="16"
+																														style="cursor: hand; border-width: 0px; vertical-align: middle;" />
+																													<div id="ContentPlaceHolderBody_pnlMGR_HELP"
+																														style="padding: 1px 1px 1px 5px; font-size: 8pt; color: Black;"> Please refer to FAQ to learn how to
+																														update your manager, direct reports,
+																														matrix reports and non-employee reports
+																													</div>
+																												</div>
+																												<div
+																													style="float: right; padding-right: 20px; display: none;">
+																													<img id="ContentPlaceHolderBody_imgOrgChart1"
+																														title="My Org Chart" src="images/tree_icon.jpg"
+																														align="middle" height="20"
+																														style="vertical-align: middle" />&nbsp;
+																													<a href="#"
+																														id="ContentPlaceHolderBody_a_OrgChart1">My Org Chart</a>
+																												</div>
+																												<div class="GDIR_ID_info_box">
+																													<div class="topCenter">
+																														<div class="topLeft">
+																														</div>
+																														<div class="topRight">
+																														</div>
+																													</div>
+																													<div class="GDIRmidRight">
+																														<div class="GDIRwidget_text_left2">
+																															<input type="hidden"
+																																name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Manager_HR_ClientState"
+																																id="ContentPlaceHolderBody_CollapsiblePanelExtender_Manager_HR_ClientState" />
+																															<div
+																																id="ContentPlaceHolderBody_pnlManager_HRTitle">
+																																<b>
+																																	<font color="#0099CC" size="3">
+																																		<input type="image"
+																																			name="ctl00$ContentPlaceHolderBody$imgbtnManager_HR_Expand_Collapse"
+																																			id="ContentPlaceHolderBody_imgbtnManager_HR_Expand_Collapse"
+																																			src="images/expand_button.gif" />                                                                                                                                                                                &nbsp;&nbsp;
+																																		<u>
+																																			<span
+																																				id="ContentPlaceHolderBody_lblManager_HRTitle">
+																																				<b>Business contact of Wang, Meng
+																																				</b>
+																																			</span>
+																																		</u>
+																																	</font>
+																																</b>
+																															</div>
+																															<div
+																																id="ContentPlaceHolderBody_pnlManager_HRContent">
+																																<font size="3">
+																																	<table>
+																																		<tr>
+																																			<td>
+																																				<font size="3">
+																																					<b>Name</b>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<b>Role</b>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<b>GOC Description</b>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<b>Phone</b>
+																																				</font>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td>
+																																				<font size="3">
+																																					<a
+																																						href="GDIR_Result_Detail.aspx?webGEID=1001259132">Zhou, Qiong Julia </a>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">
+																																					<img
+																																						id="ContentPlaceHolderBody_imgHelpSup2"
+																																						src="images/icon_information.gif"
+																																						style="cursor:hand;border-width: 0px;vertical-align: middle;" />
+																																					<div
+																																						id="ContentPlaceHolderBody_pnlHelpSup2"
+																																						style="padding:1px 1px 1px 5px; font-size:8pt; color:Black; border:solid 2px #CFEAF9; background-color:#FFFFDB; text-align:left;"> Business Contact is the
+																																						Citigroup employee who is the
+																																						primary contact for the
+																																						non-employee and will perform all
+																																						entitlement reviews.									</div>
+																																					<span> Business Contact</span>
+																																				</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">SHARED SW SERV
+																																					SHANGHAI HC</font>
+																																			</td>
+																																			<td>
+																																				<font size="3">+86 (21) 2029-8585
+																																				</font>
+																																			</td>
+																																		</tr>
+																																	</table>
+																																</font>
+																															</div>
+																															<br class="clearfloat" />
+																														</div>
+																													</div>
+																													<div class="btmCenter">
+																														<div class="btmLeft">
+																														</div>
+																														<div class="btmRight">
+																														</div>
+																													</div>
+																												</div>
+																												<div class="GDIR_ID_info_box">
+																													<div class="topCenter">
+																														<div class="topLeft">
+																														</div>
+																														<div class="topRight">
+																														</div>
+																													</div>
+																													<div class="GDIRmidRight">
+																														<div class="GDIRwidget_text_left2">
+																															<input type="hidden"
+																																name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Direct_Report_ClientState"
+																																id="ContentPlaceHolderBody_CollapsiblePanelExtender_Direct_Report_ClientState" />
+																															<div
+																																id="ContentPlaceHolderBody_pnlDirect_ReportTitle">
+																																<b>
+																																	<font color="#0099CC" size="3">
+																																		<input type="image"
+																																			name="ctl00$ContentPlaceHolderBody$imgbtnDirect_Report_Expand_Collapse"
+																																			id="ContentPlaceHolderBody_imgbtnDirect_Report_Expand_Collapse"
+																																			src="images/expand_button.gif" />                                                                                                                                                                                &nbsp;&nbsp;
+																																		<u>
+																																			<span
+																																				id="ContentPlaceHolderBody_lblDirect_ReportTitle">Direct Reports of Wang, Meng (0)
+																																			</span>
+																																		</u>
+																																	</font>
+																																</b>
+																															</div>
+																															<div
+																																id="ContentPlaceHolderBody_pnlDirect_ReportContent">
+																																<font size="3">
+																																	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This
+																																		person has no direct reports.
+																																	</span>
+																																</font>
+																															</div>
+																															<br class="clearfloat" />
+																														</div>
+																													</div>
+																													<div class="btmCenter">
+																														<div class="btmLeft">
+																														</div>
+																														<div class="btmRight">
+																														</div>
+																													</div>
+																												</div>
+																												<div class="GDIR_ID_info_box">
+																													<div class="topCenter">
+																														<div class="topLeft">
+																														</div>
+																														<div class="topRight">
+																														</div>
+																													</div>
+																													<div class="GDIRmidRight">
+																														<div class="GDIRwidget_text_left2">
+																															<input type="hidden"
+																																name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Matrix_Report_ClientState"
+																																id="ContentPlaceHolderBody_CollapsiblePanelExtender_Matrix_Report_ClientState" />
+																															<div
+																																id="ContentPlaceHolderBody_pnlMatrix_ReportTitle">
+																																<font color="#0099CC" size="3">
+																																	<input type="image"
+																																		name="ctl00$ContentPlaceHolderBody$imgbtnMatrix_Report_Expand_Collapse"
+																																		id="ContentPlaceHolderBody_imgbtnMatrix_Report_Expand_Collapse"
+																																		src="images/expand_button.gif" />                                                                                                            &nbsp;&nbsp;
+																																	<u>
+																																		<span
+																																			id="ContentPlaceHolderBody_lblMatrix_ReportTitle">
+																																			<b>Matrix Reports of Wang, Meng (0)
+																																			</b>
+																																		</span>
+																																	</u>
+																																</font>
+																															</div>
+																															<div
+																																id="ContentPlaceHolderBody_pnlMatrix_ReportContent">
+																																<font size="3">
+																																	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This
+																																		person has no matrix reports.
+																																	</span>
+																																</font>
+																															</div>
+																															<br class="clearfloat" />
+																														</div>
+																													</div>
+																													<div class="btmCenter">
+																														<div class="btmLeft">
+																														</div>
+																														<div class="btmRight">
+																														</div>
+																													</div>
+																												</div>
+																												<div class="GDIR_ID_info_box">
+																													<div class="topCenter">
+																														<div class="topLeft">
+																														</div>
+																														<div class="topRight">
+																														</div>
+																													</div>
+																													<div class="GDIRmidRight">
+																														<div class="GDIRwidget_text_left2">
+																															<input type="hidden"
+																																name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Emp_NonEmp_ClientState"
+																																id="ContentPlaceHolderBody_CollapsiblePanelExtender_Emp_NonEmp_ClientState" />
+																															<div
+																																id="ContentPlaceHolderBody_pnlEmp_NonEmpTitle">
+																																<font color="#0099CC" size="3">
+																																	<input type="image"
+																																		name="ctl00$ContentPlaceHolderBody$imgbtnEmp_NonEmp_Expand_Collapse"
+																																		id="ContentPlaceHolderBody_imgbtnEmp_NonEmp_Expand_Collapse"
+																																		src="images/expand_button.gif" />                                                                                                            &nbsp;&nbsp;
+																																	<u>
+																																		<span
+																																			id="ContentPlaceHolderBody_lblEmp_NonEmpTitle">
+																																			<b>Non-Employees of Wang, Meng (0)
+																																			</b>
+																																		</span>
+																																	</u>
+																																</font>
+																															</div>
+																															<div
+																																id="ContentPlaceHolderBody_pnlEmp_NonEmpContent">
+																																<font size="3">
+																																	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This
+																																		person has no non-employees.
+																																	</span>
+																																	<table
+																																		id="ContentPlaceHolderBody_NonEmp_Report_Table">
+																																		<tr align="right" valign="bottom">
+																																			<td colspan="3">
+																																				<font size="3">
+																																					<img src="images/icon_excel.gif"
+																																						alt="Non-Employees in population"
+																																						style="vertical-align: middle;" />
+																																					<a class="aspNetDisabled">Non-Employees in
+																																						population</a>
+																																					<span>&nbsp;&nbsp;&nbsp;&nbsp;
+																																					</span>
+																																					<img src="images/icon_excel.gif"
+																																						alt="Non-Employee Reports and Below"
+																																						style="vertical-align: middle;" />
+																																					<a class="aspNetDisabled">Non-Employee Reports and
+																																						Below</a>
+																																				</font>
+																																			</td>
+																																		</tr>
+																																	</table>
+																																</font>
+																															</div>
+																															<br class="clearfloat" />
+																														</div>
+																													</div>
+																													<div class="btmCenter">
+																														<div class="btmLeft">
+																														</div>
+																														<div class="btmRight">
+																														</div>
+																													</div>
+																												</div>
+																												<br class="clearfloat" />
+																												<div style="float: left">
+																													<strong>
+																													</strong>
+																												</div>
+																											</div>
+																								</font>
+																							</td>
+																							<td valign="top" style="vertical-align: top">
+																								<div id="GDIRprofile_right" style="margin-right: 17px;">
+																									<div class="profile_widgets2">
+																										<div class="profile_top">
+																										</div>
+																										<div class="profile_middle">
+																											<div class="widget_text_left" style="width: 90%;">
+																												<input type="hidden"
+																													name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_PBH_ClientState"
+																													id="ContentPlaceHolderBody_CollapsiblePanelExtender_PBH_ClientState" />
+																												<div id="ContentPlaceHolderBody_pnlPBHTitle">
+																													<font color="#0099CC" size="3">
+																														<input type="image"
+																															name="ctl00$ContentPlaceHolderBody$imgbtn_PBH_Expand_Collapse"
+																															id="ContentPlaceHolderBody_imgbtn_PBH_Expand_Collapse"
+																															src="images/expand_button.gif" />                                                                                                        &nbsp;&nbsp;
+																														<u>
+																															<span
+																																id="ContentPlaceHolderBody_lblPBHTitle"
+																																title="The People-Based tree is based on Direct Manager-to-Employee relationships.">
+																																<b>People Based</b>
+																															</span>
+																														</u>
+																													</font>
+																												</div>
+																												<div id="ContentPlaceHolderBody_pnlPBHContent"
+																													style="background-color: #F2F2F2; font-size: Small; margin: 7px 0px 7px 7px; padding: 7px;">
+																													<font size="3">
+																														<span>*Non-Employees do not have a
+																															manager-to-non-employee relationship in
+																															the people-based tree.</span>
+																													</font>
+																												</div>
+																											</div>
+																										</div>
+																										<div class="profile_bottom">
+																										</div>
+																									</div>
+																									<div class="profile_widgets2">
+																										<div class="profile_top">
+																										</div>
+																										<div class="profile_middle">
+																											<div class="widget_text_left" style="width: 90%;">
+																												<input type="hidden"
+																													name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_ManagedSegment_ClientState"
+																													id="ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedSegment_ClientState" />
+																												<div
+																													id="ContentPlaceHolderBody_pnlManagedSegmentTitle">
+																													<font color="#0099CC" size="3">
+																														<input type="image"
+																															name="ctl00$ContentPlaceHolderBody$imgbtn_ManagedSegment_Expand_Collapse"
+																															id="ContentPlaceHolderBody_imgbtn_ManagedSegment_Expand_Collapse"
+																															src="images/expand_button.gif" />                                                                                                        &nbsp;&nbsp;
+																														<u>
+																															<span
+																																id="ContentPlaceHolderBody_lblManagedSegmentTitle"
+																																title="Managed Segment replaces CBOH as the standard Business Organization Hierarchy of Citi. Managed Segment is split into Citicorp and Citi Holdings at the top levels, and each individual business defines the lower level structures of the hierarchy.">
+																																<b>Managed Segment</b>
+																															</span>
+																														</u>
+																													</font>
+																												</div>
+																												<div
+																													id="ContentPlaceHolderBody_pnlManagedSegmentContent"
+																													style="background-color: #F2F2F2; font-size: Small; margin: 7px 0px 7px 7px; padding: 7px;">
+																													<font size="3">
+																														<table cellspacing="1" cellpadding="1">
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=1&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Total Citi [L1]
+																																			<br />
+																																			1
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=20448&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Core Citi Businesses [L2]
+																																			<br />
+																																			20448
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=3&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Institutional Clients Group [L
+																																			<br />
+																																			3
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=23078&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			ICG O&T [L4]
+																																			<br />
+																																			23078
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=22941&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			ICG Technology [L5]
+																																			<br />
+																																			22941
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=9909306&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Information Services Group Tec
+																																			<br />
+																																			9909306
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=25643&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			ISG Tech Data Quality [L7]
+																																			<br />
+																																			25643
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="#e5effa">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedSegmentSearch&amp;ManagedSegmentCode=22497&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			ISG Distribution Technology [L
+																																			<br />
+																																			22497
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td></td>
+																															</tr>
+																															<tr>
+																																<td></td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img
+																																		id="ContentPlaceHolderBody_imgHelpMS398"
+																																		src="images/icon_information.gif"
+																																		style="cursor:hand;border-width: 0px;vertical-align: middle;" />
+																																	<div
+																																		id="ContentPlaceHolderBody_pnlHelpMS30"
+																																		style="padding:1px 1px 1px 5px; font-size:8pt; color:Black; border:solid 2px #CFEAF9; background-color:#FFFFDB; text-align:left; display:none;"> This is the Global
+																																		Organizational Code (GOC) the worker
+																																		reports to. The lowest-level CBOH node
+																																		may contain multiple GOCs.									</div>
+																																	<span>&nbsp;&nbsp;
+																																	</span>
+																																	<span>This worker鈥檚 GOC is </span>
+																																	<span>&nbsp;&nbsp;
+																																	</span>
+																																	<a
+																																		href="GDIR_GOC_Search_Result.aspx?SearchType=GOCSearch&amp;GOC_Code=12465615&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_GOC_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">12465615(SHARED SW SERV
+																																			SHANGHAI HC)</div>
+																																	</a>
+																																</td>
+																															</tr>
+																														</table>
+																													</font>
+																												</div>
+																											</div>
+																										</div>
+																										<div class="profile_bottom">
+																										</div>
+																									</div>
+																									<div class="profile_widgets2">
+																										<div class="profile_top">
+																										</div>
+																										<div class="profile_middle">
+																											<div class="widget_text_left" style="width: 90%;">
+																												<input type="hidden"
+																													name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_ManagedGeography_ClientState"
+																													id="ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedGeography_ClientState" />
+																												<div
+																													id="ContentPlaceHolderBody_pnlManagedGeographyTitle">
+																													<font color="#0099CC" size="3">
+																														<input type="image"
+																															name="ctl00$ContentPlaceHolderBody$imgbtn_ManagedGeography_Expand_Collapse"
+																															id="ContentPlaceHolderBody_imgbtn_ManagedGeography_Expand_Collapse"
+																															src="images/expand_button.gif" />                                                                                                        &nbsp;&nbsp;
+																														<u>
+																															<span
+																																id="ContentPlaceHolderBody_lblManagedGeographyTitle"
+																																title="The Managed Geography allows the mapping of a GOC to the geography from which it is managed, even if that geography differs from where the GOC&#39;s staff and/or financials are physically located.">
+																																<b>Managed Geography</b>
+																															</span>
+																														</u>
+																													</font>
+																												</div>
+																												<div
+																													id="ContentPlaceHolderBody_pnlManagedGeographyContent"
+																													style="background-color: #F2F2F2; font-size: Small; margin: 7px 0px 7px 7px; padding: 7px;">
+																													<font size="3">
+																														<table cellspacing="1" cellpadding="1">
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1000&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Total Citi Geography [L1]
+																																			<br />
+																																			1000
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1130&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			International [L2]
+																																			<br />
+																																			1130
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1002&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Asia Pacific [L3]
+																																			<br />
+																																			1002
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1060&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Asia ex Japan [L4]
+																																			<br />
+																																			1060
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1008&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Asia Other [L5]
+																																			<br />
+																																			1008
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="White">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=X68&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			Asia EM Hub node [L6]
+																																			<br />
+																																			X68
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img src="images/arrow-down.gif" />
+																																</td>
+																															</tr>
+																															<tr>
+																																<td align="center" bgcolor="#e5effa">
+																																	<a
+																																		href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=X68_R01&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">
+																																			China CSC [L7]
+																																			<br />
+																																			X68_R01
+																																		</div>
+																																	</a>
+																																</td>
+																															</tr>
+																															<tr>
+																																<td></td>
+																															</tr>
+																															<tr>
+																																<td></td>
+																															</tr>
+																															<tr>
+																																<td align="center">
+																																	<img
+																																		id="ContentPlaceHolderBody_imgHelpMG562"
+																																		src="images/icon_information.gif"
+																																		style="cursor:hand;border-width: 0px;vertical-align: middle;" />
+																																	<div
+																																		id="ContentPlaceHolderBody_pnlHelpMG629"
+																																		style="padding:1px 1px 1px 5px; font-size:8pt; color:Black; border:solid 2px #CFEAF9; background-color:#FFFFDB; text-align:left; display:none;"> This is the Global
+																																		Organizational Code (GOC) the worker
+																																		reports to. The lowest-level MG node
+																																		may contain multiple GOCs.									</div>
+																																	<span>&nbsp;&nbsp;
+																																	</span>
+																																	<span>This worker鈥檚 GOC is </span>
+																																	<span>&nbsp;&nbsp;
+																																	</span>
+																																	<a
+																																		href="GDIR_GOC_Search_Result.aspx?SearchType=GOCSearch&amp;GOC_Code=12465615&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_GOC_RDP_MBH&amp;Screen_Code=RDP">
+																																		<div class="wrapword2">12465615(SHARED SW SERV
+																																			SHANGHAI HC)</div>
+																																	</a>
+																																</td>
+																															</tr>
+																														</table>
+																													</font>
+																												</div>
+																											</div>
+																										</div>
+																										<div class="profile_bottom">
+																										</div>
+																									</div>
+																								</div>
+																								<br class="clearfloat" />
+																							</td>
+																						</tr>
+																					</table>
+																				</div>
+																				<br class="clearfloat" />
+																			</div>
+																		</div>
+																		<input type="hidden"
+																			name="ctl00$ContentPlaceHolderBody$hddCurrentSearchID"
+																			id="ContentPlaceHolderBody_hddCurrentSearchID" value="1010960249" />
+																		<input type="hidden"
+																			name="ctl00$ContentPlaceHolderBody$hddSearchResultFound"
+																			id="ContentPlaceHolderBody_hddSearchResultFound"
+																			value="Y" />
+																		<input type="hidden"
+																			name="ctl00$ContentPlaceHolderBody$hddBlankFullNameSearch"
+																			id="ContentPlaceHolderBody_hddBlankFullNameSearch"
+																			value="N" />
+																		<input type="hidden"
+																			name="ctl00$ContentPlaceHolderBody$hddGEID" id="ContentPlaceHolderBody_hddGEID" />
+																		<input type="hidden"
+																			name="ctl00$ContentPlaceHolderBody$hddAutoExtenderSelection"
+																			id="ContentPlaceHolderBody_hddAutoExtenderSelection"
+																			value="N" />                                                            <!--[if !IE]>BEGIN CLOSING ROUNDED CONTENT WRAPPER <![endif] -->
+																	</div>
+																</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br class="clearfloat" />
+										<div class="btmCenter" style="clear: both;">
+											<div class="btmLeft">
+											</div>
+											<div class="btmRight">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br />
+					</div>
+					<table id="tbUpdateProgress" width="100%">
+						<tr align="center">
+							<td>
+								<div id="ContentPlaceHolderBody_UpdateProgress1" style="display:none;">
+									<div id="ContentPlaceHolderBody_imgDiv" align="center"
+										valign="middle"
+										style="position: absolute; left: 40%; top: 25%; visibility: visible; vertical-align: middle; border-style: inset; border-color: black; background-color: White; z-index: 40;">
+										<img id="ContentPlaceHolderBody_Image1" src="Images/loading_animation.gif"
+											alt="Processing" />
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<div align="center">
+						<span id="lblMsg" style="display:inline-block;">
+							<b>
+								<font face="arial" color="Red" size="2"></font>
+							</b>
+						</span>
+					</div>
+					<div id="footer">
+						<div class="nav_bar">
+							<ul>
+								<li style="margin-left: 0px;">
+									<a href="#" onclick="JavaScript:window.open('http://www.citigroup.net');">www.citigroup.net</a>
+								</li>
+								<li>|</li>
+								<li>
+									<a href="#"
+										onclick="JavaScript:window.open('http://www.citi.net/EN/Pages/terms-and-conditions.aspx');">Terms and Conditions</a>
+								</li>
+								<li>|</li>
+								<li>
+									<a id="hyplnkContactUs" href="mailto:HRSSGlobDirSup@imcnam.ssmb.com">Contact Us</a>
+								</li>
+							</ul>
+						</div>
+						<div class="logo"></div>
+						<div class="copyrighttext">Copyright 漏 2018 Citigroup Inc.</div>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="ctl00$hddSOEID" id="hddSOEID" />
+			<script type="text/javascript">//<![CDATA[Sys.Application.add_init(function() {    $create(AjaxControlToolkit.AutoCompleteBehavior, {"completionInterval":1,"completionListCssClass":"suggestionsList","completionListItemCssClass":"suggestionsTd","delimiterCharacters":"","highlightedItemCssClass":"hilighted","id":"mhMain","minimumPrefixLength":2,"serviceMethod":"GetSearchCompletionList_SBS","servicePath":"/globaldir_new/GDIR_Result_Detail.aspx"}, {"itemSelected":OnSelect1,"showing":AdvancedItemDisplay}, null, $get("ContentPlaceHolderBody_txtFullName"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterMode":2,"InvalidChars":"`~!@#$%^\u0026*()_+={}|\\:鈥?\u003c\u003e?/","id":"ContentPlaceHolderBody_FilteredTextBoxExtender1"}, null, null, $get("ContentPlaceHolderBody_txtFullName"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_ID_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlIDTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlIDTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtnID_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblIDTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_ID"}, null, null, $get("ContentPlaceHolderBody_pnlIDContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_Work_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlWorkTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlWorkTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtnWork_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblWorkTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_Work"}, null, null, $get("ContentPlaceHolderBody_pnlWorkContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_Contact_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlContactTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlContactTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtnContact_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblContactTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_Contact"}, null, null, $get("ContentPlaceHolderBody_pnlContactContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_Location_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlLocationTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlLocationTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtnLocation_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblLocationTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_Location"}, null, null, $get("ContentPlaceHolderBody_pnlLocationContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.HoverMenuBehavior, {"HoverDelay":10,"OffsetX":12,"PopDelay":50,"PopupPosition":4,"dynamicServicePath":"/globaldir_new/GDIR_Result_Detail.aspx","id":"ContentPlaceHolderBody_HoverMenuExtender2","onHide":"{\"AnimationName\":\"Sequence\",\"AnimationChildren\":[{\"AnimationName\":\"Parallel\",\"AnimationChildren\":[{\"AnimationName\":\"FadeOut\",\"duration\":\".2\",\"AnimationChildren\":[]}]},{\"AnimationName\":\"HideAction\",\"AnimationChildren\":[]}]}","onShow":"{\"AnimationName\":\"Sequence\",\"AnimationChildren\":[{\"AnimationName\":\"HideAction\",\"Visible\":\"true\",\"AnimationChildren\":[]},{\"AnimationName\":\"Parallel\",\"AnimationChildren\":[{\"AnimationName\":\"FadeIn\",\"duration\":\".4\",\"AnimationChildren\":[]}]}]}","popupElement":$get("ContentPlaceHolderBody_pnlMGR_HELP")}, null, null, $get("ContentPlaceHolderBody_MGR_HELP"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_Manager_HR_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlManager_HRTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlManager_HRTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtnManager_HR_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblManager_HRTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_Manager_HR"}, null, null, $get("ContentPlaceHolderBody_pnlManager_HRContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.HoverMenuBehavior, {"OffsetX":12,"PopupPosition":4,"dynamicServicePath":"/globaldir_new/GDIR_Result_Detail.aspx","id":"ContentPlaceHolderBody_ctl13","onHide":"{\"AnimationName\":\"Sequence\",\"AnimationChildren\":[{\"AnimationName\":\"Parallel\",\"AnimationChildren\":[{\"AnimationName\":\"FadeOut\",\"duration\":\".2\",\"AnimationChildren\":[]}]},{\"AnimationName\":\"HideAction\",\"AnimationChildren\":[]}]}","onShow":"{\"AnimationName\":\"Sequence\",\"AnimationChildren\":[{\"AnimationName\":\"HideAction\",\"Visible\":\"true\",\"AnimationChildren\":[]},{\"AnimationName\":\"Parallel\",\"AnimationChildren\":[{\"AnimationName\":\"FadeIn\",\"duration\":\".4\",\"AnimationChildren\":[]}]}]}","popupElement":$get("ContentPlaceHolderBody_pnlHelpSup2")}, null, null, $get("ContentPlaceHolderBody_imgHelpSup2"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_Direct_Report_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlDirect_ReportTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlDirect_ReportTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtnDirect_Report_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblDirect_ReportTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_Direct_Report"}, null, null, $get("ContentPlaceHolderBody_pnlDirect_ReportContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_Matrix_Report_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlMatrix_ReportTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlMatrix_ReportTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtnMatrix_Report_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblMatrix_ReportTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_Matrix_Report"}, null, null, $get("ContentPlaceHolderBody_pnlMatrix_ReportContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_Emp_NonEmp_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlEmp_NonEmpTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlEmp_NonEmpTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtnEmp_NonEmp_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblEmp_NonEmpTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_Emp_NonEmp"}, null, null, $get("ContentPlaceHolderBody_pnlEmp_NonEmpContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_PBH_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlPBHTitle","CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlPBHTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtn_PBH_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblPBHTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_PBH"}, null, null, $get("ContentPlaceHolderBody_pnlPBHContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedSegment_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlManagedSegmentTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlManagedSegmentTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtn_ManagedSegment_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblManagedSegmentTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedSegment"}, null, null, $get("ContentPlaceHolderBody_pnlManagedSegmentContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.HoverMenuBehavior, {"OffsetY":12,"PopupPosition":3,"dynamicServicePath":"/globaldir_new/GDIR_Result_Detail.aspx","id":"ContentPlaceHolderBody_ctl47","onHide":"{\"AnimationName\":\"Sequence\",\"AnimationChildren\":[{\"AnimationName\":\"Parallel\",\"AnimationChildren\":[{\"AnimationName\":\"FadeOut\",\"duration\":\".2\",\"AnimationChildren\":[]}]},{\"AnimationName\":\"HideAction\",\"AnimationChildren\":[]}]}","onShow":"{\"AnimationName\":\"Sequence\",\"AnimationChildren\":[{\"AnimationName\":\"HideAction\",\"Visible\":\"true\",\"AnimationChildren\":[]},{\"AnimationName\":\"Parallel\",\"AnimationChildren\":[{\"AnimationName\":\"FadeIn\",\"duration\":\".4\",\"AnimationChildren\":[]}]}]}","popupElement":$get("ContentPlaceHolderBody_pnlHelpMS30")}, null, null, $get("ContentPlaceHolderBody_imgHelpMS398"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedGeography_ClientState","CollapseControlID":"ContentPlaceHolderBody_pnlManagedGeographyTitle","Collapsed":true,"CollapsedImage":"images/expand_button.gif","ExpandControlID":"ContentPlaceHolderBody_pnlManagedGeographyTitle","ExpandedImage":"images/collapse_button.gif","ImageControlID":"ContentPlaceHolderBody_imgbtn_ManagedGeography_Expand_Collapse","SuppressPostBack":true,"TextLabelID":"ContentPlaceHolderBody_lblManagedGeographyTitle","id":"ContentPlaceHolderBody_CollapsiblePanelExtender_ManagedGeography"}, null, null, $get("ContentPlaceHolderBody_pnlManagedGeographyContent"));});Sys.Application.add_init(function() {    $create(AjaxControlToolkit.HoverMenuBehavior, {"OffsetY":12,"PopupPosition":3,"dynamicServicePath":"/globaldir_new/GDIR_Result_Detail.aspx","id":"ContentPlaceHolderBody_ctl68","onHide":"{\"AnimationName\":\"Sequence\",\"AnimationChildren\":[{\"AnimationName\":\"Parallel\",\"AnimationChildren\":[{\"AnimationName\":\"FadeOut\",\"duration\":\".2\",\"AnimationChildren\":[]}]},{\"AnimationName\":\"HideAction\",\"AnimationChildren\":[]}]}","onShow":"{\"AnimationName\":\"Sequence\",\"AnimationChildren\":[{\"AnimationName\":\"HideAction\",\"Visible\":\"true\",\"AnimationChildren\":[]},{\"AnimationName\":\"Parallel\",\"AnimationChildren\":[{\"AnimationName\":\"FadeIn\",\"duration\":\".4\",\"AnimationChildren\":[]}]}]}","popupElement":$get("ContentPlaceHolderBody_pnlHelpMG629")}, null, null, $get("ContentPlaceHolderBody_imgHelpMG562"));});//]]></script>
+		</form>
+	</body>
+</html>

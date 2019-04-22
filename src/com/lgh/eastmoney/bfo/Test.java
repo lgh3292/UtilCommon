@@ -36,6 +36,12 @@ public class Test extends EastMoneyURLMsg{
 		List list = new ArrayList();
 		list.add(1);
 		test.setList(list);
-		System.out.print("test");
+		
+		int sum=0;
+		for(int i=0;i<=100;i++){
+			sum+=i;
+		}
+		System.out.println(10/3);
+		System.out.println(103);
 	}
 }

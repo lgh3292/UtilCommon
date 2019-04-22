@@ -3,7 +3,6 @@ package com.lgh.eastmoney.bo;
 import java.text.DecimalFormat;
 
 public class EastMoneyInOutFlow extends EastMoneyStock{
-
 	private long transDate;
 	private int marketType;
 	private String industryCode;

@@ -1,19 +1,40 @@
-2019-2-21 10:46:30[ INFO](LogUtil.java:24) Current Pool's size <=0,will new a Conection to user,current Pool size:0
-2019-2-21 10:51:51[ INFO](LogUtil.java:24) Current Pool's size <=0,will new a Conection to user,current Pool size:0
-2019-2-21 15:59:07[ INFO](LogUtil.java:24) "0000011,上证指数,2694.84,6734236,61646554,-28.66,-1.05%,2723.49,-1","3990012,深证成指,11998.58,5884654,46967961,-118.28,-0.98%,12116.86,1"
-2019-2-21 15:59:07[ INFO](LogUtil.java:24) "182,15,698","347,19,933"
-2019-2-21 16:01:37[ INFO](LogUtil.java:24) 1.
-2019-2-21 16:01:59[ INFO](LogUtil.java:24) 1.
-2019-2-21 16:02:55[ INFO](LogUtil.java:24) 1.
-2019-2-21 16:03:31[ INFO](LogUtil.java:24) 1.
-2019-2-21 16:05:17[ INFO](LogUtil.java:24) 1.1
-2019-2-21 16:05:26[ INFO](LogUtil.java:24) 11.1
-2019-2-21 16:05:35[ INFO](LogUtil.java:24) 11.112
-2019-2-21 16:06:12[ INFO](LogUtil.java:24) 11.112
-2019-2-21 16:06:12[ INFO](LogUtil.java:24) 11.23124
-2019-2-21 16:06:31[ INFO](LogUtil.java:24) 11.112
-2019-2-21 16:06:31[ INFO](LogUtil.java:24) 11.23124
-2019-2-21 16:06:31[ INFO](LogUtil.java:24) 11.11
-2019-2-21 16:06:43[ INFO](LogUtil.java:24) 11.112
-2019-2-21 16:06:43[ INFO](LogUtil.java:24) 11.23124
-2019-2-21 16:06:43[ INFO](LogUtil.java:24) 11.11.22
+2019-4-22 15:07:08[ INFO](LogUtil.java:15) save html&image info for webGEID:0000537302, find 0 local employees! and 0 directory employees!
+2019-4-22 15:07:08[DEBUG](HttpClient.java:71) Java version: 1.8.0_161
+2019-4-22 15:07:08[DEBUG](HttpClient.java:72) Java vendor: Oracle Corporation
+2019-4-22 15:07:08[DEBUG](HttpClient.java:73) Java class path: D:\doc\project\git\UtilCommon\bin;D:\doc\project\git\UtilCommon\lib\commons-codec-1.3.jar;D:\doc\project\git\UtilCommon\lib\commons-httpclient-3.1-beta1.jar;D:\doc\project\git\UtilCommon\lib\commons-logging-1.1.jar;D:\doc\project\git\UtilCommon\lib\commons-net-1.0.0.jar;D:\doc\project\git\UtilCommon\lib\dom4j.jar;D:\doc\project\git\UtilCommon\lib\javax.jms_1.1.jar;D:\doc\project\git\UtilCommon\lib\jdom-1.0.jar;D:\doc\project\git\UtilCommon\lib\jxl.jar;D:\doc\project\git\UtilCommon\lib\log4j-1.2.9.jar;D:\doc\project\git\UtilCommon\lib\msbase.jar;D:\doc\project\git\UtilCommon\lib\mssqlserver.jar;D:\doc\project\git\UtilCommon\lib\msutil.jar;D:\doc\project\git\UtilCommon\lib\ojdbc14.jar;D:\doc\project\git\UtilCommon\lib\mysql-connector-java-8.0.13.jar;D:\doc\project\git\UtilCommon\lib\hamcrest-core-1.3.jar;D:\doc\project\git\UtilCommon\lib\jsoup-1.11.3.jar;D:\doc\project\git\UtilCommon\lib\junit-4.12.jar;D:\doc\project\git\UtilCommon\lib\mysql-bin.jar;D:\doc\project\git\UtilCommon\lib\spring-boot-cli-1.3.0.RELEASE.jar
+2019-4-22 15:07:08[DEBUG](HttpClient.java:74) Operating system name: Windows 10
+2019-4-22 15:07:08[DEBUG](HttpClient.java:75) Operating system architecture: amd64
+2019-4-22 15:07:08[DEBUG](HttpClient.java:76) Operating system version: 10.0
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SUN 1.8: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS & DKS keystores; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SunRsaSign 1.8: Sun RSA signature provider
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SunEC 1.8: Sun Elliptic Curve provider (EC, ECDSA, ECDH)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SunJSSE 1.8: Sun JSSE provider(PKCS12, SunX509/PKIX key/trust factories, SSLv3/TLSv1/TLSv1.1/TLSv1.2)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SunJCE 1.8: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SunJGSS 1.8: Sun (Kerberos v5, SPNEGO)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SunSASL 1.8: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) XMLDSig 1.8: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory; C14N 1.0, C14N 1.1, Exclusive C14N, Base64, Enveloped, XPath, XPath2, XSLT TransformServices)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SunPCSC 1.8: Sun PC/SC provider
+2019-4-22 15:07:08[DEBUG](HttpClient.java:81) SunMSCAPI 1.8: Sun's Microsoft Crypto API provider
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.useragent = Jakarta Commons-HttpClient/3.1-beta1
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.protocol.version = HTTP/1.1
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.protocol.cookie-policy = default
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.protocol.element-charset = US-ASCII
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.protocol.content-charset = ISO-8859-1
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@5680a178
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2019-4-22 15:07:08[DEBUG](GetMethod.java:89) enter GetMethod(String)
+2019-4-22 15:07:08[DEBUG](DefaultHttpParams.java:150) Set parameter http.protocol.content-charset = UTF-8
+2019-4-22 15:07:08[DEBUG](HttpMethodBase.java:383) HttpMethodBase.addRequestHeader(Header)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:322) enter HttpClient.executeMethod(HttpMethod)
+2019-4-22 15:07:08[DEBUG](HttpClient.java:373) enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+2019-4-22 15:07:08[DEBUG](HttpMethodDirector.java:378) Attempt number 1 to process request
+2019-4-22 15:07:08[DEBUG](HttpConnection.java:684) enter HttpConnection.open()
+2019-4-22 15:07:08[DEBUG](HttpConnection.java:691) Open connection to globaldirectory.citigroup.net:80
+2019-4-22 15:07:08[DEBUG](HttpConnection.java:1214) enter HttpConnection.closeSockedAndStreams()
+2019-4-22 15:07:08[DEBUG](HttpMethodDirector.java:403) Closing the connection.
+2019-4-22 15:07:08[DEBUG](HttpConnection.java:1147) enter HttpConnection.close()
+2019-4-22 15:07:08[DEBUG](HttpConnection.java:1214) enter HttpConnection.closeSockedAndStreams()
+2019-4-22 15:07:08[DEBUG](HttpMethodDirector.java:433) Method retry handler returned false. Automatic recovery will not be attempted
+2019-4-22 15:07:08[DEBUG](HttpConnection.java:1173) enter HttpConnection.releaseConnection()
+2019-4-22 15:07:08[DEBUG](HttpConnection.java:1177) Releasing connection back to connection manager.

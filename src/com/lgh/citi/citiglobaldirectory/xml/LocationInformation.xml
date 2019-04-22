@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="ContentPlaceHolderBody_pnlLocationContent"
+	style="font-size: small; overflow-y: hidden; visibility: visible; height: auto; display: block;">
+	<div id="" style="font-size: small; visibility: visible; height: auto;">
+
+		<table id="ContentPlaceHolderBody_tbLocationInfo" cellspacing="0"
+			cellpadding="0" style="width:75%;border-collapse:collapse;">
+			<tbody>
+				<tr>
+					<td style="width:1%;">&nbsp;&nbsp;&nbsp;&nbsp;
+					</td>
+					<td style="width:35%;">
+						<strong>
+							<span id="ContentPlaceHolderBody_lblAddress">Address</span>
+						</strong>
+					</td>
+					<td>
+						<span id="ContentPlaceHolderBody_lblAddress_Location">
+							33 HUA YUAN SHI QIAO ROAD PUDONG
+							<br>
+								SHANGHAI CITIGROUP TOWER
+								<br>
+						</span>
+
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblBldFlrZone">Building/Floor/Zone</span>
+						</strong>
+					</td>
+					<td> / / </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblCity">City</span>
+						</strong>
+					</td>
+					<td>Shanghai</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblState">State/Province</span>
+						</strong>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblPostalCode">Postal Code</span>
+						</strong>
+					</td>
+					<td>200120</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblCountry">Country</span>
+						</strong>
+					</td>
+					<td>CN - CHINA</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblLocationCode">Location Code</span>
+						</strong>
+					</td>
+					<td>25860</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<strong>
+							<span id="ContentPlaceHolderBody_lblMailCode">Mail Code</span>
+						</strong>
+					</td>
+					<td>CBXPTNY</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>
+	

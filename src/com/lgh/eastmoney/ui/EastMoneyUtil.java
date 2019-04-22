@@ -2,12 +2,12 @@ package com.lgh.eastmoney.ui;
 
 import java.awt.Color;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.GetMethod;
 
@@ -141,7 +141,7 @@ public class EastMoneyUtil {
 	 * 
 	 * @param uri
 	 * @return
-	 * @throws Exception 
+	 * @throws Exception  
 	 * @throws Exception
 	 */
 	public static String getContent(String uri,String charsetName) throws Exception{
@@ -216,7 +216,7 @@ public class EastMoneyUtil {
 		if(list.size()==1){
 			return Integer.valueOf(list.get(0));
 		}else{
-			LogUtil.println("unvalide result while find pageSize:"+list.size());
+			LogUtil.log("unvalide result while find pageSize:"+list.size());
 		}
 		return -1;
 	}
@@ -235,15 +235,20 @@ public class EastMoneyUtil {
 		List<String> list = ZhengZe.getResult(s, "[^\"][^\"]*[^\"]", "");
 		return list;
 	}
+	
+	
+	
+	
 	public static void main(String[] args) throws Exception {
-		 String url="http://dynamic.12306.cn/TrainQuery/passCodeAction.do?rand=rrand?0.12459405005016022";
-		 byte[] content = getArrayContent(url, "utf-8");
-		 System.out.println(content.length); 
-		 FileOutputStream fous = new FileOutputStream(new File("c://a.bmp"));
-		 fous.write(content);
-		 fous.flush();
-		 fous.close();
-		 
+//		 String url="http://globaldirectory.citigroup.net/globaldir_new/GDIR_Result_Detail.aspx?webGEID=0000450357";
+//		 byte[] content = getArrayContent(url, "utf-8");
+//		 System.out.println(content.length); 
+//		 FileOutputStream fous = new FileOutputStream(new File("c://a.bmp"));
+//		 fous.write(content);
+//		 fous.flush();
+//		 fous.close();
+		
+		
 	}
 	
 }

@@ -207,7 +207,7 @@ public class StockWorker extends Thread{
 		}
 		FileUtil.createFile(stockDataFile);
 		for(StockVolume sv:stocks){
-			FileUtil.writeToLastLine(stockDataFile, sv.getEmStockId()+","+sv.getMarket());
+				FileUtil.writeToLastLine(stockDataFile, sv.getEmStockId()+","+sv.getMarket());
 			LogUtil.info(sv.getEmStockId()+","+sv.getMarket());
 		}
 		if(UISystemTray.getInstance()!=null){

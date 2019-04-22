@@ -39,7 +39,7 @@ public class NetworkManager {
 		proxy_port= PropertiesConfig.getReadOnlyEastmoneyProperties().getProperty("proxy_port");
 		proxy_userName= PropertiesConfig.getReadOnlyEastmoneyProperties().getProperty("proxy_userName");
 		proxy_password= PropertiesConfig.getReadOnlyEastmoneyProperties().getProperty("proxy_password");
-		LogUtil.println("proxy_auto_detect:"+proxy_auto_detect+"   use proxy?:"+proxy_set+"  info: current proxy settting:"+proxy_host+":"+proxy_port+":"+proxy_userName+":"+proxy_password);
+		LogUtil.log("proxy_auto_detect:"+proxy_auto_detect+"   use proxy?:"+proxy_set+"  info: current proxy settting:"+proxy_host+":"+proxy_port+":"+proxy_userName+":"+proxy_password);
 		if(Boolean.valueOf(proxy_auto_detect)){
 			detectNetWork();
 		}

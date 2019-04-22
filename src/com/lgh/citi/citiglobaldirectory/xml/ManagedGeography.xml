@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="ContentPlaceHolderBody_pnlManagedGeographyContent"
+	style="background-color: rgb(242, 242, 242); font-size: small; margin: 7px 0px 7px 7px; overflow-y: hidden; visibility: visible; height: auto; display: block;">
+	<div id=""
+		style="background-color: rgb(242, 242, 242); font-size: small; padding: 7px; visibility: visible; height: auto;">
+
+		<table cellspacing="1" cellpadding="1">
+			<tbody>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1000&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								Total Citi Geography [L1]
+								<br>1000
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1130&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								International [L2]
+								<br>1130
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1002&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								Asia Pacific [L3]
+								<br>1002
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=1060&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								Asia ex Japan [L4]
+								<br>1060
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:White;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=CN&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								China [L5]
+								<br>CN
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<img src="images/arrow-down.gif">
+					</td>
+				</tr>
+				<tr style="border-style:Solid;">
+					<td align="center"
+						style="background-color:#e5effa;border-color:LightGrey;border-width:1px;border-style:Solid;">
+						<a
+							href="Gdir_Result.aspx?SearchType=ManagedGeographySearch&amp;ManagedGeographyCode=CN_P00&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_MS_RDP_MBH&amp;Screen_Code=RDP">
+							<div class="wrapword2">
+								China Country [L6]
+								<br>CN_P00
+							</div>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="center"
+						style="border-color:LightGrey;border-width:2px;border-style:Dashed;">
+						<img id="ContentPlaceHolderBody_imgHelpMG351" src="images/icon_information.gif"
+							style="cursor:hand;border-width: 0px;vertical-align: middle;">
+							<div id="ContentPlaceHolderBody_pnlHelpMG59"
+								style="width: 330px; padding: 1px 1px 1px 5px; font-size: 8pt; color: black; border: 2px solid rgb(207, 234, 249); background-color: rgb(255, 255, 219); text-align: left; display: none; position: absolute;">
+								This is the Global Organizational Code (GOC) the worker reports to.
+								The lowest-level MG node may contain multiple GOCs.
+							</div>
+							<span>&nbsp;&nbsp;
+							</span>
+							<span>This worker’s GOC is </span>
+							<span>&nbsp;&nbsp;
+							</span>
+							<a
+								href="GDIR_GOC_Search_Result.aspx?SearchType=GOCSearch&amp;GOC_Code=26750391&amp;ComingFrom=RDP&amp;Sub_Action_Code=ADV_GOC_RDP_MBH&amp;Screen_Code=RDP">
+								<div class="wrapword2">26750391(COUNTRY CORPORATE OFFICER OFFICE)</div>
+							</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

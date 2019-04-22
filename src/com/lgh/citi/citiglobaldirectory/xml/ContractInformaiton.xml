@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="ContentPlaceHolderBody_pnlContactContent"
+	style="font-size: small; text-align: left; overflow-y: hidden; visibility: visible; height: auto; display: block;">
+	<div id=""
+		style="font-size: small; text-align: left; visibility: visible; height: auto;">
+
+		<table id="ContentPlaceHolderBody_tbContactInfo" cellspacing="0"
+			cellpadding="0" style="width:75%;border-collapse:collapse;">
+			<tbody>
+				<tr>
+					<td style="width:35%;">
+                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<strong>
+							<span id="ContentPlaceHolderBody_lblEmail">E-Mail</span>
+						</strong>
+					</td>
+					<td>
+						<a id="ContentPlaceHolderBody_hyplnkEmail" href="mailto:christine.lam@citi.com">christine.lam@citi.com</a>
+					</td>
+					<td>
+                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="sip:christine.lam@citi.com" id="ContentPlaceHolderBody_a_IMCall">Chat</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<strong>
+							<span id="ContentPlaceHolderBody_lblWorkPhone">Work Phone 1</span>
+						</strong>
+					</td>
+					<td>+86
+						(21) 2896-6008
+                                                                                                                        
+                                                                                &nbsp;&nbsp;
+					</td>
+					<td>
+						<a id="ContentPlaceHolderBody_HyperLink1"></a>
+                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td>
+                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<strong>
+							<span id="ContentPlaceHolderBody_lblAltWorkPhone">Work Phone 2</span>
+						</strong>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<strong>
+							<span id="ContentPlaceHolderBody_lblFax">Fax</span>
+						</strong>
+					</td>
+					<td>+86 (21) 5879-5933</td>
+				</tr>
+				<tr>
+					<td>
+                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<strong>
+						</strong>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>

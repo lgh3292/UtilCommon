@@ -16,7 +16,6 @@ import java.io.ObjectOutputStream;
 import java.io.RandomAccessFile;
 import java.io.Serializable;
 
-import com.lgh.util.logging.Level;
 import com.lgh.util.logging.LogUtil;
 
 /**
@@ -50,14 +49,14 @@ public class FileUtil {
     	}
     	if(file.isFile()){
     		boolean success = file.delete();
-    		LogUtil.log("..........delete file:"+file.getAbsolutePath()+ " "+(success==true?"success":"failed"), Level.INFO);
+    		LogUtil.log("..........delete file:"+file.getAbsolutePath()+ " "+(success==true?"success":"failed"));
     	}else{
     		File[] files = file.listFiles();
     		for(File f:files){
     			deleteFile(f);
     		}
     		boolean success = file.delete();
-    		LogUtil.log("..........delete folder:"+file.getAbsolutePath()+ " "+(success==true?"success":"failed"), Level.INFO);
+    		LogUtil.log("..........delete folder:"+file.getAbsolutePath()+ " "+(success==true?"success":"failed"));
     	}
     }
     
@@ -227,13 +226,27 @@ public class FileUtil {
 		return null;
 	}
     
+	
+	
+	public static void writeByteArray(byte[] bytes,File out) throws IOException{
+		if(!out.exists()){
+			FileUtil.createFile(out);
+		}
+		FileOutputStream fous =new FileOutputStream(out);
+		fous.write(bytes);
+		fous.close();
+		
+	}
+	
 	/**
 	 * add a line to the file end
 	 * @param file
 	 * @param line
+	 * @throws IOException 
 	 */
-	public static void writeToLastLine(File file,String line){
-		if (!file.exists() || file.isDirectory() || !file.canRead()) {
+	public static void writeToLastLine(File file,String line) {
+		FileUtil.createFile(file);
+		if (file.isDirectory() || !file.canRead()) {
 			return;
 		}
 		RandomAccessFile raf = null;
@@ -260,6 +273,8 @@ public class FileUtil {
 	
 	
 	
+	
+	
 	public void leftMove(byte[] buf){
 		byte[] newbyte =new byte[buf.length];
 		for(byte b:buf){
@@ -277,11 +292,12 @@ public class FileUtil {
 	
 	
     public static void main(String[] args) {
-    	deleteFile(new File("C:\\Documents and Settings\\liuguohu\\Desktop\\Allway Sync"));
     	try {
 //			String lastLine = readLastLine(new File("c://laba.log.0"), "utf-8");
 //			LogUtil.info("lastLine:"+lastLine);
 			//writeToLastLine(new File("c://laba.log.0"),"你好，国华3");
+    		File file =new File("test.txt");
+    		FileUtil.writeToLastLine(file, "你好");
     	} catch (Exception e) {
 			e.printStackTrace();
 		}

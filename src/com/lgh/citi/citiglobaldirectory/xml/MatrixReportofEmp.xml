@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div class="GDIR_ID_info_box">
+	<div class="topCenter">
+		<div class="topLeft">
+		</div>
+		<div class="topRight">
+		</div>
+	</div>
+	<div class="GDIRmidRight">
+		<div class="GDIRwidget_text_left2">
+			<input type="hidden"
+				name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Matrix_Report_ClientState"
+				id="ContentPlaceHolderBody_CollapsiblePanelExtender_Matrix_Report_ClientState"
+				value="false">
+				<div id="ContentPlaceHolderBody_pnlMatrix_ReportTitle" style="color:#0099CC;font-size:Small;font-weight:normal;">
+
+					<input type="image"
+						name="ctl00$ContentPlaceHolderBody$imgbtnMatrix_Report_Expand_Collapse"
+						id="ContentPlaceHolderBody_imgbtnMatrix_Report_Expand_Collapse"
+						src="images/collapse_button.gif">
+                                                                                                            &nbsp;&nbsp;
+						<u>
+							<span id="ContentPlaceHolderBody_lblMatrix_ReportTitle"
+								style="font-weight:bold;">Matrix Reports of Lam, Yuk Wah Christine (2)</span>
+						</u>
+
+				</div>
+				<div id="ContentPlaceHolderBody_pnlMatrix_ReportContent"
+					style="font-size: small; font-weight: normal; overflow-y: hidden; visibility: visible; height: 95px; display: block;">
+					<div id=""
+						style="font-size: small; font-weight: normal; visibility: visible; height: auto;">
+
+						<table id="ContentPlaceHolderBody_Matrix_Report_Table">
+							<tbody>
+								<tr>
+									<td style="font-weight:bold;">Name</td>
+									<td style="font-weight:bold;">Job Title</td>
+									<td style="font-weight:bold;">Phone</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="GDIR_Result_Detail.aspx?webGEID=1010877754">Jiang, Guorong </a>
+									</td>
+									<td>COUNTRY BUSINESS HEAD</td>
+									<td>+852 2501-2188</td>
+								</tr>
+								<tr style="background-color:#e5effa;">
+									<td>
+										<a href="GDIR_Result_Detail.aspx?webGEID=1010333105">Nie, Gang </a>
+									</td>
+									<td>Chief Auditor</td>
+									<td>+86 (21) 2896-9230</td>
+								</tr>
+								<tr align="right" valign="bottom">
+									<td colspan="3">
+										<img src="images/icon_excel.gif" alt="Download Matrix Reports"
+											style="vertical-align: middle;">
+											<a
+												href="GDIR_Download_Excel_Report.aspx?ReportName=DIRECT_MATRIX&amp;Full_Name=Lam, Yuk Wah Christine &amp;Top_GEID=0000537302&amp;ReportsToCount=2&amp;Lang=ENGLISH">Download Matrix Reports</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<br class="clearfloat">
+		</div>
+	</div>
+	<div class="btmCenter">
+		<div class="btmLeft">
+		</div>
+		<div class="btmRight">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+2019-2-21 10:46:30[ INFO](LogUtil.java:24) Current Pool's size <=0,will new a Conection to user,current Pool size:0
+2019-2-21 10:51:51[ INFO](LogUtil.java:24) Current Pool's size <=0,will new a Conection to user,current Pool size:0
+2019-2-21 15:59:07[ INFO](LogUtil.java:24) "0000011,上证指数,2694.84,6734236,61646554,-28.66,-1.05%,2723.49,-1","3990012,深证成指,11998.58,5884654,46967961,-118.28,-0.98%,12116.86,1"
+2019-2-21 15:59:07[ INFO](LogUtil.java:24) "182,15,698","347,19,933"
+2019-2-21 16:01:37[ INFO](LogUtil.java:24) 1.
+2019-2-21 16:01:59[ INFO](LogUtil.java:24) 1.
+2019-2-21 16:02:55[ INFO](LogUtil.java:24) 1.
+2019-2-21 16:03:31[ INFO](LogUtil.java:24) 1.
+2019-2-21 16:05:17[ INFO](LogUtil.java:24) 1.1
+2019-2-21 16:05:26[ INFO](LogUtil.java:24) 11.1
+2019-2-21 16:05:35[ INFO](LogUtil.java:24) 11.112
+2019-2-21 16:06:12[ INFO](LogUtil.java:24) 11.112
+2019-2-21 16:06:12[ INFO](LogUtil.java:24) 11.23124
+2019-2-21 16:06:31[ INFO](LogUtil.java:24) 11.112
+2019-2-21 16:06:31[ INFO](LogUtil.java:24) 11.23124
+2019-2-21 16:06:31[ INFO](LogUtil.java:24) 11.11
+2019-2-21 16:06:43[ INFO](LogUtil.java:24) 11.112
+2019-2-21 16:06:43[ INFO](LogUtil.java:24) 11.23124
+2019-2-21 16:06:43[ INFO](LogUtil.java:24) 11.11.22

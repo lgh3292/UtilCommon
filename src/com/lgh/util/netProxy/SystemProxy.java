@@ -37,16 +37,21 @@ import com.lgh.util.logging.LogUtil;
  * @author liuguohu
  *
  */
-public class SystemProxy {
+public class SystemProxy implements Runnable{
+	
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
 		
-//		dump("http://www.yahoo.com");
-		LogUtil.info("**************");
+		 new SystemProxy().run();
 
 		try {
 			//if we don't use the proxy
-			URL url = new URL("http://internal.server.local/");
-			URLConnection conn = url.openConnection(Proxy.NO_PROXY);  
+			URL url = new URL("http://www.baidu.com/");
+			URLConnection conn = url.openConnection();  
 			getSystemProxy();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -60,13 +65,15 @@ public class SystemProxy {
 	      DataInputStream di = null;
 	      FileOutputStream fo = null;
 	      byte[] b = new byte[1];
-
+	      System.setProperty("javax.net.ssl.trustStore", "C://dev//dev_tool//jdk1.7.0_17//jre//lib//security//jssecacerts");
+	      System.setProperty("javax.net.ssl.trustStore", "C://dev//dev_tool//jdk1.7.0_17//jre//lib//security//jssecacerts2");
 	      // PROXY
-	      System.setProperty("http.proxyHost","proxy.tay.cpqcorp.net") ;
-	      System.setProperty("http.proxyPort", "8080") ;
-
+	     // System.setProperty("http.proxyHost","proxy.tay.cpqcorp.net") ;
+	     // System.setProperty("http.proxyPort", "8080") ;
+	     // System.setProperty("java.net.useSystemProxies", "true");
 	      URL u = new URL(URLName);
 	      HttpURLConnection con = (HttpURLConnection) u.openConnection();
+	      
 	      
 	      
 	      //
@@ -74,20 +81,25 @@ public class SystemProxy {
 	      // Sun strongly advises not to use them since they can
 	      // change or go away in a future release so beware.
 	      //
-	      sun.misc.BASE64Encoder encoder = new sun.misc.BASE64Encoder();
-	      String encodedUserPwd = encoder.encode("username:password".getBytes());
-	      con.setRequestProperty("Proxy-Authorization", "Basic " + encodedUserPwd);
+
+//ring encodedUserPwd = encoder.encode("username:password".getBytes());
+//	      String encodedUserPwd = null;
+//	      con.setRequestProperty("Proxy-Authorization", "Basic " + encodedUserPwd);
 
 	      //since jdk1.2 we can use Authenticator.setDefault to set the username and password 
 	      //Authenticator.setDefault(new AuthenticatorImpl(userName,password));
 	      
 	      di = new DataInputStream(con.getInputStream());
+	      StringBuffer sb =new StringBuffer();
 	      while(-1 != di.read(b,0,1)) {
 	         System.out.print(new String(b));
+	         sb.append(new String(b));
 	      }
+	      LogUtil.info(sb.toString());
 	    }
 	    catch (Exception e) {
 	      e.printStackTrace();
+	      LogUtil.info(e.getMessage());
 	    }
 	}
 
@@ -97,8 +109,8 @@ public class SystemProxy {
 	 * @return
 	 */
 	public static List<Proxy> getSystemProxy(){
-		   System.setProperty("java.net.useSystemProxies", "true"); 
-		   System.getProperties().remove("java.net.useSystemProxies");
+		 //  System.setProperty("java.net.useSystemProxies", "true"); 
+		//   System.getProperties().remove("java.net.useSystemProxies");
 		   List<Proxy> list = null;
 		   try {    
 			   list = ProxySelector.getDefault().select(new URI("http://www.yahoo.com"));  
@@ -183,5 +195,25 @@ public class SystemProxy {
 	   }
 	   return buffer.toString();
    }
-   
+
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		int i=0;
+		while(true){
+			dump("https://thirdpartypaymentdc.gcbcn.citigroup.net/cn3pps/dologin");
+//			dump("https://servicemanagement.citigroup.net/navpage.do");
+			
+			LogUtil.info("**************access count:"+i++);
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	   
 }

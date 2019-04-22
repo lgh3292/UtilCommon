@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="GDIR_ID_info_box">
+	<div class="topCenter">
+		<div class="topLeft">
+		</div>
+		<div class="topRight">
+		</div>
+	</div>
+	<div class="GDIRmidRight">
+		<div class="GDIRwidget_text_left2">
+			<input type="hidden"
+				name="ctl00$ContentPlaceHolderBody$CollapsiblePanelExtender_Emp_NonEmp_ClientState"
+				id="ContentPlaceHolderBody_CollapsiblePanelExtender_Emp_NonEmp_ClientState"
+				value="true">
+				<div id="ContentPlaceHolderBody_pnlEmp_NonEmpTitle" style="color:#0099CC;font-size:Small;font-weight:normal;">
+
+					<input type="image"
+						name="ctl00$ContentPlaceHolderBody$imgbtnEmp_NonEmp_Expand_Collapse"
+						id="ContentPlaceHolderBody_imgbtnEmp_NonEmp_Expand_Collapse" src="images/expand_button.gif">
+                                                                                                            &nbsp;&nbsp;
+						<u>
+							<span id="ContentPlaceHolderBody_lblEmp_NonEmpTitle" style="font-weight:bold;">Non-Employees
+								of Lam, Yuk Wah Christine (0)</span>
+						</u>
+
+				</div>
+				<div id="ContentPlaceHolderBody_pnlEmp_NonEmpContent"
+					style="font-size: small; font-weight: normal; overflow-y: hidden; visibility: visible; height: 0px; display: none;">
+					<div id=""
+						style="font-size: small; font-weight: normal; visibility: visible; height: auto;">
+
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This
+							person has no non-employees.
+						</span>
+						<table id="ContentPlaceHolderBody_NonEmp_Report_Table">
+							<tbody>
+								<tr align="right" valign="bottom">
+									<td colspan="3">
+										<img src="images/icon_excel.gif" alt="Non-Employees in population"
+											style="vertical-align: middle;">
+											<a class="aspNetDisabled">Non-Employees in population</a>
+											<span>&nbsp;&nbsp;&nbsp;&nbsp;
+											</span>
+											<img src="images/icon_excel.gif" alt="Non-Employee Reports and Below"
+												style="vertical-align: middle;">
+												<a
+													href="GDIR_Download_Excel_Report.aspx?ReportName=DIRECT_BELOW_NON_EMP&amp;Full_Name=Lam, Yuk Wah Christine &amp;Top_GEID=0000537302&amp;ReportsToCount=732&amp;Lang=ENGLISH">Non-Employee Reports and Below</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<br class="clearfloat">
+		</div>
+	</div>
+	<div class="btmCenter">
+		<div class="btmLeft">
+		</div>
+		<div class="btmRight">
+		</div>
+	</div>
+</div>

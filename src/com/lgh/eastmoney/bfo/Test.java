@@ -36,6 +36,6 @@ public class Test extends EastMoneyURLMsg{
 		List list = new ArrayList();
 		list.add(1);
 		test.setList(list);
-		
+		System.out.print("test");
 	}
 }

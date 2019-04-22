@@ -32,7 +32,7 @@ public class DBConnectionManager {
     
     
     public static void main(String[] args) {
-		DBMessage message = new DBMessage("localhost", 3306, "mysql", "root","lghlgh", DBMessage.MYSQL);
+		DBMessage message = new DBMessage("192.168.95.29", 3306, "mysql", "root","Nissanfc!", DBMessage.MYSQL);
 		final Connection con = DBConnectionManager.getInstance(message).getConnection();
 		try {
 			con.setAutoCommit(false);
@@ -97,8 +97,8 @@ public class DBConnectionManager {
 //                    Class.forName("com.mysql.jdbc.Driver").newInstance();
                     //the dirver is also could be the following
 //                    Class.forName("org.gjt.mm.mysql.Driver").newInstance();
-                    Class.forName("com.mysql.jdbc.Driver").newInstance();
-                    
+                   // Class.forName("com.mysql.jdbc.Driver").newInstance();
+                    Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
                     connection = DriverManager.getConnection(url1, username, password);
                     break;
                 case DBMessage.ORACLE:

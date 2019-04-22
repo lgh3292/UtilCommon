@@ -12,13 +12,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
 
 public class Drink {
 	public static int key = 1;
 
 	public static void main(String[] args) {
-		File filepath = new File("f:\\temp\\test");
+		File filepath = new File("c:\\temp\\test");
 		File[] files = filepath.listFiles();
 		for (File en : files) {
 			try {
@@ -26,8 +25,9 @@ public class Drink {
 				System.out.println(en.getPath() + en.getAbsolutePath()
 						+ en.getCanonicalPath() + en.getParentFile()
 						+ en.getParent());
-				//				enFilebyByte(en);
-				deFilebyByte(en);
+				
+				enFilebyByte(en);
+//				deFilebyByte(en);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

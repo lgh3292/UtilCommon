@@ -16,7 +16,6 @@ import com.lgh.citi.citiglobaldirectory.bo.IDInformation;
 import com.lgh.citi.citiglobaldirectory.bo.ManagersAndReportInformation;
 import com.lgh.citi.citiglobaldirectory.bo.MatrixReportofEmp;
 import com.lgh.citi.citiglobaldirectory.bo.NonEmployeesofEmp;
-import com.lgh.citi.citiglobaldirectory.bo.OneDownEmployee;
 import com.lgh.util.FileUtil;
 import com.lgh.util.logging.LogUtil;
 
@@ -90,7 +89,7 @@ public class CitiDirectoryGrabProcess {
 			/*	3. Call method Save html info and image of "People head"*/
 			StringBuffer sb =  checkAndReturnHtmlcontext(webGEID);
 			
-			employee.printEmployee_and_SuperVisor(employee.getSuperVisorEmployee(), new StringBuffer());
+			employee.printEmployee_and_SuperVisor(employee.getSuperVisorEmployee(), new StringBuffer("webGEID"));
 			Document document = Jsoup.parse(sb.toString());
 			get_and_Parse_xml(document, employee);
 
@@ -104,17 +103,17 @@ public class CitiDirectoryGrabProcess {
 			DirectReportOfEmp directReportOfEmp = managersAndReportInformation.getDirectReprtOfEmp();
 			MatrixReportofEmp matrixReportofEmp = managersAndReportInformation.getMatrixReportofEmp();
 			NonEmployeesofEmp nonEmployeesofEmp = managersAndReportInformation.getNonEmployeesofEmp();
-			List<OneDownEmployee> onedown_directReportOfEmps = directReportOfEmp.getOneDownEmployees();
-			List<OneDownEmployee> onedown_matrixReportofEmps = matrixReportofEmp.getOneDownEmployees();
-			List<OneDownEmployee> onedown_nonEmployeesofEmps = nonEmployeesofEmp.getOneDownEmployees();
+			List<Employee> onedown_directReportOfEmps = directReportOfEmp.getOneDownEmployees();
+			List<Employee> onedown_matrixReportofEmps = matrixReportofEmp.getOneDownEmployees();
+			List<Employee> onedown_nonEmployeesofEmps = nonEmployeesofEmp.getOneDownEmployees();
 			
-			for(OneDownEmployee oneDownEmployee:onedown_directReportOfEmps){
+			for(Employee oneDownEmployee:onedown_directReportOfEmps){
 				save_Citi_Global_Directory_EmployeeAndMembers_HtmlIfo_and_TitleImages_byGEID(new Employee(oneDownEmployee.getWebGEID(),employee));
 			}
-			for(OneDownEmployee oneDownEmployee:onedown_matrixReportofEmps){
+			for(Employee oneDownEmployee:onedown_matrixReportofEmps){
 				save_Citi_Global_Directory_EmployeeAndMembers_HtmlIfo_and_TitleImages_byGEID(new Employee(oneDownEmployee.getWebGEID(),employee));
 			}
-			for(OneDownEmployee oneDownEmployee:onedown_nonEmployeesofEmps){
+			for(Employee oneDownEmployee:onedown_nonEmployeesofEmps){
 				save_Citi_Global_Directory_EmployeeAndMembers_HtmlIfo_and_TitleImages_byGEID(new Employee(oneDownEmployee.getWebGEID(),employee));
 			}
 		} catch (Exception e) {
@@ -203,10 +202,10 @@ public class CitiDirectoryGrabProcess {
 		}
 		
 		NonEmployeesofEmp nonEmployeesofEmp = managersAndReportInformation.getNonEmployeesofEmp();
-		List<OneDownEmployee> oneDownEmployees = new ArrayList<OneDownEmployee>();
+		List<Employee> oneDownEmployees = new ArrayList<Employee>();
 		Elements trs = content.getElementsByTag("tr");
 		for(int i= 1;i<trs.size();i++){
-			 OneDownEmployee oneDownEmployee = new OneDownEmployee();
+			Employee oneDownEmployee = new Employee();
 			 Elements tds= trs.get(i).getElementsByTag("td");
 			 if(tds.size()!=3){
 				 LogUtil.debug("error in handle this element." + tds.toString()+"\n");
@@ -241,10 +240,10 @@ public class CitiDirectoryGrabProcess {
 		}
 		
 		MatrixReportofEmp matrixReportofEmp = managersAndReportInformation.getMatrixReportofEmp();
-		List<OneDownEmployee> oneDownEmployees = new ArrayList<OneDownEmployee>();
+		List<Employee> oneDownEmployees = new ArrayList<Employee>();
 		Elements trs = content.getElementsByTag("tr");
 		for(int i= 1;i<trs.size();i++){
-			 OneDownEmployee oneDownEmployee = new OneDownEmployee();
+			Employee oneDownEmployee = new Employee();
 			 Elements tds= trs.get(i).getElementsByTag("td");
 			 if(tds.size()!=3){
 				 LogUtil.debug("error in handle this element." + tds.toString()+"\n");
@@ -281,10 +280,10 @@ public class CitiDirectoryGrabProcess {
 		}
 		
 		DirectReportOfEmp directReportOfEmp = managersAndReportInformation.getDirectReprtOfEmp();
-		List<OneDownEmployee> oneDownEmployees = new ArrayList<OneDownEmployee>();
+		List<Employee> oneDownEmployees = new ArrayList<Employee>();
 		Elements trs = content.getElementsByTag("tr");
 		for(int i= 1;i<trs.size();i++){
-			 OneDownEmployee oneDownEmployee = new OneDownEmployee();
+			Employee oneDownEmployee = new Employee();
 			 Elements tds= trs.get(i).getElementsByTag("td");
 			 if(tds.size()!=4){
 				 LogUtil.debug("error in handle this element." + tds.toString()+"\n");
@@ -334,6 +333,7 @@ public class CitiDirectoryGrabProcess {
 	public static void main(String[] args) {
 		File htmlPath = new File("CitiGlobalDirectory\\html");
 		File imagePath = new File("CitiGlobalDirectory\\Images");
+		System.out.println(htmlPath.getAbsolutePath());
 		Employee employee = new Employee("0000537302",null);
 		CitiDirectoryGrabProcess citiDirectoryGrabProcess = new CitiDirectoryGrabProcess(htmlPath, imagePath);
 		citiDirectoryGrabProcess.save_Citi_Global_Directory_EmployeeAndMembers_HtmlIfo_and_TitleImages_byGEID(employee);

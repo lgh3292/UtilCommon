@@ -5,19 +5,19 @@ import java.util.List;
 
 public class DirectReportOfEmp {
 
-	private List<OneDownEmployee> oneDownEmployees;
+	private List<Employee> oneDownEmployees;
 
 	
 
 	
-	public List<OneDownEmployee> getOneDownEmployees() {
+	public List<Employee> getOneDownEmployees() {
 		return oneDownEmployees;
 	}
 
 
 
 
-	public void setOneDownEmployees(List<OneDownEmployee> oneDownEmployees) {
+	public void setOneDownEmployees(List<Employee> oneDownEmployees) {
 		this.oneDownEmployees = oneDownEmployees;
 	}
 

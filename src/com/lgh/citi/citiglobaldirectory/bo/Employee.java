@@ -5,6 +5,13 @@ import com.lgh.util.logging.LogUtil;
 
 
 public class Employee {
+	private String name;
+	private String role;
+	private String GOCDescription;
+	private String phone;
+	private String webGEID;
+	private String jobTitle;
+	
 	private Employee superVisorEmployee;
 	private EmployeeBasicInformation employeeBasicInformation;
 	private IDInformation idInformation;
@@ -28,16 +35,54 @@ public class Employee {
 			sb.append("->"+superVisorGEID);
 			if(superVisorEmployee.getSuperVisorEmployee()!=null){
 				printEmployee_and_SuperVisor(superVisorEmployee.getSuperVisorEmployee(),sb);
-			}else{
-				LogUtil.log(sb.toString());
-			}
+			} 
 		}
+		LogUtil.log(sb.toString());
 	}
-	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public String getGOCDescription() {
+		return GOCDescription;
+	}
+	public void setGOCDescription(String gOCDescription) {
+		GOCDescription = gOCDescription;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 	public Employee getSuperVisorEmployee() {
 		return superVisorEmployee;
 	}
 
+	public String getJobTitle() {
+		return jobTitle;
+	}
+
+
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	public String getWebGEID() {
+		return webGEID;
+	}
+
+
+	public void setWebGEID(String webGEID) {
+		this.webGEID = webGEID;
+	}
 
 
 	public void setSuperVisorEmployee(Employee superVisorEmployee) {
@@ -61,6 +106,9 @@ public class Employee {
 		idInformation = new IDInformation(GEID);
 		this.superVisorEmployee = superVisorEmployee;
 	}
+	public Employee() {
+	}
+
 	public void setEmployeeBasicInformation(
 			EmployeeBasicInformation employeeBasicInformation) {
 		this.employeeBasicInformation = employeeBasicInformation;

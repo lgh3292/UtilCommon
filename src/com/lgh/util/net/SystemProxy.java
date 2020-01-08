@@ -51,7 +51,7 @@ public class SystemProxy implements Runnable{
 		try {
 			//if we don't use the proxy
 			URL url = new URL("http://www.baidu.com/");
-			URLConnection conn = url.openConnection();  
+//			URLConnection conn = url.openConnection();  
 			getSystemProxy();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,12 +65,12 @@ public class SystemProxy implements Runnable{
 	      DataInputStream di = null;
 	      FileOutputStream fo = null;
 	      byte[] b = new byte[1];
-	      System.setProperty("javax.net.ssl.trustStore", "C://dev//dev_tool//jdk1.7.0_17//jre//lib//security//jssecacerts");
-	      System.setProperty("javax.net.ssl.trustStore", "C://dev//dev_tool//jdk1.7.0_17//jre//lib//security//jssecacerts2");
+//	      System.setProperty("javax.net.ssl.trustStore", "C://dev//dev_tool//jdk1.7.0_17//jre//lib//security//jssecacerts");
+//	      System.setProperty("javax.net.ssl.trustStore", "C://dev//dev_tool//jdk1.7.0_17//jre//lib//security//jssecacerts2");
 	      // PROXY
-	     // System.setProperty("http.proxyHost","proxy.tay.cpqcorp.net") ;
-	     // System.setProperty("http.proxyPort", "8080") ;
-	     // System.setProperty("java.net.useSystemProxies", "true");
+//	      System.setProperty("http.proxyHost","10.192.70.1") ;
+//	      System.setProperty("http.proxyPort", "9092") ;
+//	      System.setProperty("java.net.useSystemProxies", "true");
 	      URL u = new URL(URLName);
 	      HttpURLConnection con = (HttpURLConnection) u.openConnection();
 	      
@@ -113,7 +113,7 @@ public class SystemProxy implements Runnable{
 		//   System.getProperties().remove("java.net.useSystemProxies");
 		   List<Proxy> list = null;
 		   try {    
-			   list = ProxySelector.getDefault().select(new URI("http://www.yahoo.com"));  
+			   list = ProxySelector.getDefault().select(new URI("http://www.baidu.com"));  
 			   
 		   }catch (URISyntaxException e) { 
 			   e.printStackTrace();   
@@ -202,7 +202,7 @@ public class SystemProxy implements Runnable{
 		// TODO Auto-generated method stub
 		int i=0;
 		while(true){
-			dump("https://thirdpartypaymentdc.gcbcn.citigroup.net/cn3pps/dologin");
+			dump("https://www.baidu.com/");
 //			dump("https://servicemanagement.citigroup.net/navpage.do");
 			
 			LogUtil.info("**************access count:"+i++);

@@ -9,13 +9,19 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.nio.charset.Charset;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.apache.commons.httpclient.DefaultMethodRetryHandler;
 import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.UsernamePasswordCredentials;
+import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.commons.httpclient.methods.GetMethod;
 
 import com.lgh.util.Util;
@@ -26,6 +32,8 @@ import com.lgh.util.logging.LogUtil;
  * @author Administrator
  */
 public class NetUtil {
+	public static final int NETWORK_SUCCESS=1;
+	public static final int NETWORK_FAIL=2;
 	
 
 	/**
@@ -37,7 +45,6 @@ public class NetUtil {
 	        InputStreamReader r = null;
 	        try {
 	        	StringBuffer sb = new StringBuffer();
-	            //TODO �����ǹ̶�����ҳ���ݵı���д��GBK,Ӧ���ǿ����õ�
 	            r = new InputStreamReader(is, charsetName);
 	            char[] buffer = new char[128];
 	            int length = -1;
@@ -101,6 +108,22 @@ public class NetUtil {
 	}
 	
 	
+	public static StringBuffer getPageContentByURL(String url) throws Exception {
+	    	StringBuffer sb =new StringBuffer();
+	    	HttpClient http = new HttpClient();
+			GetMethod getMethod = new GetMethod(url);
+			http.getParams().setContentCharset("UTF-8");
+			getMethod.addRequestHeader("Accept", "*/*");
+			int responseCode = http.executeMethod(getMethod);
+			if (responseCode == 200) {
+				sb = NetUtil.getStringByReadLine(getMethod.getResponseBodyAsStream(),Charset.forName("utf-8"));
+				getMethod.releaseConnection();
+			} else {
+				throw new Exception("Html info not error!"+ responseCode);
+			}
+			
+			return sb;
+	}
 	/**
 	 * get string content from InputStream
 	 * @param is
@@ -278,11 +301,120 @@ public class NetUtil {
     	}
     }
     
-    
-   
+ 
+	
+	 
+	/**
+	 *  ping net work
+	 */
+	public static int pingNetWork(){
+		BufferedReader br = null;
+		try {
+			 Process pp = 	Runtime.getRuntime().exec("ping www.baidu.com");
+			 br = new BufferedReader(new InputStreamReader(pp.getInputStream()));
+			 String readLine = null;
+			 while((readLine=br.readLine())!=null){
+				 if(readLine.contains("Reply from")){
+					 return NETWORK_SUCCESS; 
+				 }else if(readLine.contains("could not found")){
+					 return NETWORK_FAIL;
+				 }
+			 }
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally{
+			if(br!=null){
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return NETWORK_FAIL;
+	}
+	
+	
+	public static int testNetWork(final HttpClient http){
+		try {
+			GetMethod getMethod = new GetMethod("http://www.baidu.com");
+			http.getParams().setContentCharset("GBK");
+			getMethod.addRequestHeader("Accept", "*/*");
+			http.getHttpConnectionManager().getParams().setSoTimeout(2000);
+			getMethod.getParams().setSoTimeout(2000);
+			DefaultMethodRetryHandler defaultMethodRetryHandler = new DefaultMethodRetryHandler();
+			defaultMethodRetryHandler.setRetryCount(0);
+			getMethod.setMethodRetryHandler(defaultMethodRetryHandler);
+			int responseCode = http.executeMethod(getMethod);
+			if (responseCode == 200) {
+				return NETWORK_SUCCESS;
+			} else {
+				return NETWORK_FAIL;
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			return NETWORK_FAIL;
+		}
+	}
+	/**
+	 * set proxy
+	 * @param http
+	 * @param hostName
+	 * @param port
+	 * @param userName
+	 * @param password
+	 */
+	public static void setProxy(HttpClient http,String hostName,int port,String userName,String password){
+		if(userName!=null&&!userName.trim().equals("")&&password!=null&&!password.trim().equals("")){
+			http.getState().setProxyCredentials(
+	                new AuthScope(hostName, port),
+	                new UsernamePasswordCredentials(userName, password));
+		}else{
+			http.getHostConfiguration().setProxy(hostName, port);
+		}
+	}
+	 
+	/**
+	 * set proxy by the browser's proxy setting
+	 * @param http
+	 */
+	public static void setProxyByBrowser(HttpClient http){
+		List<Proxy> proxy = SystemProxy.getSystemProxy();
+     	  if(proxy!=null&&proxy.size()>0){
+     		Proxy p = proxy.get(0);
+     		InetSocketAddress inetSocketAddress = (InetSocketAddress)p.address();
+     		http.getHostConfiguration().setProxy(inetSocketAddress.getHostName(),inetSocketAddress.getPort());
+     	  }
+	}
+	
+    /**
+     * @param args
+     * @throws Exception
+     */
     public static void main(String args[]) throws Exception {
-  
     	
+    	try {
+			HttpClient http = new HttpClient();
+			GetMethod getMethod = new GetMethod("http://globaldirectory.citigroup.net/globaldir_new/GDIR_Result_Detail.aspx?webGEID=0000450357");
+			http.getParams().setContentCharset("GBK");
+			getMethod.addRequestHeader("Accept", "*/*");
+			http.getHttpConnectionManager().getParams().setSoTimeout(2000);
+			getMethod.getParams().setSoTimeout(2000);
+			DefaultMethodRetryHandler defaultMethodRetryHandler = new DefaultMethodRetryHandler();
+			defaultMethodRetryHandler.setRetryCount(0);
+			getMethod.setMethodRetryHandler(defaultMethodRetryHandler);
+			int responseCode = http.executeMethod(getMethod);
+			System.err.println(responseCode);
+			if (responseCode == 200) {
+			} else {
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+    	System.out.println(NetUtil.getPageContentByURL("https://www.baidu.com/"));
 //    	for(int i=100;i<255;i++){
 //    		final int num = i;
 //    		 new Thread(new Runnable() {

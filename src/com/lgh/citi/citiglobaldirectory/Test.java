@@ -9,7 +9,7 @@ public class Test {
 	}
 	
 	public static void main(String[] args) {
-		String a = "hello2"; 
+		String a = "hello2222"; 
         final String b = "hello";
         String d = "hello";
         String c = b + 2; 

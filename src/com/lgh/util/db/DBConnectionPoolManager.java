@@ -86,7 +86,7 @@ public class DBConnectionPoolManager implements Runnable{
 	private boolean isClosed(Connection dbConnection){
 		boolean close = false;
 		try {
-			if(dbConnection.isClosed()){
+			if(dbConnection!=null&dbConnection.isClosed()){
 				close = true;
 			}
 		} catch (SQLException e) {

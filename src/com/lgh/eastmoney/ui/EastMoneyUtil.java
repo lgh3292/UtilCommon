@@ -12,12 +12,12 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.GetMethod;
 
 import com.lgh.eastmoney.bfo.EastMoneyURLMsg;
-import com.lgh.eastmoney.ctl.NetworkManager;
 import com.lgh.util.DateUtil;
 import com.lgh.util.FileUtil;
 import com.lgh.util.ZhengZe;
 import com.lgh.util.logging.LogUtil;
 import com.lgh.util.net.NetUtil;
+import com.lgh.util.net.NetworkManager;
 
 public class EastMoneyUtil {
 	public static Color GREEN_COLOR = new Color(0,139,0);
@@ -148,7 +148,7 @@ public class EastMoneyUtil {
 		HttpClient http = getHttpClient();
 		GetMethod getMethod = new GetMethod(uri);
 		http.getParams().setContentCharset("GBK");
-//		http.getHostConfiguration().setHost("hqdigi2.eastmoney.com", 80,"http");
+		http.getHostConfiguration().setHost("hqdigi2.eastmoney.com", 80,"http");
 		getMethod.addRequestHeader("Accept", "*/*");
 		// get.addRequestHeader("Referer","http://quote.eastmoney.com/f1.aspx?code=600000&market=1");
 		// get.addRequestHeader("Accept-Language", "zh-cn");

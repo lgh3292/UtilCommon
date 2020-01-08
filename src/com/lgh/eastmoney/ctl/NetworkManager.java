@@ -4,7 +4,7 @@ import org.apache.commons.httpclient.HttpClient;
 
 import com.lgh.eastmoney.ui.PropertiesConfig;
 import com.lgh.util.logging.LogUtil;
-import com.lgh.util.netProxy.HttpClientProxy;
+import com.lgh.util.net.HttpClientProxy;
 
 public class NetworkManager { 
 	private static NetworkManager INSTANCE = null;

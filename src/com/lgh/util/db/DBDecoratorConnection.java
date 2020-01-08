@@ -102,7 +102,7 @@ public class DBDecoratorConnection implements Connection{
 		return connection.getWarnings();
 	}
 	public boolean isClosed() throws SQLException {
-		return connection.isClosed();
+		return connection==null?false:connection.isClosed();
 	}
 	public boolean isReadOnly() throws SQLException {
 		return connection.isReadOnly();

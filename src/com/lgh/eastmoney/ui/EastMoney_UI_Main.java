@@ -47,7 +47,6 @@ import com.lgh.eastmoney.bfo.EastMoneyPersonBuy;
 import com.lgh.eastmoney.bfo.EastMoneyURLMsg;
 import com.lgh.eastmoney.bfo.RealTimeMarketTrend;
 import com.lgh.eastmoney.bo.EastMoneyRiseDrop;
-import com.lgh.eastmoney.ctl.NetworkManager;
 import com.lgh.eastmoney.ctl.StockRiseDrop;
 import com.lgh.eastmoney.ctl.StockWorker;
 import com.lgh.util.DateUtil;
@@ -57,6 +56,7 @@ import com.lgh.util.coms.UISystemTray;
 import com.lgh.util.coms.UTableColumnModel;
 import com.lgh.util.coms.UTableModel;
 import com.lgh.util.logging.LogUtil;
+import com.lgh.util.net.NetworkManager;
 
 public class EastMoney_UI_Main extends JPanel implements ActionListener,Runnable{
 	//north Jpanel

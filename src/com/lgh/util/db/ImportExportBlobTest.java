@@ -14,14 +14,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 
-import oracle.jdbc.driver.OracleCallableStatement;
-import oracle.jdbc.driver.OracleResultSet;
-import oracle.jdbc.driver.OracleTypes;
-import oracle.sql.BLOB;
-import testpackage.Customer;
-
 import com.lgh.util.StreamUtil;
 import com.lgh.util.logging.LogUtil;
+
+import oracle.jdbc.OracleCallableStatement;
+import oracle.jdbc.OracleResultSet;
+import oracle.sql.BLOB;
+import testpackage.Customer;
 /**
  * import/export blob from database's various method with shell implement,or
  * java implement,or oracle procedure implement
@@ -139,7 +138,7 @@ public class ImportExportBlobTest {
 			st.executeUpdate("insert into test values(3,empty_blob())");
 			ResultSet rs = st.executeQuery("select content from test where id = 3 for update");
 			if(rs.next()){
-				java.sql.Blob blob = ((OracleResultSet)rs).getBLOB(1);
+				java.sql.Blob blob = ((	OracleResultSet)rs).getBLOB(1);
 				File file = new File("c://ES1010_g3u802_es3.csv");
 				InputStream is = new FileInputStream(file);
 				int chunk = 32000;

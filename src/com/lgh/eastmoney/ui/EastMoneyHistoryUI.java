@@ -127,37 +127,40 @@ public class EastMoneyHistoryUI extends JPanel implements ActionListener,Propert
 		emrisedrop.setTransStartDate(DateUtil.getPreDays(import_date, 1));
 		emrisedrop.setTransEndDate(transEndDate);
 		List<EastMoneyRiseDrop> drops= (List<EastMoneyRiseDrop>) new EastMoneyService().findData(emrisedrop,EastMoneyRiseDrop.class);
-		for(EastMoneyRiseDrop drop:drops){
-			EastMoneyRiseDropHistory his = drop.getEastMoneyRiseDropHistory();
-			list.add(his);
-		}
-		
-		
-		for(int i=0;i<list.size();i++){
+		if(drops!=null) {
+			for(EastMoneyRiseDrop drop:drops){
+				EastMoneyRiseDropHistory his = drop.getEastMoneyRiseDropHistory();
+				list.add(his);
+			}
 			
-			EastMoneyRiseDropHistory curHis = list.get(i);
-			//the date must be healthy
-			if(curHis.isHealthy()){
-				//if it's the first data,we set the riseDropScope and riseDropMoney as default value.
-				if(i==0){
-					higestMoney = curHis.getHigestPrice();
-					lowestMoney = curHis.getLowestPrice();
-					curHis.setRiseDropScope(new Double(0));
-					curHis.setRiseDropMoney(new Double(0));
-					curHis.setYesShoupan(0.0);
-				}else{
-					EastMoneyRiseDropHistory preHis = list.get(i-1);
-					if(curHis.getHigestPrice()>higestMoney){
+			for(int i=0;i<list.size();i++){
+				
+				EastMoneyRiseDropHistory curHis = list.get(i);
+				//the date must be healthy
+				if(curHis.isHealthy()){
+					//if it's the first data,we set the riseDropScope and riseDropMoney as default value.
+					if(i==0){
 						higestMoney = curHis.getHigestPrice();
-					}else if(curHis.getLowestPrice()<lowestMoney){
 						lowestMoney = curHis.getLowestPrice();
+						curHis.setRiseDropScope(new Double(0));
+						curHis.setRiseDropMoney(new Double(0));
+						curHis.setYesShoupan(0.0);
+					}else{
+						EastMoneyRiseDropHistory preHis = list.get(i-1);
+						if(curHis.getHigestPrice()>higestMoney){
+							higestMoney = curHis.getHigestPrice();
+						}else if(curHis.getLowestPrice()<lowestMoney){
+							lowestMoney = curHis.getLowestPrice();
+						}
+						curHis.setYesShoupan(preHis.getShoupan());
+						curHis.setRiseDropMoney(curHis.getShoupan()-curHis.getKaipan());
+						curHis.setRiseDropScope((curHis.getShoupan()-preHis.getShoupan())/preHis.getShoupan());
 					}
-					curHis.setYesShoupan(preHis.getShoupan());
-					curHis.setRiseDropMoney(curHis.getShoupan()-curHis.getKaipan());
-					curHis.setRiseDropScope((curHis.getShoupan()-preHis.getShoupan())/preHis.getShoupan());
 				}
 			}
 		}
+		
+		
 		
 
 	}
@@ -410,69 +413,73 @@ public class EastMoneyHistoryUI extends JPanel implements ActionListener,Propert
 		
 		this.setBackground(Color.white);
 		
-		double height = dimension.getHeight();
-		double width = dimension.getWidth();
-		xLen = width/list.size();
+		if(list!=null&list.size()>0) {
+			double height = dimension.getHeight();
+			double width = dimension.getWidth();
+			xLen = width/list.size();
 
-		
-		double preferLineWidth = getPreferLineWidth();
-		double preferLineHeight = getPreferLineHeigh();
-		//draw bg line画背景线
-		for(int i=0;i<width/preferLineWidth;i++){
-			g.setColor(BG_LINE_COLOR);
-			g.drawLine((int)(i*preferLineWidth+xLen/3), 0, (int)(i*preferLineWidth+xLen/3), (int) height);
-		}
-		
-		for(int i=0;i<height/preferLineHeight;i++){
-			g.setColor(BG_LINE_COLOR);
-			g.drawLine(0, (int)(i*preferLineHeight), (int)width, (int)(i*preferLineHeight));
-		}	
-		
-		
-		//画出股票涨跌幅信息
-		double xGap = xLen/3;
-		double ySubLen = height/(higestMoney-lowestMoney);//every 0.01's gap
-		for(int i=0;i<list.size();i++){
-			EastMoneyRiseDropHistory curHis = list.get(i);
-			//当开盘,收盘数据有异常时,不画这条信息
-			if(curHis.isHealthy()){
-				double shoupan = curHis.getShoupan();
-				double kaipan = curHis.getKaipan();
-				double higestPrice = curHis.getHigestPrice();
-				double lowestPrice = curHis.getLowestPrice();
-				int x = (int) (i*xLen);
-				
-				int kanpanY = (int) ((kaipan-lowestMoney)*ySubLen);
-				int shoupanY = (int) ((shoupan-lowestMoney)*ySubLen);
-				int higestY = (int) ((higestPrice-lowestMoney)*ySubLen);
-				int lowestY = (int) ((lowestPrice-lowestMoney)*ySubLen);
-				if(curHis.getRiseDropMoney()>0){
-					int yGap = (int) (ySubLen*(shoupan-kaipan));
-					//hidden color so that mouse over can know 
-					g.setColor(HIDDEN_COLOR);
-					g.drawRect(x, (int) (height-kanpanY), (int) (xLen-xGap), -yGap);
-					g.setColor(RED_COLOR);
-					drawRect(x, (int) (height-kanpanY), (int) (xLen-xGap), -yGap,g);
+			
+			double preferLineWidth = getPreferLineWidth();
+			double preferLineHeight = getPreferLineHeigh();
+			//draw bg line画背景线
+			for(int i=0;i<width/preferLineWidth;i++){
+				g.setColor(BG_LINE_COLOR);
+				g.drawLine((int)(i*preferLineWidth+xLen/3), 0, (int)(i*preferLineWidth+xLen/3), (int) height);
+			}
+			
+			for(int i=0;i<height/preferLineHeight;i++){
+				g.setColor(BG_LINE_COLOR);
+				g.drawLine(0, (int)(i*preferLineHeight), (int)width, (int)(i*preferLineHeight));
+			}	
+			
+			
+			//画出股票涨跌幅信息
+			double xGap = xLen/3;
+			double ySubLen = height/(higestMoney-lowestMoney);//every 0.01's gap
+			for(int i=0;i<list.size();i++){
+				EastMoneyRiseDropHistory curHis = list.get(i);
+				//当开盘,收盘数据有异常时,不画这条信息
+				if(curHis.isHealthy()){
+					double shoupan = curHis.getShoupan();
+					double kaipan = curHis.getKaipan();
+					double higestPrice = curHis.getHigestPrice();
+					double lowestPrice = curHis.getLowestPrice();
+					int x = (int) (i*xLen);
 					
-					//中间需要空的，所以需要画两条线，因为是收涨所以当然是收盘大于开盘，A条线是最高到收盘，B条线是最低到开盘
-					g.drawLine(x+(int)(xLen-xGap)/2, (int) (height-higestY), x+(int)(xLen-xGap)/2, (int) (height-shoupanY));
-					g.drawLine(x+(int)(xLen-xGap)/2, (int) (height-kanpanY), x+(int)(xLen-xGap)/2, (int) (height-lowestY));
-				}else{
-					g.setColor(GREEN_COLOR);
-					int yGap = (int) (ySubLen*(kaipan-shoupan));
-					g.drawRect(x, (int) (height-shoupanY), (int) (xLen-xGap), -yGap);
-					//这里也画两条线吧
-					//因为是收跌，所以A线应该是最高到开盘，B线应该是最低到收盘
-					g.drawLine(x+(int)(xLen-xGap)/2, (int) (height-higestY), x+(int)(xLen-xGap)/2, (int) (height-kanpanY));
-					g.drawLine(x+(int)(xLen-xGap)/2, (int) (height-shoupanY), x+(int)(xLen-xGap)/2, (int) (height-lowestY));
+					int kanpanY = (int) ((kaipan-lowestMoney)*ySubLen);
+					int shoupanY = (int) ((shoupan-lowestMoney)*ySubLen);
+					int higestY = (int) ((higestPrice-lowestMoney)*ySubLen);
+					int lowestY = (int) ((lowestPrice-lowestMoney)*ySubLen);
+					if(curHis.getRiseDropMoney()>0){
+						int yGap = (int) (ySubLen*(shoupan-kaipan));
+						//hidden color so that mouse over can know 
+						g.setColor(HIDDEN_COLOR);
+						g.drawRect(x, (int) (height-kanpanY), (int) (xLen-xGap), -yGap);
+						g.setColor(RED_COLOR);
+						drawRect(x, (int) (height-kanpanY), (int) (xLen-xGap), -yGap,g);
+						
+						//中间需要空的，所以需要画两条线，因为是收涨所以当然是收盘大于开盘，A条线是最高到收盘，B条线是最低到开盘
+						g.drawLine(x+(int)(xLen-xGap)/2, (int) (height-higestY), x+(int)(xLen-xGap)/2, (int) (height-shoupanY));
+						g.drawLine(x+(int)(xLen-xGap)/2, (int) (height-kanpanY), x+(int)(xLen-xGap)/2, (int) (height-lowestY));
+					}else{
+						g.setColor(GREEN_COLOR);
+						int yGap = (int) (ySubLen*(kaipan-shoupan));
+						g.drawRect(x, (int) (height-shoupanY), (int) (xLen-xGap), -yGap);
+						//这里也画两条线吧
+						//因为是收跌，所以A线应该是最高到开盘，B线应该是最低到收盘
+						g.drawLine(x+(int)(xLen-xGap)/2, (int) (height-higestY), x+(int)(xLen-xGap)/2, (int) (height-kanpanY));
+						g.drawLine(x+(int)(xLen-xGap)/2, (int) (height-shoupanY), x+(int)(xLen-xGap)/2, (int) (height-lowestY));
+					}
 				}
 			}
+			//draw stock message显示股票ID,name
+			g.setColor(Color.BLACK);
+			g.drawString(eastMoneyStock.getEmStockId()+" "+eastMoneyStock.getEmStockName(),(int)width-100, 15);
+			g.drawString("  current:"+selectRow+"/"+eastMoneyStocks.size(), (int)width-100,30);
 		}
 		
-		//draw stock message显示股票ID,name
-		g.setColor(Color.BLACK);
-		g.drawString(eastMoneyStock.getEmStockId()+" "+eastMoneyStock.getEmStockName(),(int)width-100, 15);
-		g.drawString("  current:"+selectRow+"/"+eastMoneyStocks.size(), (int)width-100,30);
+		
+		
 	}
 	
 	private void drawRect(int x,int y,int width,int height,Graphics g){

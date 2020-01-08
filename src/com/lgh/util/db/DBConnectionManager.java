@@ -41,7 +41,7 @@ public class DBConnectionManager {
     }
     
     public static DBConnectionManager getLocalOracleInstance(){
-    	DBMessage message = new DBMessage("localhost",1521,"oracle","test","test",DBMessage.ORACLE);
+    	DBMessage message = new DBMessage("lgh3292.gicp.net",44966,"DNAF","TEST","TEST",DBMessage.ORACLE);
     	return getInstance(message);
     }
     
@@ -81,7 +81,7 @@ public class DBConnectionManager {
                     Class.forName("org.gjt.mm.mysql.Driver").newInstance();
                     connection = DriverManager.getConnection(url1, username, password);
                     break;
-                case DBMessage.ORACLE:
+                case DBMessage.ORACLE://ojdbc7.jar use for oracle 12C , ojdbc14.jar for the old version
                     String url2 = "jdbc:oracle:thin:@" + host + ":" + port + ":" + dbName;
                     Class.forName("oracle.jdbc.driver.OracleDriver").newInstance();
                     connection = DriverManager.getConnection(url2, username, password);
@@ -186,5 +186,18 @@ public class DBConnectionManager {
     	+" execute immediate '"+sql+"';" 
     	+" End;";
     	getConnection().createStatement().execute(createSQL);
+    }
+    
+    
+    public static void main(String[] args) {
+    	
+    	try {
+    		 String url2 = "jdbc:oracle:thin:@lgh3292.gicp.net:44966:DNAF";
+//    		String url2 = "jdbc:oracle:thin:@118.25.53.189:1539:DNAF";
+             Class.forName("oracle.jdbc.driver.OracleDriver").newInstance();
+             Connection connection = DriverManager.getConnection(url2, "TEST", "TEST");
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
     }
 }

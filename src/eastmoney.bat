@@ -1,7 +1,7 @@
 
 ::install
-set SOURCE_DIR=C:\projects\myproject\J2SE\UtilCommon
-SET TO_DIR="C:\Documents and Settings\liuguohu\Desktop\em"
+set SOURCE_DIR=D:\doc\project\git\UtilCommon
+SET TO_DIR="D:\users\DNAF01069\Desktop\em"
 
 
 cd %SOURCE_DIR%\bin
@@ -11,7 +11,7 @@ cd %SOURCE_DIR%\bin
 
 echo Main-Class: com.lgh.eastmoney.ui.StockWorker>eastmoney.txt
 echo Class-Path: lib\eastmoney.jar lib\util.jar lib\log4j-1.2.9.jar lib\commons-codec-1.3.jar lib\commons-httpclient-3.1-beta1.jar lib\commons-logging-1.1.jar lib\ojdbc14.jar>>eastmoney.txt
-echo Main-Class: com.lgh.eastmoney.ui.EastMoneyUI>eastmoney_ui.txt
+echo Main-Class: com.lgh.eastmoney.ui.EastMoney_UI_Main>eastmoney_ui.txt
 echo Class-Path: lib\eastmoney.jar lib\util.jar lib\log4j-1.2.9.jar lib\commons-codec-1.3.jar lib\commons-httpclient-3.1-beta1.jar lib\commons-logging-1.1.jar lib\ojdbc14.jar>>eastmoney_ui.txt
 
 jar cvf util.jar com/lgh/util

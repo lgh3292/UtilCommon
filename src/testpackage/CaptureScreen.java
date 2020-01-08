@@ -1,7 +1,7 @@
     /*
      * CaptureScreen.java
      *
-     * Created on 2007Äê7ÔÂ3ÈÕ, ÏÂÎç2:05
+     * Created on 2007å¹´7æœˆ3æ—¥, ä¸‹åˆ2:05
      *
      * To change this template, choose Tools | Template Manager
      * and open the template in the editor.
@@ -11,7 +11,7 @@ package testpackage;
 
 /**
  *
- * @author tewang
+ * @author tewang fortest
  */
 
 import java.awt.*;
@@ -27,23 +27,23 @@ public class CaptureScreen extends JFrame implements ActionListener{
     private BufferedImage get;
     /** Creates a new instance of CaptureScreen */
     public CaptureScreen() {
-        super("ÆÁÄ»½ØÈ¡Èí¼ş");
+        super("å±å¹•æˆªå–è½¯ä»¶");
         initWindow();
     }
     private void initWindow(){
-        start=new JButton("¿ªÊ¼½ØÈ¡");
-        cancel=new JButton("ÍË³ö");
-        save=new JButton("±£´æ");
+        start=new JButton("å¼€å§‹æˆªå–");
+        cancel=new JButton("é€€å‡º");
+        save=new JButton("ä¿å­˜");
         save.setEnabled(false);
         save.addActionListener(this);
         start.addActionListener(this);
         cancel.addActionListener(this);
         JPanel buttonJP=new JPanel();
         c=new JPanel(new BorderLayout());
-        JLabel jl=new JLabel("ÆÁÄ»½ØÈ¡",SwingConstants.CENTER);
-        JLabel jl1=new JLabel("×÷Õß£ºÇ§Àï±ù·â",SwingConstants.CENTER);
-        jl.setFont(new Font("ºÚÌå",Font.BOLD,40));
-        jl1.setFont(new Font("ËÎÌå",Font.BOLD,20));
+        JLabel jl=new JLabel("å±å¹•æˆªå–",SwingConstants.CENTER);
+        JLabel jl1=new JLabel("ä½œè€…ï¼šåƒé‡Œå†°å°",SwingConstants.CENTER);
+        jl.setFont(new Font("é»‘ä½“",Font.BOLD,40));
+        jl1.setFont(new Font("å®‹ä½“",Font.BOLD,20));
         jl.setForeground(Color.RED);
         jl1.setForeground(Color.BLUE);
         c.add(jl,BorderLayout.CENTER);
@@ -111,10 +111,10 @@ public class CaptureScreen extends JFrame implements ActionListener{
                 }
                 
                 if(ImageIO.write(get,about,file)){
-                    JOptionPane.showMessageDialog(this,"±£´æ³É¹¦£¡");
+                    JOptionPane.showMessageDialog(this,"ä¿å­˜æˆåŠŸï¼");
                     save.setEnabled(false);
                 } else
-                    JOptionPane.showMessageDialog(this,"±£´æÊ§°Ü£¡");
+                    JOptionPane.showMessageDialog(this,"ä¿å­˜å¤±è´¥ï¼");
             }
         } catch(Exception exe){
             exe.printStackTrace();
@@ -129,7 +129,7 @@ public class CaptureScreen extends JFrame implements ActionListener{
             doSave();
         }
     }
-    //Ò»¸öÎÄ¼şºó×ºÃûÑ¡ÔñÆ÷
+    //ä¸€ä¸ªæ–‡ä»¶åç¼€åé€‰æ‹©å™¨
     private class JPGfilter extends javax.swing.filechooser.FileFilter{
         public JPGfilter(){
             
@@ -145,7 +145,7 @@ public class CaptureScreen extends JFrame implements ActionListener{
         }
         @Override
 		public String getDescription(){
-            return "*.JPG,*.JPEG(JPG,JPEGÍ¼Ïñ)";
+            return "*.JPG,*.JPEG(JPG,JPEGå›¾åƒ)";
         }
     }
     private class PNGfilter extends javax.swing.filechooser.FileFilter{
@@ -159,19 +159,19 @@ public class CaptureScreen extends JFrame implements ActionListener{
         }
         @Override
 		public String getDescription(){
-            return "*.PNG(PNGÍ¼Ïñ)";
+            return "*.PNG(PNGå›¾åƒ)";
         }
     }
-    //Ò»¸öÔİÊ±Àà£¬ÓÃÓÚÏÔÊ¾µ±Ç°µÄÆÁÄ»Í¼Ïñ
+    //ä¸€ä¸ªæš‚æ—¶ç±»ï¼Œç”¨äºæ˜¾ç¤ºå½“å‰çš„å±å¹•å›¾åƒ
     private class Temp extends JPanel implements MouseListener,MouseMotionListener{
         private BufferedImage bi;
         private int width,height;
         private int startX,startY,endX,endY,tempX,tempY;
         private JFrame jf;
-        private Rectangle select=new Rectangle(0,0,0,0);//±íÊ¾Ñ¡ÖĞµÄÇøÓò
-        private Cursor cs;//±íÊ¾Ò»°ãÇé¿öÏÂµÄÊó±ê×´Ì¬
-        private States current=States.DEFAULT;// ±íÊ¾µ±Ç°µÄ±à¼­×´Ì¬
-        private Rectangle[] rec;//±íÊ¾°Ë¸ö±à¼­µãµÄÇøÓò
+        private Rectangle select=new Rectangle(0,0,0,0);//è¡¨ç¤ºé€‰ä¸­çš„åŒºåŸŸ
+        private Cursor cs;//è¡¨ç¤ºä¸€èˆ¬æƒ…å†µä¸‹çš„é¼ æ ‡çŠ¶æ€
+        private States current=States.DEFAULT;// è¡¨ç¤ºå½“å‰çš„ç¼–è¾‘çŠ¶æ€
+        private Rectangle[] rec;//è¡¨ç¤ºå…«ä¸ªç¼–è¾‘ç‚¹çš„åŒºåŸŸ
         public Temp(JFrame jf,BufferedImage bi,int width,int height){
             this.jf=jf;
             this.bi=bi;
@@ -410,7 +410,7 @@ public class CaptureScreen extends JFrame implements ActionListener{
     }
 }
 enum States{
-    NORTH_WEST(new Cursor(Cursor.NW_RESIZE_CURSOR)),//±íÊ¾Î÷±±½Ç
+    NORTH_WEST(new Cursor(Cursor.NW_RESIZE_CURSOR)),//è¡¨ç¤ºè¥¿åŒ—è§’
     NORTH(new Cursor(Cursor.N_RESIZE_CURSOR)),
     NORTH_EAST(new Cursor(Cursor.NE_RESIZE_CURSOR)),
     EAST(new Cursor(Cursor.E_RESIZE_CURSOR)),

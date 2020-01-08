@@ -11,7 +11,7 @@ package testpackage;
 
 /**
  *
- * @author tewang 22
+ * @author tewang 2222
  */
 
 import java.awt.*;

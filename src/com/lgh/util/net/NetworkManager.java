@@ -4,7 +4,13 @@ import org.apache.commons.httpclient.HttpClient;
 
 import com.lgh.eastmoney.ui.PropertiesConfig;
 import com.lgh.util.logging.LogUtil;
-
+/**
+ * 通过两种方式验证网络是否可用，如果满足其中一种就代表网络可用
+ * 第一种是cmd:  ping www.baidu.com
+ * 第二种是直接通过httpClient access www.baidu.com,如果返回reponseCode=200则代表成功
+ * @author DNAF01069
+ *
+ */
 public class NetworkManager { 
 	private static NetworkManager INSTANCE = null;
 	
@@ -65,11 +71,11 @@ public class NetworkManager {
 	public void setProxy(HttpClient http){
 		if(Boolean.valueOf(proxy_auto_detect)){
 			if((PROXY_STATUS^PROXY)==INIT_STATE){
-				NetUtil.setProxy(http, proxy_host, Integer.valueOf(proxy_port), proxy_userName, proxy_password);
+				HttpClientProxy.setProxy(http, proxy_host, Integer.valueOf(proxy_port), proxy_userName, proxy_password);
 			}
 		}else if((PROXY_STATUS^UN_PROXY)==INIT_STATE){
 			if(Boolean.valueOf(proxy_set)){
-				NetUtil.setProxy(http, proxy_host, Integer.valueOf(proxy_port), proxy_userName, proxy_password);
+				HttpClientProxy.setProxy(http, proxy_host, Integer.valueOf(proxy_port), proxy_userName, proxy_password);
 			}
 		}else{
 			LogUtil.info(" unknow error...........");
@@ -92,10 +98,10 @@ public class NetworkManager {
 			while(true){
 				if(System.currentTimeMillis()>=nextRunTime&&!disableNet){
 					if((PROXY_STATUS^PROXY)!=INIT_STATE){
-						int returnCode = NetUtil.pingNetWork();
+						HttpClientProxy.ConectStatus returnCode = HttpClientProxy.pingNetWork();
 						LogUtil.info("ping network,directly...."+returnCode+"  PROXY_STATUS:"+PROXY_STATUS);
 						synchronized (lock) {
-							if (returnCode==NetUtil.NETWORK_SUCCESS) {
+							if (returnCode==HttpClientProxy.ConectStatus.SUCCESS) {
 								PROXY_STATUS |= UN_PROXY;
 							} else {
 								// remove UN_PROXY
@@ -125,11 +131,11 @@ public class NetworkManager {
 					if(System.currentTimeMillis()>=nextRunTime&&!disableNet){
 						if((PROXY_STATUS^UN_PROXY)!=INIT_STATE){
 							HttpClient httpClient =new HttpClient();
-							NetUtil.setProxy(httpClient, proxy_host, Integer.valueOf(proxy_port), proxy_userName, proxy_password);
-							int returnCode = NetUtil.testNetWork(httpClient);
+							HttpClientProxy.setProxy(httpClient, proxy_host, Integer.valueOf(proxy_port), proxy_userName, proxy_password);
+							HttpClientProxy.ConectStatus returnCode = HttpClientProxy.testNetWork(httpClient);
 							LogUtil.info("ping testNetWork...."+returnCode+"  PROXY_STATUS:"+PROXY_STATUS);
 							synchronized (lock) {
-								if (returnCode==NetUtil.NETWORK_SUCCESS) {
+								if (returnCode==HttpClientProxy.ConectStatus.SUCCESS) {
 									PROXY_STATUS |= PROXY;
 								} else {
 									if((PROXY_STATUS^PROXY)==INIT_STATE){
@@ -181,7 +187,7 @@ public class NetworkManager {
 			public void run(){
 				while(true){
 					try {
-						Thread.sleep(10000);
+						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();LogUtil.error("error", e);
 					}

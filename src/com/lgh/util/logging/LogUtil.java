@@ -100,6 +100,9 @@ public class LogUtil {
     	return true;
     }
     
-
+    public static void main(String[] args) {
+    	error("test");
+    	System.out.print("tes");
+    }
 
 }
